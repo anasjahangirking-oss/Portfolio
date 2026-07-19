@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ByteSpark — AI-Assisted Copywriting, Human-Perfected</title>
+<meta name="description" content="ByteSpark: AI-assisted writing carefully researched, edited, and refined by a human. Product descriptions, blog writing, website copy, and more." />
+
+<!-- favicon: the brand mark, drawn inline so no separate image file is needed -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0B0D'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='60' font-weight='600' fill='%23C9A24B' text-anchor='middle'%3E%C2%A7%3C/text%3E%3C/svg%3E" />
+
+<!-- social share previews (WhatsApp, Facebook, etc.) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ByteSpark" />
+<meta property="og:title" content="ByteSpark — AI-Assisted Copywriting, Human-Perfected" />
+<meta property="og:description" content="Words that build trust. Copy that drives action. AI-assisted writing, researched and hand-edited by a human." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="ByteSpark — AI-Assisted Copywriting" />
+<meta name="twitter:description" content="Words that build trust. Copy that drives action." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="siteNav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo" aria-label="ByteSpark home">
+      <span class="nav__mark">§</span> ByteSpark
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="#contact" class="btn btn--primary btn--sm">Contact Me</a>
+    </div>
+
+    <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile" id="navMobile">
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="btn btn--primary">Contact Me</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__spotlight" aria-hidden="true"></div>
+    <div class="hero__shapes" aria-hidden="true">
+      <span class="shape shape--1"></span>
+      <span class="shape shape--2"></span>
+      <span class="shape shape--3"></span>
+      <span class="shape shape--ring"></span>
+    </div>
+    <div class="hero__inner">
+
+      <p class="eyebrow" data-reveal>
+        <span class="eyebrow__mark">‸</span> AI‑drafted. Human‑perfected.
+      </p>
+
+      <h1 class="hero__headline" data-reveal>
+        <span class="edit-line" id="editLine1" aria-hidden="true"></span>
+        <span class="edit-line" id="editLine2" aria-hidden="true"></span>
+        <span class="sr-only">Words that build trust. Copy that drives action.</span>
+      </h1>
+
+      <p class="hero__sub" data-reveal>
+        I help businesses communicate clearly through AI-assisted writing that's carefully
+        researched, edited, and refined by a human. Every piece is written to engage readers,
+        build credibility, and support real business goals — no filler, no fluff, no hallucinated facts.
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a href="#work" class="btn btn--primary">View Portfolio</a>
+        <a href="#contact" class="btn btn--ghost">Contact Me</a>
+      </div>
+
+      <div class="stats" data-reveal>
+        <div class="stat">
+          <svg class="stat__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 10h18M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          <span class="stat__num" data-count="20" data-suffix="+">0</span>
+          <span class="stat__label">Projects Completed</span>
+        </div>
+        <div class="stat">
+          <svg class="stat__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+          <span class="stat__num" data-count="19" data-suffix="+">0</span>
+          <span class="stat__label">Writing Samples</span>
+        </div>
+        <div class="stat">
+          <svg class="stat__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          <span class="stat__num stat__num--text">Quality over volume</span>
+          <span class="stat__label">Writing Focus</span>
+        </div>
+        <div class="stat">
+          <svg class="stat__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <span class="stat__num stat__num--text">Now accepting projects</span>
+          <span class="stat__label">Availability</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__mark">‸</span> About</p>
+      <h2 class="section__title">Editorial judgment, powered by modern tools.</h2>
+
+      <div class="about__grid">
+        <div class="about__bio">
+          <p>
+            I'm a freelance writer working at the intersection of language and technology.
+            My process starts with AI-assisted drafting — it's fast, it's tireless, and it's
+            excellent at getting a rough shape onto the page. But nothing goes to a client
+            unedited. Every draft is rewritten, fact-checked, and shaped by hand until it
+            sounds like a person who actually understands the business wrote it.
+          </p>
+          <p>
+            I think the future of good writing isn't "AI vs. human" — it's AI for speed,
+            human for judgment. Clients get faster turnaround without losing the nuance,
+            accuracy, and voice that make copy actually work.
+          </p>
+
+          <h3 class="about__subhead">Writing philosophy</h3>
+          <ul class="check-list">
+            <li>Clarity beats cleverness. If a reader has to work to understand a sentence, rewrite it.</li>
+            <li>Every claim gets checked. AI drafts confidently — accuracy is the human's job.</li>
+            <li>Voice is not optional. Generic copy is invisible copy.</li>
+            <li>Structure serves the reader, not the writer's ego.</li>
+          </ul>
+        </div>
+
+        <div class="about__side">
+          <div class="skill-card">
+            <h3 class="about__subhead">Core skills</h3>
+            <div class="tag-grid">
+              <span class="tag">Copywriting</span>
+              <span class="tag">SEO Fundamentals</span>
+              <span class="tag">Brand Voice</span>
+              <span class="tag">Research &amp; Fact-Checking</span>
+              <span class="tag">Editing &amp; Proofreading</span>
+              <span class="tag">Content Strategy</span>
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">Storytelling</span>
+            </div>
+          </div>
+
+          <div class="values-card">
+            <h3 class="about__subhead">Values</h3>
+            <ul class="values-list">
+              <li><strong>Honesty</strong> — I disclose the AI-assisted process; nothing is hidden.</li>
+              <li><strong>Accuracy</strong> — Unverified claims don't ship.</li>
+              <li><strong>Craft</strong> — Every draft is edited until it earns the send.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section section--alt" id="services">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__mark">‸</span> Services</p>
+      <h2 class="section__title">Writing for every part of the funnel.</h2>
+
+      <div class="services__grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============ -->
+  <section class="section" id="work">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__mark">‸</span> Portfolio</p>
+      <h2 class="section__title">Sample work, by category.</h2>
+      <p class="section__lede">
+        Every piece below is a self-directed sample project written to demonstrate range and craft —
+        not a paid client deliverable.
+      </p>
+
+      <div class="filters" id="filters" role="tablist" aria-label="Filter portfolio by category">
+        <button class="filter active" data-filter="all">All</button>
+      </div>
+
+      <div class="portfolio__grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="portfolioModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Close">✕</button>
+      <p class="modal__category" id="modalCategory"></p>
+      <h3 class="modal__title" id="modalTitle"></h3>
+      <span class="badge">Sample Project</span>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section section--alt" id="process">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__mark">‸</span> Process</p>
+      <h2 class="section__title">From rough draft to final copy.</h2>
+
+      <div class="timeline">
+        <div class="timeline__item" data-reveal>
+          <span class="timeline__num">01</span>
+          <div>
+            <h3>Research</h3>
+            <p>Understand the business, the audience, and the competitive landscape before a single word is written.</p>
+          </div>
+        </div>
+        <div class="timeline__item" data-reveal>
+          <span class="timeline__num">02</span>
+          <div>
+            <h3>Planning</h3>
+            <p>Outline structure, key messages, and tone — the blueprint the draft will follow.</p>
+          </div>
+        </div>
+        <div class="timeline__item" data-reveal>
+          <span class="timeline__num">03</span>
+          <div>
+            <h3>AI Draft</h3>
+            <p>Generate a fast first pass to get raw material and structure onto the page.</p>
+          </div>
+        </div>
+        <div class="timeline__item" data-reveal>
+          <span class="timeline__num">04</span>
+          <div>
+            <h3>Human Editing</h3>
+            <p>Rewrite for voice, tighten sentences, cut filler, and inject the specifics AI can't know.</p>
+          </div>
+        </div>
+        <div class="timeline__item" data-reveal>
+          <span class="timeline__num">05</span>
+          <div>
+            <h3>Fact-Checking</h3>
+            <p>Verify every claim, number, and reference against a real source before it ships.</p>
+          </div>
+        </div>
+        <div class="timeline__item" data-reveal>
+          <span class="timeline__num">06</span>
+          <div>
+            <h3>Final Polish</h3>
+            <p>A last read for rhythm, clarity, and formatting — ready to publish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="testimonials">
+  <div class="section__inner">
+
+    <p class="eyebrow">
+      <span class="eyebrow__mark">‸</span>
+      Testimonials
+    </p>
+
+    <h2 class="section__title">
+      Trusted Words.<br>
+      Future Client Stories.
+    </h2>
+
+    <p class="section__lede">
+      Every project deserves honest feedback. As I begin working with clients,
+      this section will feature verified testimonials from businesses and
+      founders I've helped through AI-assisted, human-refined copywriting.
+      Until then, the examples below demonstrate the presentation style only.
+    </p>
+
+    <div class="testimonials__grid">
+
+      <article class="testimonial-card">
+        <span class="badge badge--muted">Preview</span>
+
+        <p>
+          "The copy immediately sounded more confident and customer-focused.
+          It communicated our value clearly while still feeling natural to our
+          brand voice."
+        </p>
+
+        <div class="testimonial-card__author">
+          <span class="avatar" aria-hidden="true">AR</span>
+
+          <div>
+            <strong>Founder</strong>
+            <span>E-commerce Brand</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="badge badge--muted">Preview</span>
+
+        <p>
+          "Complex ideas became easy to understand without losing technical
+          accuracy. The final copy was clean, persuasive, and ready to publish."
+        </p>
+
+        <div class="testimonial-card__author">
+          <span class="avatar" aria-hidden="true">MS</span>
+
+          <div>
+            <strong>Marketing Manager</strong>
+            <span>MS Company</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="badge badge--muted">Preview</span>
+
+        <p>
+          "Every sentence was carefully edited, fact-checked, and written with
+          clarity. The professionalism gave us confidence before launch."
+        </p>
+
+        <div class="testimonial-card__author">
+          <span class="avatar" aria-hidden="true">JP</span>
+
+          <div>
+            <strong>Program Director</strong>
+            <span>Education Platform</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--alt" id="faq">
+    <div class="section__inner section__inner--narrow">
+      <p class="eyebrow"><span class="eyebrow__mark">‸</span> FAQ</p>
+      <h2 class="section__title">Questions clients usually ask.</h2>
+
+      <div class="accordion" id="accordion"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__mark">‸</span> Contact</p>
+      <h2 class="section__title">Start a project.</h2>
+
+      <div class="contact__grid">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+            <span class="field__error" id="err-name"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <span class="field__error" id="err-email"></span>
+          </div>
+          <div class="field">
+            <label for="subject">Project type</label>
+            <select id="subject" name="subject">
+              <option>Product Descriptions</option>
+              <option>Blog Writing</option>
+              <option>Website Copy</option>
+              <option>Landing Page</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="field__error" id="err-message"></span>
+          </div>
+          <input type="hidden" name="_subject" value="New inquiry from the ByteSpark website" />
+          <button type="submit" class="btn btn--primary btn--block">
+            <span class="btn__label">Send Message</span>
+          </button>
+          <p class="form__note" id="formNote" role="status"></p>
+        </form>
+
+        <div class="contact__side">
+          <a class="contact-link contact-link--whatsapp" href="https://wa.me/8801771081428" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8.9-.1.2-.3.2-.6.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 3.9 3.5.5.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1Z"/></svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+          <a class="contact-link" href="mailto:anasjahangirking@gmail.com">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6 9-6"/></svg>
+            <span>anasjahangirking@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="nav__logo"><span class="nav__mark">§</span> ByteSpark</span>
+      <p>Words that build trust. Copy that drives action.</p>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer__socials">
+      <a href="mailto:anasjahangirking@gmail.com" aria-label="Email" class="social-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6 9-6"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© <span id="year"></span> ByteSpark. All sample work shown is self-directed and for demonstration purposes.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
