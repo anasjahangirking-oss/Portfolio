@@ -459,6 +459,36 @@ html[data-theme="light"] .icon-moon{ display: block; }
   color: var(--gold); margin: .75rem 0;
 }
 .badge--muted{ background: var(--surface-2); color: var(--text-tertiary); }
+.badge--real{ background: color-mix(in srgb, var(--success) 20%, transparent); color: var(--success); }
+
+/* ---------- featured project ---------- */
+.featured__card{
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 5vw, 3.25rem);
+  max-width: 780px;
+  overflow: hidden;
+}
+.featured__card::before{
+  content: "";
+  position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, var(--ink), var(--gold), var(--success));
+}
+.featured__title{
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin: .9rem 0 .75rem;
+  max-width: 24ch;
+}
+.featured__meta{
+  color: var(--text-secondary); font-size: .95rem; margin-bottom: 1.1rem;
+}
+.featured__meta strong{ color: var(--text); }
+.featured__blurb{
+  color: var(--text-secondary); max-width: 62ch; margin-bottom: 1.75rem; line-height: 1.7;
+}
+.featured__actions{ display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* modal */
 .modal{ position: fixed; inset: 0; z-index: 200; display: none; }

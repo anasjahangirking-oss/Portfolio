@@ -581,11 +581,14 @@ Take control of your attention—and let your best work speak for itself.`
   const modal = document.getElementById("portfolioModal");
   const modalCategory = document.getElementById("modalCategory");
   const modalTitle = document.getElementById("modalTitle");
+  const modalBadge = document.getElementById("modalBadge");
   const modalBody = document.getElementById("modalBody");
 
   function openModal(item){
     modalCategory.textContent = item.cat;
     modalTitle.textContent = item.title;
+    modalBadge.textContent = item.badgeLabel || "Sample Project";
+    modalBadge.className = "badge" + (item.badgeLabel ? " badge--real" : "");
     modalBody.innerHTML = item.body.replace(/\n/g, "<br>");
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
@@ -598,6 +601,18 @@ Take control of your attention—and let your best work speak for itself.`
   }
   modal.querySelectorAll("[data-close]").forEach(el => el.addEventListener("click", closeModal));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+  /* ---- featured project ---- */
+  const FEATURED = {
+    cat: "YouTube Technology Script",
+    title: "Fast Charging EXPLAINED: Does It Really Damage Your Phone Battery?",
+    badgeLabel: "Real Client Project",
+    body: `<strong>Opening Hook (0:00–0:20)</strong>\nImagine buying a brand-new smartphone today... and two years later, the battery barely lasts half a day.\n\nMost people immediately blame one thing: fast charging.\n\nBut is fast charging actually destroying your battery, or is that one of the biggest misconceptions in modern technology? Let's separate facts from myths.\n\n<strong>Introduction (0:20–0:45)</strong>\nWelcome back! If you enjoy technology explained in a simple, practical, and evidence-based way, you're in the right place.\n\nToday we're uncovering how fast charging actually works, what really causes battery degradation, and the simple habits that can help your phone stay healthy for years. Let's get started.\n\n<strong>Section 1 — Understanding Fast Charging (0:45–1:50)</strong>\nFast charging isn't simply "forcing" electricity into your phone. Modern smartphones contain sophisticated power management systems that continuously communicate with the charger.\n\nThe phone decides exactly how much power it can safely receive based on battery temperature, voltage, charging protocol, and current battery level. When the battery is nearly empty, the device accepts higher power to recharge quickly. As it approaches roughly 70–80%, charging speed gradually tapers off — a process called charge tapering that reduces stress on the battery and improves long-term reliability.\n\n<strong>Section 2 — What Actually Damages a Battery? (1:50–3:10)</strong>\nIf fast charging isn't the main problem, what is? The biggest enemy of every lithium-ion battery is heat. Excessive temperatures accelerate the chemical aging process inside the battery, permanently reducing its capacity over time.\n\nThis is why gaming while charging, leaving a phone in a hot car, using poor-quality chargers, or blocking airflow around the device can often cause more long-term damage than fast charging itself. Heat, not charging speed alone, is what deserves your attention.\n\n<strong>Section 3 — Charging Habits That Matter (3:10–4:20)</strong>\nBattery health is shaped by daily habits. Four practices recommended by manufacturers and battery experts: use certified or original chargers; avoid excessive heat while charging; keep Optimized Charging or Battery Protection enabled if your device offers it; and for everyday use, keeping the battery roughly between 20–80% can reduce long-term wear — though charging fully is perfectly fine when you need the extra battery life.\n\nSmall habits may seem insignificant today, but over hundreds of charging cycles, they add up.\n\n<strong>Closing (4:20–5:00)</strong>\nSo, does fast charging ruin your battery? Not by itself. Modern smartphones are engineered with layers of hardware and software protection to charge safely and efficiently. What truly affects battery lifespan is excessive heat, poor charging habits, and natural chemical aging over time.\n\nUnderstanding how your device actually works helps you make better decisions than believing common internet myths.`
+  };
+  const readScriptBtn = document.getElementById("readScriptBtn");
+  if (readScriptBtn) {
+    readScriptBtn.addEventListener("click", () => openModal(FEATURED));
+  }
 
   /* ---- render FAQ ---- */
   const accordion = document.getElementById("accordion");
