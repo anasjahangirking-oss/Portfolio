@@ -54,6 +54,24 @@
     a.addEventListener("click", () => { nav.classList.remove("is-open"); burger.setAttribute("aria-expanded","false"); });
   });
 
+  /* Keep the section link in sync with the reader's position. */
+  const navLinks = [...document.querySelectorAll(".nav__links a[href^='#']")];
+  const navSections = navLinks
+    .map(link => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+  if (navLinks.length && navSections.length) {
+    const sectionIo = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => link.classList.toggle(
+          "is-active",
+          link.getAttribute("href") === "#" + entry.target.id
+        ));
+      });
+    }, { rootMargin: "-30% 0px -55% 0px", threshold: 0 });
+    navSections.forEach(section => sectionIo.observe(section));
+  }
+
   /* =========================================================
      Reveal-on-scroll
      ========================================================= */
@@ -148,6 +166,28 @@
       btn.style.setProperty("--ry", ((e.clientY - r.top) / r.height * 100) + "%");
     });
   });
+
+  /* Gentle pointer tilt adds depth without changing the layout. */
+  function enableCardTilt(){
+    if (prefersReduced || !window.matchMedia("(pointer: fine)").matches) return;
+    document.querySelectorAll(".service-card, .portfolio-card, .testimonial-card, .featured__card").forEach(card => {
+      if (card.dataset.tiltReady) return;
+      card.dataset.tiltReady = "true";
+      card.addEventListener("pointermove", e => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        const rotateY = (x - 0.5) * 5;
+        const rotateX = (0.5 - y) * 5;
+        card.style.setProperty("--card-x", `${x * 100}%`);
+        card.style.setProperty("--card-y", `${y * 100}%`);
+        card.style.transform = `perspective(900px) translateY(-4px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      card.addEventListener("pointerleave", () => {
+        card.style.transform = "";
+      });
+    });
+  }
 
   /* =========================================================
      Content data
@@ -536,6 +576,7 @@ Take control of your attention—and let your best work speak for itself.`
     </div>
   `).join("");
   servicesGrid.querySelectorAll(".service-card").forEach(card => card.classList.add("is-visible"));
+  enableCardTilt();
 
   /* ---- render portfolio + filters ---- */
   const portfolioGrid = document.getElementById("portfolioGrid");
@@ -566,6 +607,7 @@ Take control of your attention—and let your best work speak for itself.`
       card.classList.add("is-visible"); // already in view context, skip re-observing
       card.addEventListener("click", () => openModal(PORTFOLIO[card.dataset.index]));
     });
+    enableCardTilt();
   }
   renderPortfolio("all");
 
@@ -724,5 +766,6 @@ Take control of your attention—and let your best work speak for itself.`
       if (rect.top < window.innerHeight) el.classList.add("is-visible");
     }
   });
+  enableCardTilt();
 
 })();
