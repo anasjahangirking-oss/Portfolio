@@ -4,6 +4,28 @@
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  const magicIntro = document.getElementById("magicIntro");
+  const magicBall = document.getElementById("magicBall");
+  function closeMagicIntro(){
+    if (!magicIntro || magicIntro.classList.contains("is-complete")) return;
+    triggerHaptic(magicBall);
+    magicIntro.classList.add("is-complete");
+    magicIntro.setAttribute("aria-hidden", "true");
+    window.setTimeout(() => magicIntro.remove(), 1000);
+  }
+  if (magicIntro && magicBall) {
+    if (prefersReduced) {
+      magicIntro.classList.add("is-complete");
+      magicIntro.setAttribute("aria-hidden", "true");
+      window.setTimeout(() => magicIntro.remove(), 1000);
+    } else {
+      magicBall.addEventListener("click", closeMagicIntro);
+      magicIntro.addEventListener("click", (event) => {
+        if (event.target === magicIntro) closeMagicIntro();
+      });
+    }
+  }
+
   /* Native-feeling press feedback where the device supports it. */
   const hapticTargets = "button, .btn, .text-link";
   const lastHaptic = new WeakMap();
