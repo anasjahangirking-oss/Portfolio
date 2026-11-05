@@ -14,14 +14,13 @@
     window.setTimeout(() => magicIntro.remove(), 1000);
   }
   if (magicIntro && magicBall) {
+    magicBall.addEventListener("pointerup", closeMagicIntro);
     if (prefersReduced) {
       magicIntro.classList.add("is-static");
-      magicBall.addEventListener("click", closeMagicIntro);
       magicIntro.addEventListener("click", (event) => {
         if (event.target === magicIntro) closeMagicIntro();
       });
     } else {
-      magicBall.addEventListener("click", closeMagicIntro);
       magicIntro.addEventListener("click", (event) => {
         if (event.target === magicIntro) closeMagicIntro();
       });
