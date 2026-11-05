@@ -1,139 +1,203 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ByteSpark — Signal Studio</title>
-<meta name="description" content="ByteSpark turns complex ideas into clear, confident copy that earns attention and moves people to act." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23070A12'/%3E%3Cpath d='M25 25h50v12H38v10h25c9 0 15 6 15 14s-6 14-15 14H25V62h35c2 0 3-1 3-3s-1-3-3-3H25V25Z' fill='%23D7FF64'/%3E%3C/svg%3E" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="ByteSpark" />
-<meta property="og:title" content="ByteSpark — Signal Studio" />
-<meta property="og:description" content="Clear, confident copy for brands with something worth saying." />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="ByteSpark — Signal Studio" />
-<meta name="twitter:description" content="Clear, confident copy for brands with something worth saying." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261105-letsgo" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ByteSpark — Copywriting that moves people</title>
+<meta name="description" content="Freelance copywriter turning complex ideas into clear, confident copy. AI for speed, human for judgment.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F5F7;--glass:rgba(255,255,255,.66);--s1:rgba(255,255,255,.8);--s2:rgba(0,0,0,.055);--line:rgba(0,0,0,.08);--ink:#1D1D1F;--mut:#6E6E73;--a:#007AFF;--hl:rgba(255,255,255,.95);--glow:rgba(0,122,255,.14);--sh:0 24px 60px -28px rgba(0,0,0,.3);
+--t:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",system-ui,sans-serif;--d:var(--t);--g:linear-gradient(90deg,#0A84FF,#BF5AF2 55%,#FF375F);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--glass:rgba(255,255,255,.07);--s1:rgba(255,255,255,.07);--s2:rgba(255,255,255,.09);--line:rgba(255,255,255,.12);--ink:#F5F5F7;--mut:#A1A1A6;--a:#0A84FF;--hl:rgba(255,255,255,.2);--glow:rgba(10,132,255,.2);--sh:0 24px 60px -28px rgba(0,0,0,.9)}}
+:root[data-theme="dark"]{--bg:#000;--glass:rgba(255,255,255,.07);--s1:rgba(255,255,255,.07);--s2:rgba(255,255,255,.09);--line:rgba(255,255,255,.12);--ink:#F5F5F7;--mut:#A1A1A6;--a:#0A84FF;--hl:rgba(255,255,255,.2);--glow:rgba(10,132,255,.2);--sh:0 24px 60px -28px rgba(0,0,0,.9)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.55 var(--t);letter-spacing:-.011em;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+body::after{content:"";position:fixed;inset:-12%;z-index:-1;pointer-events:none;filter:blur(40px);translate:0 calc(var(--sy,0)*-.1px);animation:dr 26s ease-in-out infinite alternate;
+background:radial-gradient(34% 34% at 18% 18%,rgba(10,132,255,.3),transparent 70%),radial-gradient(32% 32% at 82% 14%,rgba(191,90,242,.24),transparent 70%),radial-gradient(38% 38% at 72% 78%,rgba(255,55,95,.17),transparent 70%),radial-gradient(30% 30% at 14% 84%,rgba(255,159,10,.15),transparent 70%)}
+@keyframes dr{to{transform:translate3d(3%,2.5%,0) scale(1.1)}}
+a{color:inherit}:focus-visible{outline:3px solid var(--a);outline-offset:3px;border-radius:12px}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;width:100%;height:3px;background:var(--g);transform:scaleX(0);transform-origin:left;z-index:70}
+.gl,nav,.c,.win,.stat,.ct,.pn{background:var(--glass);-webkit-backdrop-filter:blur(26px) saturate(180%);backdrop-filter:blur(26px) saturate(180%);border:1px solid var(--line);box-shadow:inset 0 1px 0 var(--hl),var(--sh)}
+nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;max-width:calc(100% - 20px)}
+nav .lg{font:700 1rem var(--d);text-decoration:none;padding:8px 14px}
+nav a.l{text-decoration:none;color:var(--mut);font-weight:500;font-size:.93rem;padding:8px 13px;border-radius:999px;transition:background .3s,color .3s}
+nav a.l.on,nav a.l:hover{color:var(--ink);background:var(--s2)}
+@media(max-width:720px){nav{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 12px)}nav .lg,nav a.hm{display:none}nav a.l{padding:10px 11px;font-size:.88rem}body{padding-bottom:84px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font:600 1rem var(--t);text-decoration:none;border:1px solid var(--line);background:var(--glass);color:var(--ink);cursor:pointer;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);transition:transform .5s cubic-bezier(.34,1.56,.64,1),filter .2s}
+.btn:active{transform:scale(.94)}.btn.p{background:var(--a);color:#fff;border:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 10px 30px -10px var(--a)}.btn.p:hover{filter:brightness(1.08)}.btn.s{min-height:38px;padding:0 16px;font-size:.92rem}
+#th{width:38px;height:38px;border-radius:50%;border:0;background:var(--s2);color:var(--ink);cursor:pointer;font-size:1rem;transition:transform .5s cubic-bezier(.34,1.56,.64,1)}#th:active{transform:scale(.88) rotate(90deg)}
+h1,h2,h3{font-family:var(--d);margin:0;letter-spacing:-.045em;line-height:1.03}
+h1{font-size:clamp(2.7rem,10vw,6.4rem);font-weight:700;max-width:14ch}
+h2{font-size:clamp(2rem,5.6vw,3.4rem);font-weight:700;max-width:16ch}
+.gr{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--mut);font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:52ch;line-height:1.45}
+section{padding:96px 0}.hero{padding:130px 0 50px;text-align:center}.hero h1,.hero .lede{margin-left:auto;margin-right:auto}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero .row{justify-content:center}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(20px);border-radius:999px;padding:7px 15px;font-weight:500;font-size:.9rem;color:var(--mut);margin-bottom:24px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#30D158;box-shadow:0 0 0 4px rgba(48,209,88,.22)}
+.win{margin-top:56px;border-radius:30px;overflow:hidden;text-align:left}
+.bar{display:flex;align-items:center;gap:7px;padding:14px 18px;border-bottom:1px solid var(--line);color:var(--mut);font-size:.88rem}
+.bar b{width:12px;height:12px;border-radius:50%;background:var(--s2)}.bar b:nth-child(1){background:#FF5F57}.bar b:nth-child(2){background:#FEBC2E}.bar b:nth-child(3){background:#28C840}.bar span{margin-left:8px;flex:1}
+.bar em{font-style:normal;font-weight:600;padding:4px 12px;border-radius:99px;background:var(--s2);color:var(--ink);transition:background .5s,color .5s}.bar em.ok{background:var(--a);color:#fff}
+.ed{margin:0;padding:28px 26px 8px;font:600 clamp(1.2rem,3.4vw,1.8rem)/1.7 var(--d);letter-spacing:-.03em;min-height:7.6em}.ed .t{opacity:0;filter:blur(6px);transition:opacity .35s,filter .35s;position:relative;display:inline-block;margin-right:.28em}.ed .t.v{opacity:1;filter:none}
+.ed .t.k::after{content:"";position:absolute;left:0;right:100%;top:54%;height:3px;border-radius:3px;background:#FF375F;transition:right .3s}.ed .t.k.x{color:var(--mut)}.ed .t.k.x::after{right:0}
+.out{margin:0;padding:6px 26px 28px;font:700 clamp(1.5rem,4.8vw,2.5rem)/1.1 var(--d);letter-spacing:-.045em;min-height:2.7em}
+.out span{opacity:0;filter:blur(10px);transform:translateY(10px);display:inline-block;transition:opacity .7s,transform .8s cubic-bezier(.2,.9,.25,1.05),filter .7s;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}.out.on span{opacity:1;filter:none;transform:none}
+.ft{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-top:1px solid var(--line);color:var(--mut);font-size:.9rem}.ft button{background:none;border:0;color:var(--a);font:600 .95rem var(--t);cursor:pointer;padding:8px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px;text-align:left}@media(min-width:800px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{padding:22px;border-radius:24px}.stat b{display:block;font:700 2.2rem var(--d);letter-spacing:-.05em}.stat span{color:var(--mut);font-size:.93rem}
+.mq{overflow:hidden;padding:16px 0;margin-top:56px;mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq div{display:flex;gap:46px;width:max-content;animation:mq 45s linear infinite;font:600 1.15rem var(--d);color:var(--mut)}@keyframes mq{to{transform:translateX(-50%)}}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.grid{display:grid;gap:14px}.bento{grid-template-columns:1fr}@media(min-width:760px){.bento{grid-template-columns:repeat(6,1fr)}.bento .c{grid-column:span 2}.bento .c.big{grid-column:span 4}}
+.c{position:relative;padding:26px;border-radius:28px;text-align:left;color:inherit;font:inherit;cursor:pointer;overflow:hidden;display:flex;flex-direction:column;gap:10px;transition:transform .55s cubic-bezier(.34,1.56,.64,1),border-color .3s}
+.c::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),var(--glow),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.c:hover{transform:translateY(-3px)}.c:hover::before{opacity:1}.c:active{transform:scale(.97)}
+.c h3{font-size:1.28rem;letter-spacing:-.03em}.c p{margin:0;color:var(--mut);font-size:.98rem}.c .k{font-size:.82rem;font-weight:600;color:var(--a);text-transform:uppercase;letter-spacing:.05em}.c .go{margin-top:auto;padding-top:10px;font-weight:600;color:var(--a)}
+.big h3{font-size:clamp(1.7rem,3.8vw,2.5rem)}.big{background:linear-gradient(150deg,var(--glass),color-mix(in srgb,var(--a) 14%,transparent))}
+.sv{cursor:default}.sv .ic{font-size:1.8rem}.sv small{color:var(--mut);display:block;font-size:.85rem}
+.m{display:grid;gap:14px}@media(min-width:800px){.m{grid-template-columns:repeat(4,1fr)}}.m .c{cursor:default}.m .n{font:700 2.6rem var(--d);letter-spacing:-.06em}
+.fq details{border-bottom:1px solid var(--line)}.fq summary{cursor:pointer;list-style:none;font:600 1.15rem var(--d);letter-spacing:-.025em;padding:20px 0;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:62px}
+.fq summary::-webkit-details-marker{display:none}.fq summary::after{content:"+";font-size:1.7rem;color:var(--a);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}.fq details[open] summary::after{transform:rotate(135deg)}.fq p{margin:0 0 20px;color:var(--mut);max-width:62ch}
+.ct{display:grid;gap:30px;padding:30px 22px;border-radius:36px;position:relative;overflow:hidden}@media(min-width:860px){.ct{grid-template-columns:1fr 1fr;padding:54px}}
+form{display:grid;gap:14px;position:relative}label{font-weight:600;font-size:.9rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--s2);border:1px solid transparent;border-radius:16px;padding:14px 16px;width:100%;transition:background .2s,border-color .2s}input:focus,select:focus,textarea:focus{outline:none;border-color:var(--a);background:var(--glass)}
+.er{color:#FF375F;font-size:.85rem;min-height:1em;font-weight:500}.dl{display:grid;gap:8px;margin-top:22px}.dl a{font-weight:600;color:var(--a);text-decoration:none}
+footer{padding:30px 0 60px;color:var(--mut);font-size:.92rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+#sh{position:fixed;inset:0;z-index:80;pointer-events:none}#sh .bd{position:absolute;inset:0;background:rgba(0,0,0,.4);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .4s}
+#sh .pn{position:absolute;top:0;right:0;bottom:0;width:min(640px,100%);border-radius:0;border-width:0 0 0 1px;transform:translateX(100%);transition:transform .55s cubic-bezier(.2,.9,.25,1.02);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+#sh.o{pointer-events:auto}#sh.o .bd{opacity:1}#sh.o .pn{transform:none}
+@media(max-width:720px){#sh .pn{top:auto;left:0;width:100%;max-height:90vh;height:90vh;border-radius:30px 30px 0 0;border-width:1px 0 0;transform:translateY(100%)}.pn::before{content:"";width:40px;height:5px;border-radius:3px;background:var(--line);margin:9px auto 0;display:block}}
+.pn header{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-bottom:1px solid var(--line);touch-action:none}.pn header span{color:var(--a);font-weight:600;font-size:.9rem}
+.pn .cl{width:40px;height:40px;border-radius:50%;border:0;background:var(--s2);color:var(--ink);font-size:1.3rem;cursor:pointer}
+.pn .bo{overflow:auto;padding:24px 22px calc(40px + env(safe-area-inset-bottom,0px));white-space:pre-line;line-height:1.75;font-size:1.03rem}.pn h3{font-size:1.8rem;margin-bottom:8px}
+.r{opacity:0;transform:translateY(30px) scale(.97);filter:blur(10px);transition:opacity .9s,transform 1s cubic-bezier(.2,.9,.25,1.04),filter .9s;transition-delay:var(--d,0s)}.r.in{opacity:1;transform:none;filter:none}
+#in{position:fixed;inset:0;z-index:100;background:#000;display:grid;place-items:center;text-align:center;cursor:pointer;border-radius:0 0 44px 44px;transition:transform 1s cubic-bezier(.7,0,.2,1)}#in.h{transform:translateY(-102%)}
+.hi{font:400 clamp(4rem,22vw,10rem)/1.25 "Great Vibes","Snell Roundhand","Segoe Script",cursive;padding:.05em .25em;background:linear-gradient(90deg,#0A84FF,#BF5AF2,#FF375F,#FF9F0A);-webkit-background-clip:text;background-clip:text;color:transparent;min-height:1.3em}
+.hi.w{animation:wp .95s cubic-bezier(.4,0,.2,1) both}@keyframes wp{from{clip-path:inset(-20% 100% -20% 0);opacity:.3}to{clip-path:inset(-20% 0 -20% 0);opacity:1}}
+.tp{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 34px);left:0;right:0;color:#8E8E93;font-size:.9rem;letter-spacing:.02em}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.r{opacity:1;transform:none;filter:none}}
+</style>
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to content</a>
-<div class="magic-intro" id="magicIntro" aria-hidden="false">
-  <div class="magic-intro__scene">
-    <div class="magic-intro__stars" aria-hidden="true"></div>
-    <button class="magic-box" id="magicBall" type="button" aria-label="Let's go">
-      <span class="magic-box__shine"></span>
-      <span class="magic-box__face">Let's go!</span>
-      <span class="magic-box__spark magic-box__spark--one">✦</span>
-      <span class="magic-box__spark magic-box__spark--two">·</span>
-    </button>
-    <p class="magic-intro__prompt">Click the Ball <span>to see MAGIC</span></p>
-    <span class="magic-intro__hint">A small welcome from the studio</span>
+<div id="in" role="dialog" aria-label="Welcome"><div class="hi" id="hi" aria-live="polite">Hello</div><span class="tp">Tap to skip</span></div>
+<div id="pg"></div>
+<nav aria-label="Primary"><a class="lg" href="#top">ByteSpark</a><a class="l" href="#work">Work</a><a class="l" href="#services">Services</a><a class="l" href="#method">Method</a><a class="l hm" href="#faq">FAQ</a><button id="th" aria-label="Switch light or dark mode">◐</button><a class="btn p s" href="#contact">Hire me</a></nav>
+
+<main id="top">
+<section class="hero"><div class="w">
+  <span class="pill"><i></i>Open for new projects</span>
+  <h1>Words that make people <span class="gr">act.</span></h1>
+  <p class="lede" style="margin-top:22px">I’m a freelance copywriter. AI gets the draft moving fast. I rewrite it by hand, check every fact, and make it sound like you.</p>
+  <div class="row"><a class="btn p" href="#contact">Start a project</a><a class="btn" href="#work">Read the samples</a></div>
+  <div class="win" aria-label="Animated example of editing filler copy">
+    <div class="bar"><b></b><b></b><b></b><span>homepage-draft.md</span><em id="st">AI draft</em></div>
+    <p class="ed" id="ed"></p><p class="out" id="out" aria-live="polite"><span>Our platform helps teams book meetings.</span></p>
+    <div class="ft"><span>Filler out, meaning in.</span><button id="rp">Replay</button></div>
   </div>
+  <div class="stats"><div class="stat"><b data-n="8">0</b><span>Writing samples</span></div><div class="stat"><b data-n="8">0</b><span>Services offered</span></div><div class="stat"><b>100%</b><span>Human-edited</span></div><div class="stat"><b>1</b><span>Real client script</span></div></div>
 </div>
-<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div></section>
 
-<header class="nav" id="siteNav">
-  <div class="nav__inner">
-    <a href="#top" class="nav__logo" aria-label="ByteSpark home"><span class="nav__mark">B</span><span>Byte<span>spark</span></span></a>
-    <nav class="nav__links" aria-label="Primary">
-      <a href="#featured">Signal</a><a href="#work">Selected work</a><a href="#services">Capabilities</a><a href="#process">Method</a><a href="#about">Studio</a>
-    </nav>
-    <div class="nav__actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
-        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
-        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
-      </button>
-      <a href="#contact" class="btn btn--primary btn--sm">Start a project <span>↗</span></a>
-    </div>
-    <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-  <div class="nav__mobile" id="navMobile">
-    <a href="#featured">Signal</a><a href="#work">Selected work</a><a href="#services">Capabilities</a><a href="#process">Method</a><a href="#about">Studio</a><a href="#contact" class="btn btn--primary">Start a project <span>↗</span></a>
-  </div>
-</header>
-
-<main id="main">
-  <section class="hero" id="top">
-    <div class="hero__glow" aria-hidden="true"></div><div class="hero__spotlight" aria-hidden="true"></div>
-    <div class="hero__noise" aria-hidden="true"></div>
-    <div class="hero__inner">
-      <div class="hero__topline" data-reveal><span class="status-dot"></span><span>Independent writing studio</span><span class="topline-rule"></span><span>Available for select projects / 2026</span></div>
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow" data-reveal><span class="eyebrow__mark">01</span> Signal over noise</p>
-          <h1 class="hero__headline" data-reveal><span class="hero__headline-line">Make your</span><span class="hero__headline-line hero__headline-line--accent"><em>meaning</em> move.</span></h1>
-          <p class="hero__sub" data-reveal>Research-led copy and brand language for ambitious teams building the next useful thing. Human judgment, modern tools, zero filler.</p>
-          <div class="hero__cta" data-reveal><a href="#work" class="btn btn--primary">Explore the work <span>↗</span></a><a href="#contact" class="text-link">Let's talk <span>→</span></a></div>
-        </div>
-        <div class="hero__visual" data-reveal aria-label="Live writing studio interface">
-          <div class="orb orb--one"></div><div class="orb orb--two"></div>
-          <div class="signal-card">
-            <div class="signal-card__header"><span class="signal-card__label"><i></i> Live composition</span><span class="signal-card__time">00:42:18</span></div>
-            <div class="signal-card__body"><span class="signal-card__index">/ 07</span><h2>Words that<br><span>land.</span></h2><p>Clarity is not a reduction.<br>It is a signal with less noise.</p><div class="signal-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
-            <div class="signal-card__footer"><span>Human refined / AI assisted</span><strong>98.4 <b>↗</b></strong></div>
-          </div>
-          <div class="hero__stamp">B<span>·</span>S</div>
-        </div>
-      </div>
-      <div class="hero__scroll" aria-hidden="true"><span>Scroll to discover</span><i></i></div>
-      <div class="stats" data-reveal>
-        <div class="stat"><span class="stat__num" data-count="20" data-suffix="+">0</span><span class="stat__label">Projects shipped</span></div>
-        <div class="stat"><span class="stat__num" data-count="19" data-suffix="+">0</span><span class="stat__label">Writing samples</span></div>
-        <div class="stat"><span class="stat__num stat__num--text">Human first</span><span class="stat__label">Creative principle</span></div>
-        <div class="stat"><span class="stat__num stat__num--text">Open</span><span class="stat__label">For new signals</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="marquee" aria-label="Studio principles"><div class="marquee__track"><span>STRATEGY</span><b>✳</b><span>VOICE</span><b>✳</b><span>CLARITY</span><b>✳</b><span>CONVERSION</span><b>✳</b><span>STRATEGY</span><b>✳</b><span>VOICE</span><b>✳</b><span>CLARITY</span><b>✳</b><span>CONVERSION</span><b>✳</b></div></section>
-
-  <section class="section featured" id="featured"><div class="section__inner">
-    <div class="section__head" data-reveal><p class="eyebrow"><span class="eyebrow__mark">02</span> The signal</p><span class="section__count">01 / 01</span></div>
-    <div class="featured__layout">
-      <div class="featured__intro"><h2 class="section__title">A good idea deserves a voice people can hear.</h2><p class="section__lede">I help businesses translate complicated ideas into language that feels immediate, credible, and worth remembering.</p><a href="#about" class="text-link">Inside the studio <span>→</span></a></div>
-      <div class="featured__card" data-reveal><div class="featured__card-top"><span class="badge badge--real">Real client project</span><span class="featured__meta-index">CASE / 001</span></div><h3 class="featured__title">Fast Charging <em>EXPLAINED</em></h3><p class="featured__meta">YouTube technology script / Quantum Byte</p><p class="featured__blurb">A retention-focused script that turns a common battery myth into a clear, evidence-led story.</p><div class="featured__actions"><a href="https://www.youtube.com/@QuantumByte_techX" target="_blank" rel="noopener" class="btn btn--primary">Watch the result <span>↗</span></a><button class="text-link" id="readScriptBtn">Read the script <span>→</span></button></div><span class="featured__corner">↗</span></div>
-    </div>
-  </div></section>
-
-  <section class="section section--dark" id="work"><div class="section__inner">
-    <div class="section__head" data-reveal><div><p class="eyebrow"><span class="eyebrow__mark">03</span> Selected work</p><h2 class="section__title">A library of<br><em>useful words.</em></h2></div><p class="section__aside">Every sample is a small experiment in making information feel obvious.</p></div>
-    <div class="filters" id="filters" role="tablist" aria-label="Filter portfolio by category"><button class="filter active" data-filter="all">All signals</button></div>
-    <div class="portfolio__grid" id="portfolioGrid"></div>
-  </div></section>
-
-  <section class="section" id="services"><div class="section__inner">
-    <div class="section__head" data-reveal><div><p class="eyebrow"><span class="eyebrow__mark">04</span> Capabilities</p><h2 class="section__title">What the studio<br><em>tunes.</em></h2></div><p class="section__aside">From the first headline to the final period, every touchpoint should sound like you at your clearest.</p></div>
-    <div class="services__grid" id="servicesGrid"></div>
-  </div></section>
-
-  <section class="section section--dark process-section" id="process"><div class="section__inner">
-    <div class="section__head" data-reveal><div><p class="eyebrow"><span class="eyebrow__mark">05</span> Method</p><h2 class="section__title">Less guesswork.<br><em>More signal.</em></h2></div><p class="section__aside">A clear process keeps the work sharp, collaborative, and moving forward.</p></div>
-    <div class="timeline"><div class="timeline__line"></div>
-      <div class="timeline__item" data-reveal><span class="timeline__num">01</span><div><span class="timeline__tag">Find the signal</span><h3>Research</h3><p>Understand the business, the audience, and the competitive landscape before a single word is written.</p></div></div>
-      <div class="timeline__item" data-reveal><span class="timeline__num">02</span><div><span class="timeline__tag">Build the frame</span><h3>Plan</h3><p>Outline structure, key messages, and tone — the blueprint the draft will follow.</p></div></div>
-      <div class="timeline__item" data-reveal><span class="timeline__num">03</span><div><span class="timeline__tag">Make it human</span><h3>Draft, edit, verify</h3><p>Use modern tools for speed, then apply human judgment for voice, nuance, rhythm, and facts.</p></div></div>
-      <div class="timeline__item" data-reveal><span class="timeline__num">04</span><div><span class="timeline__tag">Ship with intent</span><h3>Final polish</h3><p>A last read for clarity and momentum, ready to publish and built to perform.</p></div></div>
-    </div>
-  </div></section>
-
-  <section class="section" id="about"><div class="section__inner">
-    <div class="section__head" data-reveal><div><p class="eyebrow"><span class="eyebrow__mark">06</span> The studio</p><h2 class="section__title">Human taste in an<br><em>automated world.</em></h2></div></div>
-    <div class="about__grid"><div class="about__bio"><p class="about__lead">I'm a freelance writer working at the intersection of language and technology.</p><p>AI is excellent at getting a rough shape onto the page. But nothing ships unedited. Every draft is rewritten, fact-checked, and shaped by hand until it sounds like a person who actually understands the business wrote it.</p><p>The future of good writing isn't AI versus human. It is AI for speed, human for judgment.</p><ul class="check-list"><li>Clarity beats cleverness.</li><li>Every claim gets checked.</li><li>Voice is never optional.</li></ul></div><div class="about__side"><div class="studio-panel"><span class="panel-label">Studio principles</span><div class="principle"><strong>01</strong><span>Make it clear</span></div><div class="principle"><strong>02</strong><span>Make it true</span></div><div class="principle"><strong>03</strong><span>Make it matter</span></div></div><div class="tag-grid"><span class="tag">Copywriting</span><span class="tag">Brand voice</span><span class="tag">SEO</span><span class="tag">Storytelling</span><span class="tag">Editing</span><span class="tag">Strategy</span></div></div></div>
-  </div></section>
-
-  <section class="section section--dark testimonials-section" id="testimonials"><div class="section__inner"><div class="section__head" data-reveal><div><p class="eyebrow"><span class="eyebrow__mark">07</span> Early signals</p><h2 class="section__title">The kind of response<br><em>we're building toward.</em></h2></div></div><div class="testimonials__grid"><article class="testimonial-card"><span class="badge badge--muted">Preview</span><p>“The copy immediately sounded more confident and customer-focused.”</p><div class="testimonial-card__author"><span class="avatar">AR</span><div><strong>Founder</strong><span>E-commerce brand</span></div></div></article><article class="testimonial-card"><span class="badge badge--muted">Preview</span><p>“Complex ideas became easy to understand without losing technical accuracy.”</p><div class="testimonial-card__author"><span class="avatar">MS</span><div><strong>Marketing manager</strong><span>Technology company</span></div></div></article><article class="testimonial-card"><span class="badge badge--muted">Preview</span><p>“Every sentence was carefully edited, fact-checked, and written with clarity.”</p><div class="testimonial-card__author"><span class="avatar">JP</span><div><strong>Program director</strong><span>Education platform</span></div></div></article></div></div></section>
-
-  <section class="section faq-section" id="faq"><div class="section__inner section__inner--narrow"><div class="section__head" data-reveal><div><p class="eyebrow"><span class="eyebrow__mark">08</span> FAQ</p><h2 class="section__title">Before we<br><em>begin.</em></h2></div></div><div class="accordion" id="accordion"></div></div></section>
-
-  <section class="section contact-section" id="contact"><div class="section__inner"><div class="contact__panel"><div class="contact__intro"><p class="eyebrow"><span class="eyebrow__mark">09</span> Start a project</p><h2>Have a signal<br>worth sharing?</h2><p>Tell me what you're building. I'll help you find the words for it.</p><div class="contact__direct"><a href="mailto:anasjahangirking@gmail.com">anasjahangirking@gmail.com <span>↗</span></a><a href="https://wa.me/8801771081428" target="_blank" rel="noopener">WhatsApp <span>↗</span></a></div></div><form class="contact-form" id="contactForm" novalidate><div class="form-row"><div class="field"><label for="name">Name</label><input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name"><span class="field__error" id="err-name"></span></div><div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email" placeholder="you@company.com"><span class="field__error" id="err-email"></span></div></div><div class="field"><label for="subject">What are we making?</label><select id="subject" name="subject"><option>Website copy</option><option>Landing page</option><option>Blog / SEO</option><option>Product descriptions</option><option>Brand story</option><option>Something else</option></select></div><div class="field"><label for="message">A little context</label><textarea id="message" name="message" rows="4" required placeholder="What are you building, and where does it feel stuck?"></textarea><span class="field__error" id="err-message"></span></div><input type="hidden" name="_subject" value="New inquiry from the ByteSpark website"><button type="submit" class="btn btn--primary btn--block"><span class="btn__label">Send the signal</span><span>↗</span></button><p class="form__note" id="formNote" role="status"></p></form></div></div></section>
+<section id="work"><div class="w"><div class="hd"><h2>Selected work</h2><p class="lede">Tap a card to read the full piece.</p></div><div class="grid bento" id="pf"></div></div></section>
+<section id="services"><div class="w"><div class="hd"><h2>What I write</h2><p class="lede">Clear copy for every touchpoint.</p></div><div class="grid bento" id="sv"></div></div></section>
+<section id="method"><div class="w"><div class="hd"><h2>How I work</h2><p class="lede">A simple process that keeps the work sharp.</p></div>
+<div class="m">
+<div class="c"><span class="n gr">1</span><h3>Research</h3><p>I learn the business, the audience, and the competition before writing a word.</p></div>
+<div class="c"><span class="n gr">2</span><h3>Plan</h3><p>I outline the structure, key messages, and tone.</p></div>
+<div class="c"><span class="n gr">3</span><h3>Draft, edit, verify</h3><p>Modern tools for speed. Human judgment for voice, nuance, and facts.</p></div>
+<div class="c"><span class="n gr">4</span><h3>Polish</h3><p>A last read for clarity and momentum, ready to publish.</p></div></div></div></section>
+<section id="faq"><div class="w" style="max-width:800px"><div class="hd"><h2>Before we begin</h2></div><div class="fq" id="fq"></div></div></section>
+<section id="contact"><div class="w"><div class="ct">
+  <div><h2>Got something worth saying?</h2><p class="lede" style="margin-top:16px">Tell me what you’re building and where the words feel stuck.</p>
+  <div class="dl"><a href="mailto:anasjahangirking@gmail.com">anasjahangirking@gmail.com</a><a href="https://wa.me/8801771081428" target="_blank" rel="noopener">Message on WhatsApp</a></div></div>
+  <form id="fm" novalidate>
+    <label>Name<input id="nm" autocomplete="name" placeholder="Your name"><span class="er" id="e1"></span></label>
+    <label>Email<input id="em" type="email" autocomplete="email" placeholder="you@company.com"><span class="er" id="e2"></span></label>
+    <label>What are we making?<select id="sj"></select></label>
+    <label>A little context<textarea id="ms" rows="4" placeholder="What are you building, and where does it feel stuck?"></textarea><span class="er" id="e3"></span></label>
+    <button class="btn p" type="submit">Send message</button><p class="er" id="nt" role="status"></p>
+  </form></div></div></section>
 </main>
+<footer class="w"><span>© ByteSpark. Written by a human, with attention.</span><span>Copywriter portfolio</span></footer>
 
-<footer class="footer"><div class="footer__inner"><div class="footer__brand"><span class="nav__logo"><span class="nav__mark">B</span><span>Byte<span>spark</span></span></span><p>Clear, confident copy for brands with something worth saying.</p></div><nav class="footer__links" aria-label="Footer"><a href="#work">Work</a><a href="#services">Capabilities</a><a href="#about">Studio</a><a href="#contact">Contact</a></nav><div class="footer__socials"><a href="mailto:anasjahangirking@gmail.com" aria-label="Email" class="social-icon">↗</a></div></div><div class="footer__bottom"><p>© <span id="year"></span> ByteSpark / Signal Studio</p><span>Made with attention.</span></div></footer>
+<div id="sh" aria-hidden="true"><div class="bd" data-c></div><aside class="pn" role="dialog" aria-modal="true" aria-labelledby="sht"><header><span id="shk"></span><button class="cl" data-c aria-label="Close">×</button></header><div class="bo"><h3 id="sht"></h3><div id="shb"></div></div></aside></div>
 
-<div class="modal" id="portfolioModal" aria-hidden="true"><div class="modal__backdrop" data-close></div><div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal__close" data-close aria-label="Close">×</button><p class="modal__category" id="modalCategory"></p><h3 class="modal__title" id="modalTitle"></h3><span class="badge" id="modalBadge">Sample Project</span><div class="modal__body" id="modalBody"></div></div></div>
-<script src="js/script.js?v=20261105-letsgo"></script>
+<script>
+const D={"S":[{"icon":"📦","title":"Product Descriptions","desc":"Clear, benefit-led copy that helps shoppers decide fast — built for e-commerce and marketplace listings.","benefits":"Higher conversion, less return-driving confusion","clients":"D2C brands, marketplace sellers"},{"icon":"📝","title":"Blog Writing","desc":"Well-researched articles that answer real reader questions and support SEO without keyword-stuffing.","benefits":"Organic traffic, topical authority","clients":"SaaS, agencies, niche publishers"},{"icon":"🌐","title":"Website Copy","desc":"Homepage and inner-page copy that explains what you do in plain language, fast.","benefits":"Lower bounce, clearer positioning","clients":"Startups, service businesses"},{"icon":"🚀","title":"Landing Pages","desc":"Single-goal pages built around one offer, one action, and a clear reason to act now.","benefits":"Higher conversion rate","clients":"Product launches, ad campaigns"},{"icon":"👋","title":"About Us Pages","desc":"Origin story and mission copy that builds trust without sounding like a press release.","benefits":"Stronger brand connection","clients":"Founders, small businesses"},{"icon":"🏢","title":"Business Profiles","desc":"Concise, credible company descriptions for directories, pitch decks, and partner pages.","benefits":"Consistent brand story everywhere","clients":"B2B firms, agencies"},{"icon":"📱","title":"Social Media Content","desc":"Platform-native captions and post copy that sound human, not templated.","benefits":"Better engagement, consistent voice","clients":"Small brands, personal brands"},{"icon":"🎬","title":"YouTube Scripts","desc":"Hook-first scripts structured for retention, with clear visual and pacing notes.","benefits":"Stronger watch time","clients":"Educational and tech channels"}],"P":[{"cat":"E-Commerce Copywriting","title":"Premium Product Description for a Smart Desk Lamp","teaser":"Benefit-driven product copy crafted to build trust, highlight key features, and increase purchase confidence.","body":"<strong>Premium Product Description for a Smart Desk Lamp<\/strong>\n\nA desk lamp should do more than simply brighten your workspace. It should help you stay focused, reduce eye strain, and blend naturally into your environment. This smart LED desk lamp was designed with exactly that purpose in mind.\n\nFeaturing adjustable brightness levels and three color temperature modes, it adapts effortlessly to every task. Switch to cool white light for productive work sessions, warm light for relaxed evening reading, or balanced daylight mode for everyday use. The touch-sensitive controls provide smooth, responsive adjustments without the clutter of traditional buttons.\n\nIts minimalist aluminum body complements both modern home offices and professional workspaces while occupying very little desk space. The flexible arm offers precise positioning, ensuring light reaches exactly where you need it without unwanted glare or harsh shadows.\n\nEngineered with energy-efficient LED technology, the lamp delivers consistent illumination while consuming significantly less power than conventional lighting solutions. With an estimated lifespan of over 25,000 hours, it offers years of reliable performance with virtually no maintenance.\n\nWhether you're working late, studying for exams, reading your favorite book, or attending virtual meetings, this smart desk lamp combines elegant design with practical functionality to create a workspace that's both comfortable and productive.\n\n<strong>Key Benefits<\/strong>\n\n• Adjustable brightness and three lighting modes\n• Touch-sensitive controls for effortless operation\n• Eye-friendly illumination with reduced glare\n• Energy-efficient LED technology\n• Durable premium aluminum construction\n• Compact, modern design suitable for any workspace\n\nBuilt for professionals, students, and creators alike, this lamp delivers dependable performance while enhancing the overall look and feel of your desk."},{"cat":"SEO Blog Writing","title":"Why Most Landing Pages Lose Customers in Seconds","teaser":"An SEO-optimized educational article designed to attract organic traffic while demonstrating persuasive long-form writing.","body":"<strong>Why Most Landing Pages Lose Customers in Seconds<\/strong>\n\nEvery visitor who lands on your website asks the same question within a few seconds:\n\n<strong>\"Is this what I'm looking for?\"<\/strong>\n\nIf your page doesn't answer that question immediately, you've already lost the opportunity. Most landing pages don't fail because the product is weak. They fail because the message isn't clear.\n\nA common mistake is writing headlines that describe the company instead of explaining the customer's benefit. Phrases like <em>\"Revolutionizing Digital Experiences\"<\/em> or <em>\"Innovative Business Solutions\"<\/em> sound impressive, but they don't tell visitors why they should care.\n\nHigh-converting landing pages focus on outcomes rather than features. Instead of explaining what a business does, they explain how a customer's problem will be solved.\n\nFor example:\n\n❌ \"AI-Powered Workflow Management\"\n\n✅ \"Finish Your Daily Tasks in Half the Time with AI Automation.\"\n\nThe second version immediately communicates a clear benefit that visitors can understand.\n\nAnother overlooked factor is information overload. Many pages attempt to explain every feature before establishing trust. Visitors aren't searching for every detail at first. They want confidence that they're in the right place.\n\nStrong landing pages follow a simple structure:\n\n• A headline focused on the customer's desired outcome.\n• A supporting paragraph that explains how that outcome is achieved.\n• Key benefits presented in a clear, scannable format.\n• Social proof that builds credibility.\n• One primary call-to-action without unnecessary distractions.\n\nClarity always outperforms cleverness. Visitors shouldn't have to decode your message or guess what your business offers.\n\nThe best landing pages don't convince people with flashy language. They remove uncertainty, answer questions before they're asked, and guide visitors toward a single action with confidence.\n\nWhen every sentence has a purpose, conversions become the natural result—not the lucky outcome."},{"cat":"Website Copywriting","title":"Homepage Copy for a Modern SaaS Platform","teaser":"Clear, customer-focused homepage messaging that communicates value, builds credibility, and drives sign-ups.","body":"<strong>Homepage Copy for a Modern SaaS Platform<\/strong>\n\n<strong>Headline<\/strong>\n\nRun your business, not your admin.\n\n<strong>Subheadline<\/strong>\n\nManage projects, invoices, clients, and team communication from one intuitive platform designed to save time and keep your business moving forward.\n\n<strong>Why Choose Our Platform?<\/strong>\n\nGrowing businesses shouldn't have to juggle multiple tools just to stay organized. Our platform brings everything together in one secure workspace, helping your team collaborate more efficiently while reducing repetitive manual work.\n\nWhether you're managing five clients or five hundred, every feature is built around one goal: helping your business operate faster with less effort.\n\n<strong>What You Can Do<\/strong>\n\n• Organize projects with real-time collaboration.\n• Track invoices and payments in one dashboard.\n• Manage client communication without switching platforms.\n• Generate reports that help you make smarter business decisions.\n• Keep your entire team connected from anywhere.\n\n<strong>Built for Growing Businesses<\/strong>\n\nFrom freelancers and agencies to startups and established companies, the platform scales alongside your business. No complicated setup, no unnecessary features, and no steep learning curve.\n\nInstead of spending hours managing software, you can spend more time serving clients, closing deals, and growing your business.\n\n<strong>Call to Action<\/strong>\n\nStart your free trial today and discover how simple business management can be.\n\nNo credit card required. Cancel anytime."},{"cat":"Brand Story","title":"Brand Story for a Specialty Coffee Company","teaser":"Authentic storytelling that creates emotional connection, strengthens brand identity, and builds customer trust.","body":"<strong>Brand Story for a Specialty Coffee Company<\/strong>\n\nGreat coffee begins long before it reaches your cup. It starts with the people who grow it, the care they invest in every harvest, and the belief that quality should never come at the expense of honesty.\n\nOur journey began with a simple question:\n\n<strong>Why should exceptional coffee be difficult to trust?<\/strong>\n\nToo many brands rely on polished marketing while revealing very little about where their coffee comes from or how it's produced. We wanted to build something different. Every decision we make is guided by transparency, consistency, and respect for the farmers who make our work possible.\n\nWe partner with growers who share our commitment to sustainable farming and responsible sourcing. Every batch is carefully selected, roasted in small quantities, and tested for quality before it reaches our customers. This approach allows us to preserve the unique character of every bean while ensuring a consistently exceptional cup.\n\nFor us, coffee isn't simply another product on a shelf. It's part of someone's morning routine, an afternoon conversation, or a late-night work session. Those everyday moments deserve something crafted with genuine care.\n\nWe believe great brands earn trust through actions rather than promises. That's why we're committed to clear sourcing, honest communication, and uncompromising quality in everything we do.\n\nEvery cup reflects the same values that shaped our company from the beginning: authenticity, craftsmanship, and respect for the people behind every harvest.\n\n<strong>Our Promise<\/strong>\n\n• Ethically sourced coffee from trusted farming partners.\n• Small-batch roasting for maximum freshness.\n• Complete transparency from origin to cup.\n• Consistent quality without unnecessary complexity.\n\nBecause great coffee isn't defined by marketing.\n\nIt's defined by the experience people remember after the last sip."},{"cat":"Menu Copywriting","title":"Restaurant Menu Designed to Increase Orders","teaser":"Descriptive menu copy that makes every dish memorable while encouraging higher-value customer purchases.","body":"<strong>Restaurant Menu Designed to Increase Orders<\/strong>\n\nEvery memorable dining experience begins before the first bite. The right menu doesn't simply list ingredients. It creates anticipation, highlights craftsmanship, and helps guests feel confident about every choice they make.\n\nOur menu is carefully written to celebrate fresh ingredients, balanced flavors, and the experience behind each dish. Every description is designed to be informative without overwhelming the reader, allowing the food to remain the true focus.\n\n<strong>Signature Dishes<\/strong>\n\n<strong>Wood-Fired Herb Chicken<\/strong>\n\nFree-range chicken marinated for 24 hours in fresh herbs, garlic, and citrus, then slow-roasted over natural oak fire. Served with roasted seasonal vegetables and a light herb butter that enhances every bite.\n\n<strong>Grilled Atlantic Salmon<\/strong>\n\nFresh Atlantic salmon grilled until perfectly tender and paired with creamy lemon risotto, asparagus, and a delicate white wine butter sauce that complements without overpowering the fish.\n\n<strong>Truffle Mushroom Pasta<\/strong>\n\nFresh fettuccine tossed with sautéed wild mushrooms, roasted garlic, Parmesan cheese, and a touch of black truffle oil. Rich, comforting, and perfectly balanced.\n\n<strong>Classic Ribeye Steak<\/strong>\n\nA premium 12-ounce ribeye grilled to your preferred temperature and finished with garlic herb butter. Served alongside crispy rosemary potatoes and seasonal vegetables.\n\n<strong>Desserts<\/strong>\n\nComplete your meal with our signature Chocolate Lava Cake, served warm with handcrafted vanilla bean ice cream and fresh berries.\n\n<strong>Our Philosophy<\/strong>\n\nEvery ingredient is selected for freshness. Every dish is prepared to order. Every plate is served with the belief that exceptional food deserves thoughtful presentation and honest craftsmanship.\n\nGreat dining isn't created by recipes alone.\n\nIt's created by memorable experiences shared around the table."},{"cat":"YouTube Scriptwriting","title":"Educational Script for a Technology Channel","teaser":"A retention-focused YouTube script featuring a compelling hook, structured storytelling, and engaging explanations.","body":"<strong>Educational Script for a Technology Channel<\/strong>\n\n<strong>[HOOK | 0:00 - 0:15]<\/strong>\n\nNARRATOR:\n\n\"What if I told you your Wi-Fi isn't actually slow? The real problem might be happening before your internet connection even reaches your device.\"\n\n[Visual: A laptop loading slowly while multiple phones, TVs, and smart devices connect to the same router.]\n\n<strong>[INTRO | 0:15 - 0:40]<\/strong>\n\nEvery evening, millions of people experience slower internet speeds. Most blame their internet provider. Others restart the router and hope for the best.\n\nBut in many cases, neither is the real cause.\n\nThe biggest culprit is network congestion inside your own home.\n\nLet's see why.\n\n<strong>[EXPLANATION | 0:40 - 2:00]<\/strong>\n\nThink of your Wi-Fi like a conversation in a crowded room.\n\nOne person can speak clearly.\n\nTen people speaking at the same time create confusion.\n\nYour router works in exactly the same way.\n\nEvery phone, laptop, smart TV, gaming console, security camera, and smart speaker competes for the same wireless airtime.\n\nEven devices sitting idle still communicate with your router in the background.\n\nThe more connected devices you have, the less time each one gets to transmit data.\n\nThat's why your connection feels slower during the evening when everyone in your home is streaming, gaming, or attending video meetings.\n\n<strong>[VISUAL DEMONSTRATION]<\/strong>\n\nShow an animation comparing:\n\n• One device connected to a router.\n• Five devices sharing bandwidth.\n• Fifteen devices competing for wireless airtime.\n\nDisplay how available bandwidth is divided between devices.\n\n<strong>[PRACTICAL SOLUTIONS | 2:00 - 3:00]<\/strong>\n\nHere are three simple ways to improve your Wi-Fi performance:\n\n• Move your router to an open, central location.\n• Connect high-bandwidth devices to the 5 GHz network whenever possible.\n• Restart your router regularly to clear temporary network issues.\n\nIf your router is more than five years old, upgrading to a modern Wi-Fi 6 router can significantly improve speed and stability.\n\n<strong>[OUTRO | 3:00 - 3:20]<\/strong>\n\nUnderstanding how Wi-Fi actually works helps you solve problems instead of guessing.\n\nTechnology isn't magic.\n\nOnce you know what's happening behind the scenes, fixing it becomes much easier.\n\nIf you enjoyed this explanation, subscribe for more practical technology guides that make complex topics simple."},{"cat":"Business Copywriting","title":"Professional Company Profile for a Creative Agency","teaser":"A concise yet persuasive company profile that reinforces credibility across websites, proposals, and marketing materials.","body":"<strong>Professional Company Profile for a Creative Agency<\/strong>\n\nGreat businesses are remembered for more than the services they provide. They're remembered for the problems they solve, the relationships they build, and the results they consistently deliver.\n\nFounded with a commitment to thoughtful design and strategic communication, our agency helps ambitious businesses transform ideas into compelling digital experiences. We combine creativity, technology, and clear messaging to build brands that stand out in competitive markets.\n\nFrom startups launching their first product to established companies refreshing their identity, every project begins with understanding the client's goals before creating solutions tailored to their audience.\n\nOur multidisciplinary team specializes in website design, brand identity, UI/UX design, copywriting, and digital strategy. Rather than following trends, we focus on creating timeless, functional experiences that support long-term business growth.\n\nEvery project follows a structured process:\n\n• Discovery and research\n• Strategy and planning\n• Creative design\n• Content development\n• Review and refinement\n• Launch and ongoing support\n\nThis collaborative approach ensures every decision is backed by purpose, not assumptions.\n\nOver the years, we've partnered with businesses across technology, education, healthcare, e-commerce, and professional services, helping them strengthen their online presence and communicate with greater clarity.\n\n<strong>Why Clients Choose Us<\/strong>\n\n• Strategic thinking backed by research.\n• Clear communication throughout every project.\n• Reliable delivery without compromising quality.\n• Solutions tailored to business goals—not templates.\n\nWe believe successful partnerships are built on trust, transparency, and measurable results. Every project is an opportunity to create work that not only looks exceptional but also delivers lasting value for our clients.\n\nBecause great brands aren't built overnight.\n\nThey're built through consistent strategy, thoughtful execution, and meaningful collaboration."},{"cat":"Landing Page Copywriting","title":"Conversion-Focused Landing Page for a Productivity App","teaser":"Strategic landing page copy built around one offer, one audience, and one clear conversion goal.","body":"<strong>Conversion-Focused Landing Page for a Productivity App<\/strong>\n\n<strong>Headline<\/strong>\n\nFocus on what matters. Leave distractions behind.\n\n<strong>Subheadline<\/strong>\n\nBoost your productivity with an intelligent focus app that blocks distractions, organizes your workflow, and helps you accomplish more in less time.\n\n<strong>Why Professionals Choose FocusFlow<\/strong>\n\nStaying productive has never been more challenging. Endless notifications, social media, emails, and constant interruptions make deep work almost impossible.\n\nFocusFlow is designed to solve that problem.\n\nWith one click, it creates a distraction-free environment so you can concentrate on your most important tasks without unnecessary interruptions.\n\nWhether you're studying for exams, writing reports, coding your next project, or managing a busy workload, FocusFlow helps you stay focused from start to finish.\n\n<strong>Key Features<\/strong>\n\n• Block distracting websites and applications instantly.\n• Smart Focus Timer based on proven productivity techniques.\n• Daily productivity reports and progress tracking.\n• Custom focus sessions tailored to your workflow.\n• Automatic break reminders to prevent burnout.\n• Secure cloud synchronization across all your devices.\n\n<strong>Designed for Modern Professionals<\/strong>\n\nFreelancers, students, entrepreneurs, developers, designers, and remote teams all face the same challenge: protecting their attention.\n\nFocusFlow provides the structure you need without adding unnecessary complexity.\n\nSimple to set up.\n\nPowerful enough to become part of your daily routine.\n\n<strong>What You'll Gain<\/strong>\n\n• Complete more meaningful work every day.\n• Reduce digital distractions.\n• Improve concentration during deep work sessions.\n• Build healthier productivity habits.\n• Stay organized without feeling overwhelmed.\n\n<strong>Call to Action<\/strong>\n\nStart your free 14-day trial today.\n\nNo credit card required. No hidden fees. Cancel anytime.\n\nTake control of your attention—and let your best work speak for itself."}],"F":[{"q":"Why AI-assisted writing?","a":"AI is excellent at producing a fast first draft and exploring structure — but it also confidently states things that aren't true and tends toward generic phrasing. Using it for speed, then rewriting, fact-checking, and voicing every piece by hand, gets the turnaround benefit without the accuracy or authenticity risk."},{"q":"How long does delivery take?","a":"Most single pieces (a product description, a landing page section) are delivered within 24–72 hours depending on research depth required. Larger projects — a full site's copy, a multi-part blog series — are scoped with a timeline upfront before work begins."},{"q":"Can you write in different tones?","a":"Yes. Tone is set by the brand and audience, not by default habit — playful and irreverent for a DTC brand, precise and restrained for a fintech product, warm and plain for a healthcare service. A short brief or existing brand voice guide speeds this up considerably."},{"q":"What industries do you write for?","a":"Most experience so far is in tech, SaaS, e-commerce, and education — the samples above reflect that. I'm glad to take on other industries with extra research time built into the timeline and cost."},{"q":"Do you disclose when content is AI-assisted?","a":"Always, if asked, and it's stated plainly on this page. The AI-assisted step is treated as a tool in the process, not something to hide — the human editing and fact-checking step is what's actually being sold."}]}, FORM_ENDPOINT="", EMAIL="anasjahangirking@gmail.com";
+const $=s=>document.querySelector(s), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const buzz=p=>{try{if(!reduce&&navigator.vibrate)navigator.vibrate(p)}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+/* theme */
+const root=document.documentElement;
+$('#th').onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark';buzz(10)};
+/* progress + nav */
+const pg=$('#pg');addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?scrollY/h:0)+')'},{passive:true});
+const links=[...document.querySelectorAll('nav a.l')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.hash==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>io.observe(s));
+/* render */
+$('#mq').innerHTML=[...D.S,...D.S].map(s=>'<span>'+esc(s.title)+'</span>').join('');
+const feat=D.P.length-1;
+$('#pf').innerHTML=D.P.map((p,i)=>'<button class="c'+(i===feat?' big':'')+'" data-i="'+i+'"><span class="k">'+esc(p.cat)+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.teaser)+'</p><span class="go">Read the piece →</span></button>').join('');
+$('#sv').innerHTML=D.S.map(s=>'<div class="c sv"><span class="ic">'+esc(s.icon)+'</span><h3>'+esc(s.title)+'</h3><p>'+esc(s.desc)+'</p><small>Best for: '+esc(s.clients)+'</small></div>').join('');
+$('#fq').innerHTML=D.F.map(f=>'<details><summary>'+esc(f.q)+'</summary><p>'+esc(f.a)+'</p></details>').join('');
+$('#sj').innerHTML=D.S.map(s=>'<option>'+esc(s.title)+'</option>').join('')+'<option>Something else</option>';
+document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>buzz(8)));
+document.addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.c');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}});
+/* counters */
+document.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n;if(reduce){el.textContent=n;return}
+ new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();let t0;const f=t=>{t0=t0||t;const k=Math.min((t-t0)/900,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)}}).observe(el)});
+/* slide-over reader */
+const sh=$('#sh');let last;
+function openSheet(i){const p=D.P[i];last=document.activeElement;$('#shk').textContent=p.cat;$('#sht').textContent=p.title;$('#shb').innerHTML=p.body;sh.classList.add('o');sh.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';buzz(14);setTimeout(()=>sh.querySelector('.cl').focus(),50)}
+function closeSheet(){sh.classList.remove('o');sh.setAttribute('aria-hidden','true');document.body.style.overflow='';buzz(8);last&&last.focus()}
+$('#pf').addEventListener('click',e=>{const c=e.target.closest('.c');if(c)openSheet(+c.dataset.i)});
+sh.addEventListener('click',e=>{if(e.target.closest('[data-c]'))closeSheet()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&sh.classList.contains('o'))closeSheet()});
+/* hero editing animation */
+const parts=[['Our'],['innovative,',1],['cutting-edge',1],['platform'],['will'],['leverage',1],['synergy',1],['to'],['empower',1],['teams'],['to'],['book'],['meetings'],['seamlessly.',1]];
+const ed=$('#ed'),out=$('#out'),st=$('#st');let run=0;
+ed.innerHTML=parts.map(p=>'<span class="t'+(p[1]?' k':'')+'">'+p[0]+'</span>').join('');
+const T=[...ed.children],K=T.filter(t=>t.classList.contains('k'));
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+async function play(){const id=++run;T.forEach(t=>t.classList.remove('v','x'));out.classList.remove('on');st.textContent='AI draft';st.classList.remove('ok');
+ if(reduce){T.forEach(t=>t.classList.add('v'));K.forEach(t=>t.classList.add('x'));out.classList.add('on');st.textContent='Human edit';st.classList.add('ok');return}
+ for(const t of T){if(id!==run)return;t.classList.add('v');await wait(70)}
+ await wait(500);
+ for(const k of K){if(id!==run)return;k.classList.add('x');buzz(14);await wait(330)}
+ await wait(250);if(id!==run)return;st.textContent='Human edit';st.classList.add('ok');out.classList.add('on');buzz([30,40,30,40,90])}
+$('#rp').onclick=()=>{buzz(10);play()};
+/* intro */
+const intro=$('#in'),hi=$('#hi');let started=false,iv;
+function begin(){if(started)return;started=true;clearTimeout(iv);intro.classList.add('h');document.body.style.overflow='';setTimeout(()=>intro.remove(),1100);setTimeout(play,500)}
+function end(){try{sessionStorage.setItem('bs','1')}catch(e){}buzz([30,40,70]);begin()}
+const hello=['Hello','হ্যালো','Hola','Bonjour','こんにちは','مرحبا','Ciao'];
+let seen=false;try{seen=sessionStorage.getItem('bs')==='1'}catch(e){}
+if(seen||reduce){intro.remove();started=true;play()}else{document.body.style.overflow='hidden';let i=0;const next=()=>{if(i>=hello.length){end();return}hi.textContent=hello[i];hi.classList.remove('w');void hi.offsetWidth;hi.classList.add('w');buzz(i?10:22);i++;iv=setTimeout(next,i===1?1200:900)};next()}
+intro.onclick=end;
+/* form */
+$('#fm').addEventListener('submit',async e=>{e.preventDefault();
+ const n=$('#nm').value.trim(),m=$('#em').value.trim(),s=$('#ms').value.trim(),sj=$('#sj').value;
+ $('#e1').textContent=n?'':'Enter your name.';$('#e2').textContent=/^\S+@\S+\.\S+$/.test(m)?'':'Enter a valid email.';$('#e3').textContent=s?'':'Add a short message.';
+ if(!n||!/^\S+@\S+\.\S+$/.test(m)||!s){buzz([20,40,20]);return}
+ const nt=$('#nt');
+ if(!FORM_ENDPOINT){location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('New inquiry: '+sj)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+m+'\n\n'+s);nt.textContent='Opening your email app to send this.';return}
+ try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{Accept:'application/json'},body:new FormData(e.target)});if(r.ok){nt.textContent='Thanks, your message is in.';e.target.reset();buzz([30,40,90])}else nt.textContent='Something went wrong. Try email or WhatsApp.'}catch(x){nt.textContent='Could not reach the server. Try email or WhatsApp.'}});
+
+/* depth, reveal, sheet drag */
+addEventListener('scroll',()=>root.style.setProperty('--sy',scrollY),{passive:true});
+if(!reduce){const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;ro.unobserve(el);el.classList.add('in');setTimeout(()=>el.classList.remove('r','in'),1300)}}),{threshold:.12});
+ document.querySelectorAll('.hd,.win,.stat,.c,.fq details,.ct').forEach((el,i)=>{el.classList.add('r');el.style.setProperty('--d',(i%4)*.08+'s');ro.observe(el)})}
+let y0=null;const pn=sh.querySelector('.pn');
+pn.addEventListener('touchstart',e=>{if(innerWidth<=720&&e.target.closest('header'))y0=e.touches[0].clientY},{passive:true});
+pn.addEventListener('touchmove',e=>{if(y0!==null){pn.style.transition='none';pn.style.transform='translateY('+Math.max(0,e.touches[0].clientY-y0)+'px)'}},{passive:true});
+pn.addEventListener('touchend',e=>{if(y0===null)return;const d=e.changedTouches[0].clientY-y0;y0=null;pn.style.transition='';pn.style.transform='';if(d>110)closeSheet()});
+</script>
 </body>
 </html>
