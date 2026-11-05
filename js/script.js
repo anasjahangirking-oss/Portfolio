@@ -103,10 +103,10 @@
     return text.split(" ").map(w => `<span class="word">${w}</span>`).join(" ");
   }
 
-  if (prefersReduced) {
+  if (line1 && line2 && prefersReduced) {
     line1.innerHTML = wordsSpan("Words that build trust.");
     line2.innerHTML = wordsSpan("Copy that drives action.");
-  } else {
+  } else if (line1 && line2) {
     const draft1 = "Text that sounds okay.";
     const final1 = "Words that build trust.";
     const draft2 = "Copy that sort of works.";
