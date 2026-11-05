@@ -15,9 +15,11 @@
   }
   if (magicIntro && magicBall) {
     if (prefersReduced) {
-      magicIntro.classList.add("is-complete");
-      magicIntro.setAttribute("aria-hidden", "true");
-      window.setTimeout(() => magicIntro.remove(), 1000);
+      magicIntro.classList.add("is-static");
+      magicBall.addEventListener("click", closeMagicIntro);
+      magicIntro.addEventListener("click", (event) => {
+        if (event.target === magicIntro) closeMagicIntro();
+      });
     } else {
       magicBall.addEventListener("click", closeMagicIntro);
       magicIntro.addEventListener("click", (event) => {
