@@ -4,6 +4,25 @@
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  /* Native-feeling press feedback where the device supports it. */
+  const hapticTargets = "button, .btn, .text-link";
+  const lastHaptic = new WeakMap();
+  function triggerHaptic(target){
+    if (!("vibrate" in navigator)) return;
+    const now = performance.now();
+    if (now - (lastHaptic.get(target) || 0) < 80) return;
+    lastHaptic.set(target, now);
+    navigator.vibrate(8);
+  }
+  document.addEventListener("pointerdown", (event) => {
+    const target = event.target.closest(hapticTargets);
+    if (target) triggerHaptic(target);
+  }, { passive: true });
+  document.addEventListener("click", (event) => {
+    const target = event.target.closest(hapticTargets);
+    if (target) triggerHaptic(target);
+  });
+
   /* =========================================================
      Theme toggle (in-memory only — no persistence by design)
      ========================================================= */
@@ -635,6 +654,7 @@ Take control of your attention—and let your best work speak for itself.`
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+    modal.querySelector(".modal__close").focus();
   }
   function closeModal(){
     modal.classList.remove("is-open");
