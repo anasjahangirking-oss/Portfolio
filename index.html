@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#F5F5F7">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ByteSpark — Copywriting that moves people</title>
-<!-- Galaxy S21 / Chrome tuning: same visual assets and shader resolution; render work is scheduled more efficiently. -->
 <meta name="description" content="Freelance copywriter turning complex ideas into clear, confident copy. AI for speed, human for judgment.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -14,7 +13,7 @@
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--glass:rgba(255,255,255,.07);--s1:rgba(255,255,255,.07);--s2:rgba(255,255,255,.09);--line:rgba(255,255,255,.12);--ink:#F5F5F7;--mut:#A1A1A6;--a:#0A84FF;--hl:rgba(255,255,255,.2);--glow:rgba(10,132,255,.2);--sh:0 8px 24px -16px rgba(0,0,0,.8)}}
 :root[data-theme="dark"]{--bg:#000;--glass:rgba(255,255,255,.07);--s1:rgba(255,255,255,.07);--s2:rgba(255,255,255,.09);--line:rgba(255,255,255,.12);--ink:#F5F5F7;--mut:#A1A1A6;--a:#0A84FF;--hl:rgba(255,255,255,.2);--glow:rgba(10,132,255,.2);--sh:0 8px 24px -16px rgba(0,0,0,.8)}
-*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px;overflow-x:clip}body{max-width:100%;overflow-x:clip}
+*,*::before,*::after{box-sizing:border-box}html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.55 var(--t);letter-spacing:-.011em;overflow-x:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
 body::after{content:"";position:fixed;inset:-12%;z-index:-1;pointer-events:none;
@@ -24,7 +23,7 @@ a{color:inherit}:focus-visible{outline:3px solid var(--a);outline-offset:3px;bor
 .w{max-width:1120px;margin:0 auto;padding:0 20px}
 #pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;width:100%;height:3px;background:var(--g);transform:scaleX(0);transform-origin:left;z-index:70}
 .gl,nav,.c,.win,.stat,.ct,.pn{background:var(--glass);border:1px solid var(--line);box-shadow:inset 0 1px 0 var(--hl),var(--sh)}nav{-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
-nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;transform:translateX(-50%);z-index:50;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:2px;padding:6px;border-radius:999px;width:max-content;max-width:calc(100vw - 24px);min-width:0;box-sizing:border-box}
+nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;max-width:calc(100% - 20px)}
 nav .lg{font:700 1rem var(--d);text-decoration:none;padding:8px 14px}
 nav a.l{text-decoration:none;color:var(--mut);font-weight:500;font-size:.93rem;padding:8px 13px;border-radius:999px;transition:background .3s,color .3s}
 nav a.l.on,nav a.l:hover{color:var(--ink);background:var(--s2)}
@@ -56,7 +55,7 @@ section{padding:96px 0}.hero{padding:130px 0 50px;text-align:center}.hero h1,.he
 .mq div{display:flex;gap:46px;width:max-content;animation:mq 45s linear infinite;font:600 1.15rem var(--d);color:var(--mut)}@keyframes mq{to{transform:translateX(-50%)}}
 .hd{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
 .grid{display:grid;gap:14px}.bento{grid-template-columns:1fr}@media(min-width:760px){.bento{grid-template-columns:repeat(6,1fr)}.bento .c{grid-column:span 2}.bento .c.big{grid-column:span 4}}
-.c{contain:layout style;position:relative;padding:26px;border-radius:28px;text-align:left;color:inherit;font:inherit;cursor:pointer;overflow:hidden;display:flex;flex-direction:column;gap:10px;transition:transform .55s cubic-bezier(.34,1.56,.64,1),border-color .3s}
+.c{position:relative;padding:26px;border-radius:28px;text-align:left;color:inherit;font:inherit;cursor:pointer;overflow:hidden;display:flex;flex-direction:column;gap:10px;transition:transform .55s cubic-bezier(.34,1.56,.64,1),border-color .3s}
 .c::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),var(--glow),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
 .c:hover{transform:translateY(-3px)}.c:hover::before{opacity:1}.c:active{transform:scale(.97)}
 .c h3{font-size:1.28rem;letter-spacing:-.03em}.c p{margin:0;color:var(--mut);font-size:.98rem}.c .k{font-size:.82rem;font-weight:600;color:var(--a);text-transform:uppercase;letter-spacing:.05em}.c .go{margin-top:auto;padding-top:10px;font-weight:600;color:var(--a)}
@@ -77,10 +76,10 @@ footer{padding:30px 0 60px;color:var(--mut);font-size:.92rem;display:flex;justif
 .pn header{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-bottom:1px solid var(--line);touch-action:none}.pn header span{color:var(--a);font-weight:600;font-size:.9rem}
 .pn .cl{width:40px;height:40px;border-radius:50%;border:0;background:var(--s2);color:var(--ink);font-size:1.3rem;cursor:pointer}
 .pn .bo{overflow:auto;padding:24px 22px calc(40px + env(safe-area-inset-bottom,0px));white-space:pre-line;line-height:1.75;font-size:1.03rem}.pn h3{font-size:1.8rem;margin-bottom:8px}
-.r{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .8s cubic-bezier(.2,.9,.25,1.04);transition-delay:var(--rd,0s)}.r.in{opacity:1;transform:none}
+.r{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .8s cubic-bezier(.2,.9,.25,1.04);transition-delay:var(--d,0s)}.r.in{opacity:1;transform:none}
 #in{position:fixed;inset:0;z-index:100;background:#000;display:grid;place-items:center;text-align:center;cursor:pointer;border-radius:0 0 44px 44px;transition:transform 1s cubic-bezier(.7,0,.2,1)}#in.h{transform:translateY(-102%)}
 .hi{font:400 clamp(4rem,22vw,10rem)/1.25 "Great Vibes","Snell Roundhand","Segoe Script",cursive;padding:.05em .25em;background:linear-gradient(90deg,#0A84FF,#BF5AF2,#FF375F,#FF9F0A);-webkit-background-clip:text;background-clip:text;color:transparent;min-height:1.3em}
-.hi.wp{animation:wp .55s cubic-bezier(.4,0,.2,1) both}@keyframes wp{from{clip-path:inset(-20% 100% -20% 0);opacity:.3}to{clip-path:inset(-20% 0 -20% 0);opacity:1}}
+.hi.w{animation:wp .95s cubic-bezier(.4,0,.2,1) both}@keyframes wp{from{clip-path:inset(-20% 100% -20% 0);opacity:.3}to{clip-path:inset(-20% 0 -20% 0);opacity:1}}
 .tp{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 34px);left:0;right:0;color:#8E8E93;font-size:.9rem;letter-spacing:.02em}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.r{opacity:1;transform:none;filter:none}}
 
@@ -92,13 +91,13 @@ section{padding:112px 0}
 h1{font-size:clamp(3rem,11.5vw,7.2rem);letter-spacing:-.055em;line-height:.98}
 h2{letter-spacing:-.05em}
 h2[data-e]::before{content:attr(data-e);display:block;font:600 .74rem var(--t);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-.hero{position:relative}.hero::before{content:"";position:absolute;inset:0 -15% auto;height:620px;background:radial-gradient(48% 58% at 50% 0%,rgba(10,132,255,.24),rgba(191,90,242,.11) 46%,transparent 72%);pointer-events:none;z-index:-1}
+.hero{position:relative}.hero::before{content:"";position:absolute;inset:0 0 auto;height:620px;background:radial-gradient(48% 58% at 50% 0%,rgba(10,132,255,.24),rgba(191,90,242,.11) 46%,transparent 72%);pointer-events:none;z-index:-1}
 .wd{display:inline-block;opacity:0;transform:translateY(45%)}
 body.go .wd{animation:up 1s cubic-bezier(.2,.9,.25,1) both;animation-delay:calc(var(--i)*.09s)}
 @keyframes up{from{opacity:0;transform:translateY(45%)}to{opacity:1;transform:none}}
 .hero .lede,.hero .row,.hero .pill{opacity:0}body.go .hero .pill,body.go .hero .lede,body.go .hero .row{animation:fi 1s ease both}body.go .hero .lede{animation-delay:.55s}body.go .hero .row{animation-delay:.75s}@keyframes fi{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .c,.win,.stat,.ct{border-color:transparent}
-.c::after,.win::after,.stat::after,.ct::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:var(--hair);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);pointer-events:none}
+.c::after,.win::after,.stat::after,.ct::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:var(--hair);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask-composite:exclude;pointer-events:none}
 .win,.stat,.ct{position:relative}
 .big{box-shadow:inset 0 1px 0 var(--hl),0 36px 90px -56px rgba(10,132,255,.75)}
 .btn.p{background:linear-gradient(135deg,#0A84FF,#5E5CE6 58%,#BF5AF2);position:relative;overflow:hidden}
@@ -111,7 +110,7 @@ body.go .wd{animation:up 1s cubic-bezier(.2,.9,.25,1) both;animation-delay:calc(
 .br{position:absolute;top:calc(env(safe-area-inset-top,0px) + 30px);left:0;right:0;letter-spacing:.55em;font-size:.72rem;font-weight:600;color:#E8CE9A;opacity:.8}
 .hi{filter:drop-shadow(0 0 40px rgba(191,90,242,.35))}
 @media(prefers-reduced-motion:reduce){.wd,.hero .lede,.hero .row,.hero .pill{opacity:1!important;transform:none!important}}
-#gl{position:absolute;top:0;left:0;width:100%;height:min(100%,1000px);z-index:-1;pointer-events:none;display:block}
+#gl{position:absolute;top:0;left:0;width:100%;height:min(100%,1000px);z-index:-1;pointer-events:none;display:block}.win{will-change:transform}
 
 /* LIQUID GLASS */
 :root{--lg1:rgba(255,255,255,.55);--lg2:rgba(255,255,255,.16);--rim:rgba(255,255,255,.85);--rim2:rgba(255,255,255,.2)}
@@ -125,7 +124,7 @@ nav,.c,.win,.stat,.ct,.btn:not(.p),.pill{background:linear-gradient(145deg,var(-
 .btn.p{box-shadow:inset 1.5px 1.5px 0 rgba(255,255,255,.65),inset -1px -2px 8px rgba(0,0,0,.28),inset 0 0 16px rgba(255,255,255,.2),0 16px 34px -12px var(--a)}
 input,select,textarea{background:linear-gradient(145deg,var(--lg2),transparent);box-shadow:inset 1px 1px 0 var(--rim2),inset 0 2px 8px rgba(0,0,0,.12)}
 nav a.l.on{background:none}nav a.l,#th,nav .lg{position:relative;z-index:1}
-#lens{position:absolute;z-index:0;top:6px;bottom:6px;left:0;width:0;border-radius:999px;background:linear-gradient(145deg,var(--lg1),var(--lg2));box-shadow:inset 1.5px 1.5px 0 var(--rim),inset 0 0 14px var(--rim2),0 6px 16px -8px rgba(0,0,0,.45);transition:transform .6s cubic-bezier(.34,1.45,.5,1),width .6s cubic-bezier(.34,1.45,.5,1),opacity .3s;opacity:0;pointer-events:none}
+#lens{position:absolute;top:6px;bottom:6px;left:0;width:0;border-radius:999px;background:linear-gradient(145deg,var(--lg1),var(--lg2));box-shadow:inset 1.5px 1.5px 0 var(--rim),inset 0 0 14px var(--rim2),0 6px 16px -8px rgba(0,0,0,.45);transition:transform .6s cubic-bezier(.34,1.45,.5,1),width .6s cubic-bezier(.34,1.45,.5,1),opacity .3s;opacity:0;pointer-events:none}
 @keyframes jl{0%{transform:scale(1)}22%{transform:scale(.92,1.08)}48%{transform:scale(1.06,.95)}72%{transform:scale(.99,1.02)}100%{transform:scale(1)}}
 .jl{animation:jl .75s cubic-bezier(.3,.7,.3,1)}
 :root[data-fx="lite"] *{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
@@ -138,139 +137,89 @@ nav a.l.on{background:none}nav a.l,#th,nav .lg{position:relative;z-index:1}
 .pn .cl{background:linear-gradient(145deg,var(--lg1),var(--lg2));box-shadow:inset 1px 1px 0 var(--rim),inset 0 0 10px var(--rim2)}
 :root[data-fx="lite"] #sh .pn{background:var(--bg)}
 
-/* v3: bug fixes */
-:root{color-scheme:light}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark}}
-:root[data-theme="dark"]{color-scheme:dark}
-select option{background:var(--bg);color:var(--ink)}
-#sh{visibility:hidden;transition:visibility 0s .9s}#sh.o{visibility:visible;transition-delay:0s}
-@media(max-width:980px){nav .lg{display:none}nav a.l{padding-inline:10px}}
-@media(max-width:820px){nav a.hm{display:none}}
-@media(max-width:400px){nav{gap:1px;padding:5px}nav a.l{padding:9px 6px;font-size:.78rem}nav .btn.s{padding:0 10px;min-height:36px;font-size:.82rem}#th{width:34px;height:34px}}
-@media(max-width:350px){nav a.l{padding-inline:4px;font-size:.74rem}nav .btn.s{padding-inline:8px}#th{width:32px;height:32px}}
-@media(min-width:760px){#sv .c:nth-last-child(-n+2){grid-column:span 3}}
-/* v3: glass everywhere */
-:root{--gbox:inset 1.5px 1.5px 0 var(--rim),inset -1px -1px 0 var(--rim2),inset 0 0 24px var(--rim2),0 12px 32px -16px rgba(0,0,0,.4)}
-.fq details,.mq,footer.w{position:relative;border:1px solid transparent;background:linear-gradient(145deg,var(--lg1),var(--lg2));-webkit-backdrop-filter:blur(18px) saturate(175%);backdrop-filter:blur(18px) saturate(175%);box-shadow:var(--gbox)}
-.fq details{contain:layout style;border-radius:24px;margin-bottom:10px;padding:0 24px;overflow:hidden}.fq details:last-child{border-bottom:1px solid transparent}
-.mq{border-radius:999px}
-footer.w{width:calc(100% - 40px);max-width:1080px;margin:20px auto 40px;padding:20px 28px;border-radius:30px}
-.fq details::after,.mq::after,footer.w::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:var(--hair);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);pointer-events:none}
-.stat::before,.ct::before,.fq details::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),var(--glow),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
-@media(hover:hover) and (pointer:fine){.stat:hover::before,.ct:hover::before,.fq details:hover::before{opacity:1}}
-#pg{height:4px;border-radius:0 4px 4px 0;box-shadow:0 0 16px rgba(10,132,255,.8)}
-/* v3: effects */
-body::after{animation:dr 30s ease-in-out infinite alternate;will-change:transform}:root[data-fx="lite"] body::after{animation:none}
-@media(hover:hover) and (pointer:fine){.c:hover{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-3px);transition:transform .15s ease-out,border-color .3s}}.c:active{transform:scale(.97)}
-@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
-@keyframes spin{to{--ang:360deg}}
-.big::after,.win::after{background:conic-gradient(from var(--ang),transparent 0 58%,#7CB8FF 78%,transparent 94%),var(--hair);animation:spin 6s linear infinite}
+/* LENS + CAROUSEL */
+.hero .w{position:relative;z-index:1}
+.stage{position:relative;margin-top:56px;border-radius:34px;min-height:clamp(300px,52vw,400px);overflow:hidden;text-align:left;user-select:none;-webkit-user-select:none;background:linear-gradient(145deg,var(--lg1),var(--lg2));-webkit-backdrop-filter:blur(18px) saturate(175%);backdrop-filter:blur(18px) saturate(175%);box-shadow:inset 1.5px 1.5px 0 var(--rim),inset -1px -1px 0 var(--rim2),inset 0 0 24px var(--rim2),0 20px 50px -24px rgba(0,0,0,.45)}
+.ly{position:absolute;inset:0;margin:0;padding:30px 28px;font:700 clamp(1.55rem,5.2vw,2.7rem)/1.14 var(--d);letter-spacing:-.04em;pointer-events:none}
+.ly.before{color:color-mix(in srgb,var(--ink) 40%,transparent)}
+.ly.before b{font-weight:700;text-decoration:line-through;text-decoration-color:#FF375F;text-decoration-thickness:.09em}
+.ly.after{color:var(--ink);clip-path:circle(0 at 50% 50%);-webkit-clip-path:circle(0 at 50% 50%)}
+.ly.after em{font-style:normal;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass-lens{position:absolute;left:0;top:0;width:140px;height:140px;border-radius:50%;cursor:grab;touch-action:none;will-change:transform;background:radial-gradient(circle at 30% 22%,rgba(255,255,255,.42),transparent 38%),radial-gradient(circle at 72% 82%,rgba(255,255,255,.14),transparent 50%);box-shadow:inset 2px 3px 0 rgba(255,255,255,.8),inset -2px -3px 6px rgba(255,255,255,.22),inset 0 0 34px rgba(255,255,255,.24),0 24px 50px -16px rgba(94,92,230,.8)}
+.glass-lens:active{cursor:grabbing}
+.glass-lens::before{content:"";position:absolute;inset:0;border-radius:50%;padding:2.5px;background:var(--g);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask-composite:exclude}
+.btn,nav a{white-space:nowrap}#th{flex:none}@media(max-width:720px){nav{gap:0;padding:5px}nav a.l{padding:10px 8px;font-size:.84rem}nav .btn.s{padding:0 13px;min-height:36px}#th{width:34px;height:34px}}.hint{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:var(--mut);font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;transition:opacity .5s;pointer-events:none}
+.cap{margin:14px 0 0;color:var(--mut);font-size:.95rem;text-align:center}
+:root[data-fx="lite"] .stage{background:var(--glass)}
+.car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 20px 36px;margin:0 -20px;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.car::-webkit-scrollbar{display:none}
+.car .c{flex:0 0 min(80vw,410px);min-height:340px;scroll-snap-align:center}
+.car .c h3{font-size:clamp(1.55rem,4.6vw,2.1rem);line-height:1.05}
+.car .c p{font-size:1.03rem}
+@supports(animation-timeline:view(inline)){.car .c{animation:fc linear both;animation-timeline:view(inline)}@keyframes fc{0%,100%{transform:scale(.9);opacity:.5}50%{transform:scale(1);opacity:1}}}
+.arr{display:flex;gap:10px;margin-top:2px}@media(hover:none){.arr{display:none}}
 
-/* v4: springs, light, motion */
-:root{--sp:linear(0,0.03,0.108,0.217,0.342,0.471,0.596,0.711,0.812,0.896,0.964,1.016,1.053,1.077,1.09,1.095,1.093,1.086,1.075,1.064,1.052,1.04,1.029,1.019,1.011,1.004,0.999,0.995,0.993,0.992,0.991,0.991,0.992,0.993,1);--sm:linear(0,0.021,0.073,0.143,0.221,0.302,0.381,0.457,0.527,0.59,0.647,0.697,0.742,0.78,0.814,0.842,0.867,0.888,0.906,0.921,0.934,0.945,0.954,0.962,0.968,0.974,0.978,0.982,0.985,0.988,0.99,0.992,0.993,0.994,1);--hair:linear-gradient(var(--la,160deg),rgba(255,255,255,.95),rgba(0,0,0,.05) 45%,rgba(0,122,255,.28));interpolate-size:allow-keywords}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--hair:linear-gradient(var(--la,160deg),rgba(255,255,255,.38),rgba(255,255,255,.03) 42%,rgba(255,255,255,.03) 58%,rgba(191,90,242,.45))}}
-:root[data-theme="dark"]{--hair:linear-gradient(var(--la,160deg),rgba(255,255,255,.38),rgba(255,255,255,.03) 42%,rgba(255,255,255,.03) 58%,rgba(191,90,242,.45))}
-@supports not (transition-timing-function:linear(0,1)){:root{--sp:cubic-bezier(.34,1.56,.64,1);--sm:cubic-bezier(.2,.9,.25,1)}}
-h1,h2,h3{text-wrap:balance}p,.lede{text-wrap:pretty}
-nav::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:var(--hair);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);pointer-events:none}
-.btn{position:relative;overflow:hidden;translate:var(--tx,0px) var(--ty,0px);transition:transform .8s var(--sp),translate .7s var(--sp),filter .2s}
-.btn::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(90px circle at var(--px,50%) var(--py,50%),rgba(255,255,255,.6),transparent 70%);opacity:0;transition:opacity .6s;pointer-events:none}.btn:active::before{opacity:1;transition-duration:.08s}
-.c{transition:transform .9s var(--sp),border-color .3s}.c:hover{transition:transform .15s ease-out,border-color .3s}
-#th{transition:transform .8s var(--sp)}
-#lens{transition:transform .75s var(--sp),width .75s var(--sp),opacity .3s}
-nav{transition:transform .7s var(--sm),opacity .4s}
-nav.mn{transform:translateX(-50%) scale(.9);opacity:.9}nav.mn:hover,nav.mn:focus-within{transform:translateX(-50%);opacity:1}
-@media(max-width:720px){nav.mn{transform:translateX(-50%) translateY(8px) scale(.88)}nav.mn:hover,nav.mn:focus-within{transform:translateX(-50%)}}
-.r{transform:translateY(28px) scale(.965);transition:opacity .7s ease,transform 1.1s var(--sm);transition-delay:var(--rd,0s)}.r.in{opacity:1;transform:none}
-.edge{position:fixed;left:0;right:0;height:calc(env(safe-area-inset-top,0px) + 70px);z-index:40;pointer-events:none;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);-webkit-mask:linear-gradient(#000 25%,transparent);mask:linear-gradient(#000 25%,transparent)}
-.edge.t{top:0}.edge.b{bottom:0;height:60px;transform:scaleY(-1)}:root[data-fx="lite"] .edge{display:none}
-@keyframes sh2{to{background-position:100% 0}}
-.gr{background-size:200% 100%}body.go .wd.gr{animation:up 1s cubic-bezier(.2,.9,.25,1) both,sh2 7s 1.4s ease-in-out infinite alternate;animation-delay:calc(var(--i)*.09s),1.4s}
-.m .n.gr{animation:sh2 7s ease-in-out infinite alternate}
-.fq details::details-content{block-size:0;overflow:hidden;opacity:0;transition:block-size .6s var(--sm),opacity .4s,content-visibility .6s allow-discrete}.fq details[open]::details-content{block-size:auto;opacity:1}
-.fq summary::after{transition:transform .7s var(--sp)}
-#sh .pn{transition:transform .85s var(--sm)}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}}
-#sh.o .bo>*{animation:rise .8s var(--sm) both}#sh.o #sht{animation-delay:.14s}#sh.o #shb{animation-delay:.24s}
-@media(prefers-reduced-transparency:reduce){*{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}nav,.c,.win,.stat,.ct,.fq details,.mq,footer.w,.pn,.btn:not(.p),.pill{background:var(--bg)!important}.edge{display:none}}
-
-/* Mobile/desktop performance scheduling: same visuals, less off-screen work. */
-.fx-managed .big::after,
-.fx-managed .win::after,
-.fx-managed .btn.p::after,
-.fx-managed .mq>div,
-.fx-managed .wd.gr,
-.fx-managed .m .n.gr{animation-play-state:paused}
-.fx-managed .big.fx-live::after,
-.fx-managed .win.fx-live::after,
-.fx-managed .btn.p.fx-live::after{animation-play-state:running}
-.fx-managed .mq.fx-live>div{animation-play-state:running}
-.fx-managed .hero.fx-live .wd.gr{animation-play-state:running}
-.fx-managed .m.fx-live .n.gr{animation-play-state:running}
-.fx-managed nav .btn.p::after{animation-play-state:running}
-/* The hover tilt remains a desktop interaction; touch keeps its press feedback. */
-@media(hover:hover) and (pointer:fine){
- .c:hover{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-3px);transition:transform .15s ease-out,border-color .3s}
-}
-@media(hover:none),(pointer:coarse){
- .c:hover{transform:none}
- .c:hover::before{opacity:0}
- .stat:hover::before,.ct:hover::before,.fq details:hover::before{opacity:0}
-}
-
-/* v4.1 */
-.btn,nav a{white-space:nowrap}#th{flex:none}
-.mq{width:calc(100% - 40px);max-width:1080px;margin:56px auto 0}
-@media(min-width:721px){.edge.b{display:none}}
-
-/* Render long sections only as they approach the viewport; their full effects remain intact. */
-/* Pause only the continuously-running decorative animations while scrolling.
-   Avoid a universal descendant selector that invalidates style across the whole page. */
-.fx-managed.is-scrolling body::after,
-.fx-managed.is-scrolling .big::after,
-.fx-managed.is-scrolling .win::after,
-.fx-managed.is-scrolling .btn.p::after,
-.fx-managed.is-scrolling .mq>div,
-.fx-managed.is-scrolling .wd.gr,
-.fx-managed.is-scrolling .m .n.gr{animation-play-state:paused!important}
-#work,#services,#method,#faq,#contact{content-visibility:auto;contain-intrinsic-size:auto 900px}
-@media(max-width:759px){
- #work{contain-intrinsic-size:auto 2050px}
- #services{contain-intrinsic-size:auto 1850px}
- #method{contain-intrinsic-size:auto 720px}
- #faq{contain-intrinsic-size:auto 780px}
- #contact{contain-intrinsic-size:auto 950px}
-}
-@media(min-width:760px){
- #work{contain-intrinsic-size:auto 980px}
- #services{contain-intrinsic-size:auto 850px}
- #method{contain-intrinsic-size:auto 650px}
- #faq{contain-intrinsic-size:auto 650px}
- #contact{contain-intrinsic-size:auto 850px}
-}
+/* PEAK GLASS DOCK */
+:root{--gz1:rgba(255,255,255,.5);--gz2:rgba(255,255,255,.16);--ring:rgba(255,255,255,.55);--bb:rgba(0,0,0,.09);--pk:#FF375F}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--gz1:rgba(255,255,255,.2);--gz2:rgba(255,255,255,.05);--ring:rgba(255,255,255,.3);--bb:rgba(255,255,255,.15)}}
+:root[data-theme="dark"]{--gz1:rgba(255,255,255,.2);--gz2:rgba(255,255,255,.05);--ring:rgba(255,255,255,.3);--bb:rgba(255,255,255,.15)}
+body{padding-bottom:170px}
+#dock .mini,#dock .tabs,#dock .circ,.brand,#th{background:linear-gradient(180deg,var(--gz1),var(--gz2));-webkit-backdrop-filter:blur(22px) saturate(210%) brightness(1.06);backdrop-filter:blur(22px) saturate(210%) brightness(1.06);border:0;box-shadow:inset 0 0 0 1px var(--ring),inset 0 11px 14px -9px var(--rim),inset 0 -12px 18px -10px rgba(0,0,0,.15),inset 0 0 28px var(--rim2),0 26px 40px -22px rgba(0,0,0,.55)}
+#dock{position:fixed;left:0;right:0;margin:0 auto;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:min(calc(100% - 20px),440px);z-index:50;display:grid;gap:10px;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+body:not(.go) #dock{opacity:0}body.go #dock{animation:dk 1.2s cubic-bezier(.2,1.15,.3,1) .5s backwards}
+@keyframes dk{from{transform:translateY(170%);opacity:0}to{transform:none;opacity:1}}
+.row2{display:flex;gap:10px;align-items:stretch}
+.tabs{flex:1;display:flex;position:relative;padding:6px;border-radius:999px;touch-action:pan-y;transition:transform .55s cubic-bezier(.34,1.56,.64,1)}.tabs.press{transform:scale(1.045)}
+#bub{position:absolute;top:6px;bottom:6px;left:6px;width:0;border-radius:999px;background:var(--bb);box-shadow:inset 0 1px 0 var(--rim2),inset 0 0 0 1px var(--rim2);transition:transform .65s cubic-bezier(.34,1.55,.5,1),opacity .3s,background .25s,box-shadow .25s;pointer-events:none}
+.press #bub{transition:transform .14s ease-out,background .25s;background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,.3));box-shadow:inset 0 0 0 1px rgba(255,255,255,.85),inset 0 9px 14px -7px #fff,0 16px 30px -10px rgba(0,0,0,.5)}
+.tb{-webkit-user-drag:none;flex:1;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0 7px;color:var(--mut);text-decoration:none;font-size:.7rem;font-weight:600;letter-spacing:0;transition:color .3s}
+.tb svg{width:25px;height:25px;transition:transform .5s cubic-bezier(.34,1.6,.5,1),fill .3s}
+.tb span{max-height:1.3em;overflow:hidden;transition:max-height .4s,opacity .3s}
+.tb.on{color:var(--pk)}.tb.on svg{fill:currentColor;fill-opacity:.2;transform:scale(1.1)}
+.circ{flex:none;width:66px;display:grid;place-items:center;border-radius:50%;padding:0;transition:width .4s,transform .5s cubic-bezier(.34,1.56,.64,1)}.circ:active{transform:scale(.92)}
+.mini{display:flex;align-items:center;gap:11px;padding:8px 10px 8px 8px;border-radius:999px;transition:transform .55s cubic-bezier(.34,1.4,.5,1),opacity .35s}
+.av{width:44px;height:44px;border-radius:15px;background:var(--g);display:grid;place-items:center;color:#fff;font:800 .95rem var(--d);box-shadow:inset 0 0 0 1px rgba(255,255,255,.4),inset 0 8px 10px -6px #fff8}
+.tx{flex:1;line-height:1.15;min-width:0}.tx b{display:block;font:700 1.02rem var(--d);letter-spacing:-.02em}.tx small{color:var(--mut);font-size:.82rem}
+.ib{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink);transition:transform .5s cubic-bezier(.34,1.6,.5,1)}.ib:active{transform:scale(.85)}.ib svg{width:25px;height:25px}
+.min .mini,.atc .mini{opacity:0;transform:translateY(26px) scale(.9);pointer-events:none}
+.min .tb span{max-height:0;opacity:0}.min .tb{padding:11px 0}.min .circ{width:50px}
+.brand{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:14px;z-index:50;padding:11px 17px;border-radius:999px;font:800 .95rem var(--d);letter-spacing:-.02em;text-decoration:none}
+#th{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:14px;z-index:50;width:44px;height:44px;border-radius:50%;cursor:pointer;color:var(--ink);font-size:1.1rem}
+:root[data-fx="lite"] #dock .mini,:root[data-fx="lite"] #dock .tabs,:root[data-fx="lite"] #dock .circ,:root[data-fx="lite"] .brand,:root[data-fx="lite"] #th{background:var(--glass)}
+.art{display:block;height:122px;border-radius:20px;margin-bottom:8px;position:relative;overflow:hidden;flex:none;background:radial-gradient(circle at 18% 28%,hsl(var(--h1) 95% 64%),transparent 58%),radial-gradient(circle at 84% 72%,hsl(var(--h2) 95% 58%),transparent 56%),hsl(var(--h1) 75% 42%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.art::after{content:"";position:absolute;right:16px;bottom:-24px;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 30% 24%,rgba(255,255,255,.6),transparent 40%),linear-gradient(145deg,hsl(var(--h2) 95% 70%),hsl(var(--h1) 90% 50%));box-shadow:inset -6px -8px 16px rgba(0,0,0,.3)}
 </style>
 </head>
 <body>
-<div id="in" tabindex="0" role="dialog" aria-modal="true" aria-label="Welcome"><div class="hi" id="hi" aria-live="polite">Hello</div><span class="br">BYTESPARK</span><span class="tp">Tap to skip</span></div>
-<div class="edge t" aria-hidden="true"></div><div class="edge b" aria-hidden="true"></div><div id="pg"></div>
-<nav aria-label="Primary"><i id="lens"></i><a class="lg" href="#top">ByteSpark</a><a class="l" href="#work">Work</a><a class="l" href="#services">Services</a><a class="l" href="#method">Method</a><a class="l hm" href="#faq">FAQ</a><button id="th" aria-label="Switch light or dark mode">◐</button><a class="btn p s" href="#contact">Hire me</a></nav>
+<div id="in" role="dialog" aria-label="Welcome"><div class="hi" id="hi" aria-live="polite">Hello</div><span class="br">BYTESPARK</span><span class="tp">Tap to skip</span></div>
+<div id="pg"></div>
+<a class="brand" href="#hero">ByteSpark</a><button id="th" aria-label="Switch light or dark mode">◐</button>
+<div id="dock" aria-label="Primary">
+ <div class="mini" id="mini"><span class="av">BS</span><span class="tx"><b>ByteSpark</b><small>Open for new projects</small></span>
+  <a class="ib" href="mailto:anasjahangirking@gmail.com" aria-label="Email me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg></a>
+  <a class="ib" href="https://wa.me/8801771081428" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.4 18.7z"/><path d="M9 9.5c.4 2.2 2.3 4.1 5 5l1.3-1.3-1.8-1-.9.7c-.8-.4-1.6-1.1-2-2l.7-.9-1-1.8z"/></svg></a></div>
+ <div class="row2">
+  <div class="tabs" id="tabs" role="navigation" aria-label="Sections"><i id="bub"></i>
+   <a class="tb on" href="#hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+   <a class="tb" href="#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg><span>Work</span></a>
+   <a class="tb" href="#services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16.5 4.5a2 2 0 0 1 3 3L8 19zM14 7l3 3"/></svg><span>Services</span></a>
+   <a class="tb" href="#method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9zM18 16l.8 2.2L21 19l-2.2.8L18 22l-.8-2.2L15 19l2.2-.8z"/></svg><span>Method</span></a></div>
+  <a class="tb circ" href="#contact" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg></a>
+ </div></div>
 
 <main id="top">
-<section class="hero"><canvas id="gl" aria-hidden="true"></canvas><div class="w">
+<section class="hero" id="hero"><canvas id="gl" aria-hidden="true"></canvas><div class="w">
   <span class="pill"><i></i>Open for new projects</span>
   <h1 aria-label="Words that make people act."><span class="wd" style="--i:0">Words</span> <span class="wd" style="--i:1">that</span> <span class="wd" style="--i:2">make</span> <span class="wd" style="--i:3">people</span> <span class="wd gr" style="--i:4">act.</span></h1>
   <p class="lede" style="margin-top:22px">I’m a freelance copywriter. AI gets the draft moving fast. I rewrite it by hand, check every fact, and make it sound like you.</p>
   <div class="row"><a class="btn p" href="#contact">Start a project</a><a class="btn" href="#work">Read the samples</a></div>
-  <div class="win" aria-label="Animated example of editing filler copy">
-    <div class="bar"><b></b><b></b><b></b><span>homepage-draft.md</span><em id="st">AI draft</em></div>
-    <p class="ed" id="ed"></p><p class="out" id="out" aria-live="polite"><span>Our platform helps teams book meetings.</span></p>
-    <div class="ft"><span>Filler out, meaning in.</span><button id="rp">Replay</button></div>
-  </div>
-  <div class="stats"><div class="stat"><b data-n="8">0</b><span>Writing samples</span></div><div class="stat"><b data-n="8">0</b><span>Services offered</span></div><div class="stat"><b>100%</b><span>Human-edited</span></div><div class="stat"><b>1</b><span>Video script sample</span></div></div>
+  <div class="stage" id="stage"><p class="ly before" aria-hidden="true">We <b>leverage</b> innovative, cutting-edge <b>synergies</b> to <b>empower</b> teams to <b>seamlessly</b> optimize their end-to-end workflow solutions.</p><p class="ly after" id="af">We help teams <em>book meetings faster.</em> No jargon, no filler. Just one clear next step, written so people actually act on it.</p><div class="glass-lens" id="lens2" role="img" aria-label="Draggable lens that reveals the rewrite"></div><span class="hint" id="hint">Drag the lens</span></div>
+  <p class="cap">Gray: what clients usually send me. Inside the lens: what I write.</p>
+  <div class="stats"><div class="stat"><b data-n="8">0</b><span>Writing samples</span></div><div class="stat"><b data-n="8">0</b><span>Services offered</span></div><div class="stat"><b>100%</b><span>Human-edited</span></div><div class="stat"><b>1</b><span>Real client script</span></div></div>
 </div>
 <div class="mq" aria-hidden="true"><div id="mq"></div></div></section>
 
-<section id="work"><div class="w"><div class="hd"><h2 data-e="01 — Portfolio">Selected work</h2><p class="lede">Tap a card to read the full piece.</p></div><div class="grid bento" id="pf"></div></div></section>
+<section id="work"><div class="w"><div class="hd"><h2 data-e="01 — Portfolio">Selected work</h2><p class="lede">Swipe through, then tap a card to read the full piece.</p></div><div class="car" id="pf"></div><div class="arr"><button class="btn s" id="pv" aria-label="Previous">←</button><button class="btn s" id="nx" aria-label="Next">→</button></div></div></section>
 <section id="services"><div class="w"><div class="hd"><h2 data-e="02 — Services">What I write</h2><p class="lede">Clear copy for every touchpoint.</p></div><div class="grid bento" id="sv"></div></div></section>
 <section id="method"><div class="w"><div class="hd"><h2 data-e="03 — Process">How I work</h2><p class="lede">A simple process that keeps the work sharp.</p></div>
 <div class="m">
@@ -283,10 +232,10 @@ nav.mn{transform:translateX(-50%) scale(.9);opacity:.9}nav.mn:hover,nav.mn:focus
   <div><h2 data-e="05 — Contact">Got something worth saying?</h2><p class="lede" style="margin-top:16px">Tell me what you’re building and where the words feel stuck.</p>
   <div class="dl"><a href="mailto:anasjahangirking@gmail.com">anasjahangirking@gmail.com</a><a href="https://wa.me/8801771081428" target="_blank" rel="noopener">Message on WhatsApp</a></div></div>
   <form id="fm" novalidate>
-    <label>Name<input id="nm" name="name" autocomplete="name" placeholder="Your name" required aria-describedby="e1"><span class="er" id="e1" aria-live="polite"></span></label>
-    <label>Email<input id="em" name="email" type="email" autocomplete="email" placeholder="you@company.com" required aria-describedby="e2"><span class="er" id="e2" aria-live="polite"></span></label>
-    <label>What are we making?<select id="sj" name="service" required></select></label>
-    <label>A little context<textarea id="ms" name="message" rows="4" placeholder="What are you building, and where does it feel stuck?" required aria-describedby="e3"></textarea><span class="er" id="e3" aria-live="polite"></span></label>
+    <label>Name<input id="nm" autocomplete="name" placeholder="Your name"><span class="er" id="e1"></span></label>
+    <label>Email<input id="em" type="email" autocomplete="email" placeholder="you@company.com"><span class="er" id="e2"></span></label>
+    <label>What are we making?<select id="sj"></select></label>
+    <label>A little context<textarea id="ms" rows="4" placeholder="What are you building, and where does it feel stuck?"></textarea><span class="er" id="e3"></span></label>
     <button class="btn p" type="submit">Send message</button><p class="er" id="nt" role="status"></p>
   </form></div></div></section>
 </main>
@@ -296,172 +245,94 @@ nav.mn{transform:translateX(-50%) scale(.9);opacity:.9}nav.mn:hover,nav.mn:focus
 
 <script>
 const D={"S":[{"icon":"📦","title":"Product Descriptions","desc":"Clear, benefit-led copy that helps shoppers decide fast — built for e-commerce and marketplace listings.","benefits":"Higher conversion, less return-driving confusion","clients":"D2C brands, marketplace sellers"},{"icon":"📝","title":"Blog Writing","desc":"Well-researched articles that answer real reader questions and support SEO without keyword-stuffing.","benefits":"Organic traffic, topical authority","clients":"SaaS, agencies, niche publishers"},{"icon":"🌐","title":"Website Copy","desc":"Homepage and inner-page copy that explains what you do in plain language, fast.","benefits":"Lower bounce, clearer positioning","clients":"Startups, service businesses"},{"icon":"🚀","title":"Landing Pages","desc":"Single-goal pages built around one offer, one action, and a clear reason to act now.","benefits":"Higher conversion rate","clients":"Product launches, ad campaigns"},{"icon":"👋","title":"About Us Pages","desc":"Origin story and mission copy that builds trust without sounding like a press release.","benefits":"Stronger brand connection","clients":"Founders, small businesses"},{"icon":"🏢","title":"Business Profiles","desc":"Concise, credible company descriptions for directories, pitch decks, and partner pages.","benefits":"Consistent brand story everywhere","clients":"B2B firms, agencies"},{"icon":"📱","title":"Social Media Content","desc":"Platform-native captions and post copy that sound human, not templated.","benefits":"Better engagement, consistent voice","clients":"Small brands, personal brands"},{"icon":"🎬","title":"YouTube Scripts","desc":"Hook-first scripts structured for retention, with clear visual and pacing notes.","benefits":"Stronger watch time","clients":"Educational and tech channels"}],"P":[{"cat":"E-Commerce Copywriting","title":"Premium Product Description for a Smart Desk Lamp","teaser":"Benefit-driven product copy crafted to build trust, highlight key features, and increase purchase confidence.","body":"<strong>Premium Product Description for a Smart Desk Lamp<\/strong>\n\nA desk lamp should do more than simply brighten your workspace. It should help you stay focused, reduce eye strain, and blend naturally into your environment. This smart LED desk lamp was designed with exactly that purpose in mind.\n\nFeaturing adjustable brightness levels and three color temperature modes, it adapts effortlessly to every task. Switch to cool white light for productive work sessions, warm light for relaxed evening reading, or balanced daylight mode for everyday use. The touch-sensitive controls provide smooth, responsive adjustments without the clutter of traditional buttons.\n\nIts minimalist aluminum body complements both modern home offices and professional workspaces while occupying very little desk space. The flexible arm offers precise positioning, ensuring light reaches exactly where you need it without unwanted glare or harsh shadows.\n\nEngineered with energy-efficient LED technology, the lamp delivers consistent illumination while consuming significantly less power than conventional lighting solutions. With an estimated lifespan of over 25,000 hours, it offers years of reliable performance with virtually no maintenance.\n\nWhether you're working late, studying for exams, reading your favorite book, or attending virtual meetings, this smart desk lamp combines elegant design with practical functionality to create a workspace that's both comfortable and productive.\n\n<strong>Key Benefits<\/strong>\n\n• Adjustable brightness and three lighting modes\n• Touch-sensitive controls for effortless operation\n• Eye-friendly illumination with reduced glare\n• Energy-efficient LED technology\n• Durable premium aluminum construction\n• Compact, modern design suitable for any workspace\n\nBuilt for professionals, students, and creators alike, this lamp delivers dependable performance while enhancing the overall look and feel of your desk."},{"cat":"SEO Blog Writing","title":"Why Most Landing Pages Lose Customers in Seconds","teaser":"An SEO-optimized educational article designed to attract organic traffic while demonstrating persuasive long-form writing.","body":"<strong>Why Most Landing Pages Lose Customers in Seconds<\/strong>\n\nEvery visitor who lands on your website asks the same question within a few seconds:\n\n<strong>\"Is this what I'm looking for?\"<\/strong>\n\nIf your page doesn't answer that question immediately, you've already lost the opportunity. Most landing pages don't fail because the product is weak. They fail because the message isn't clear.\n\nA common mistake is writing headlines that describe the company instead of explaining the customer's benefit. Phrases like <em>\"Revolutionizing Digital Experiences\"<\/em> or <em>\"Innovative Business Solutions\"<\/em> sound impressive, but they don't tell visitors why they should care.\n\nHigh-converting landing pages focus on outcomes rather than features. Instead of explaining what a business does, they explain how a customer's problem will be solved.\n\nFor example:\n\n❌ \"AI-Powered Workflow Management\"\n\n✅ \"Finish Your Daily Tasks in Half the Time with AI Automation.\"\n\nThe second version immediately communicates a clear benefit that visitors can understand.\n\nAnother overlooked factor is information overload. Many pages attempt to explain every feature before establishing trust. Visitors aren't searching for every detail at first. They want confidence that they're in the right place.\n\nStrong landing pages follow a simple structure:\n\n• A headline focused on the customer's desired outcome.\n• A supporting paragraph that explains how that outcome is achieved.\n• Key benefits presented in a clear, scannable format.\n• Social proof that builds credibility.\n• One primary call-to-action without unnecessary distractions.\n\nClarity always outperforms cleverness. Visitors shouldn't have to decode your message or guess what your business offers.\n\nThe best landing pages don't convince people with flashy language. They remove uncertainty, answer questions before they're asked, and guide visitors toward a single action with confidence.\n\nWhen every sentence has a purpose, conversions become the natural result—not the lucky outcome."},{"cat":"Website Copywriting","title":"Homepage Copy for a Modern SaaS Platform","teaser":"Clear, customer-focused homepage messaging that communicates value, builds credibility, and drives sign-ups.","body":"<strong>Homepage Copy for a Modern SaaS Platform<\/strong>\n\n<strong>Headline<\/strong>\n\nRun your business, not your admin.\n\n<strong>Subheadline<\/strong>\n\nManage projects, invoices, clients, and team communication from one intuitive platform designed to save time and keep your business moving forward.\n\n<strong>Why Choose Our Platform?<\/strong>\n\nGrowing businesses shouldn't have to juggle multiple tools just to stay organized. Our platform brings everything together in one secure workspace, helping your team collaborate more efficiently while reducing repetitive manual work.\n\nWhether you're managing five clients or five hundred, every feature is built around one goal: helping your business operate faster with less effort.\n\n<strong>What You Can Do<\/strong>\n\n• Organize projects with real-time collaboration.\n• Track invoices and payments in one dashboard.\n• Manage client communication without switching platforms.\n• Generate reports that help you make smarter business decisions.\n• Keep your entire team connected from anywhere.\n\n<strong>Built for Growing Businesses<\/strong>\n\nFrom freelancers and agencies to startups and established companies, the platform scales alongside your business. No complicated setup, no unnecessary features, and no steep learning curve.\n\nInstead of spending hours managing software, you can spend more time serving clients, closing deals, and growing your business.\n\n<strong>Call to Action<\/strong>\n\nStart your free trial today and discover how simple business management can be.\n\nNo credit card required. Cancel anytime."},{"cat":"Brand Story","title":"Brand Story for a Specialty Coffee Company","teaser":"Authentic storytelling that creates emotional connection, strengthens brand identity, and builds customer trust.","body":"<strong>Brand Story for a Specialty Coffee Company<\/strong>\n\nGreat coffee begins long before it reaches your cup. It starts with the people who grow it, the care they invest in every harvest, and the belief that quality should never come at the expense of honesty.\n\nOur journey began with a simple question:\n\n<strong>Why should exceptional coffee be difficult to trust?<\/strong>\n\nToo many brands rely on polished marketing while revealing very little about where their coffee comes from or how it's produced. We wanted to build something different. Every decision we make is guided by transparency, consistency, and respect for the farmers who make our work possible.\n\nWe partner with growers who share our commitment to sustainable farming and responsible sourcing. Every batch is carefully selected, roasted in small quantities, and tested for quality before it reaches our customers. This approach allows us to preserve the unique character of every bean while ensuring a consistently exceptional cup.\n\nFor us, coffee isn't simply another product on a shelf. It's part of someone's morning routine, an afternoon conversation, or a late-night work session. Those everyday moments deserve something crafted with genuine care.\n\nWe believe great brands earn trust through actions rather than promises. That's why we're committed to clear sourcing, honest communication, and uncompromising quality in everything we do.\n\nEvery cup reflects the same values that shaped our company from the beginning: authenticity, craftsmanship, and respect for the people behind every harvest.\n\n<strong>Our Promise<\/strong>\n\n• Ethically sourced coffee from trusted farming partners.\n• Small-batch roasting for maximum freshness.\n• Complete transparency from origin to cup.\n• Consistent quality without unnecessary complexity.\n\nBecause great coffee isn't defined by marketing.\n\nIt's defined by the experience people remember after the last sip."},{"cat":"Menu Copywriting","title":"Restaurant Menu Designed to Increase Orders","teaser":"Descriptive menu copy that makes every dish memorable while encouraging higher-value customer purchases.","body":"<strong>Restaurant Menu Designed to Increase Orders<\/strong>\n\nEvery memorable dining experience begins before the first bite. The right menu doesn't simply list ingredients. It creates anticipation, highlights craftsmanship, and helps guests feel confident about every choice they make.\n\nOur menu is carefully written to celebrate fresh ingredients, balanced flavors, and the experience behind each dish. Every description is designed to be informative without overwhelming the reader, allowing the food to remain the true focus.\n\n<strong>Signature Dishes<\/strong>\n\n<strong>Wood-Fired Herb Chicken<\/strong>\n\nFree-range chicken marinated for 24 hours in fresh herbs, garlic, and citrus, then slow-roasted over natural oak fire. Served with roasted seasonal vegetables and a light herb butter that enhances every bite.\n\n<strong>Grilled Atlantic Salmon<\/strong>\n\nFresh Atlantic salmon grilled until perfectly tender and paired with creamy lemon risotto, asparagus, and a delicate white wine butter sauce that complements without overpowering the fish.\n\n<strong>Truffle Mushroom Pasta<\/strong>\n\nFresh fettuccine tossed with sautéed wild mushrooms, roasted garlic, Parmesan cheese, and a touch of black truffle oil. Rich, comforting, and perfectly balanced.\n\n<strong>Classic Ribeye Steak<\/strong>\n\nA premium 12-ounce ribeye grilled to your preferred temperature and finished with garlic herb butter. Served alongside crispy rosemary potatoes and seasonal vegetables.\n\n<strong>Desserts<\/strong>\n\nComplete your meal with our signature Chocolate Lava Cake, served warm with handcrafted vanilla bean ice cream and fresh berries.\n\n<strong>Our Philosophy<\/strong>\n\nEvery ingredient is selected for freshness. Every dish is prepared to order. Every plate is served with the belief that exceptional food deserves thoughtful presentation and honest craftsmanship.\n\nGreat dining isn't created by recipes alone.\n\nIt's created by memorable experiences shared around the table."},{"cat":"YouTube Scriptwriting","title":"Educational Script for a Technology Channel","teaser":"A retention-focused YouTube script featuring a compelling hook, structured storytelling, and engaging explanations.","body":"<strong>Educational Script for a Technology Channel<\/strong>\n\n<strong>[HOOK | 0:00 - 0:15]<\/strong>\n\nNARRATOR:\n\n\"What if I told you your Wi-Fi isn't actually slow? The real problem might be happening before your internet connection even reaches your device.\"\n\n[Visual: A laptop loading slowly while multiple phones, TVs, and smart devices connect to the same router.]\n\n<strong>[INTRO | 0:15 - 0:40]<\/strong>\n\nEvery evening, millions of people experience slower internet speeds. Most blame their internet provider. Others restart the router and hope for the best.\n\nBut in many cases, neither is the real cause.\n\nThe biggest culprit is network congestion inside your own home.\n\nLet's see why.\n\n<strong>[EXPLANATION | 0:40 - 2:00]<\/strong>\n\nThink of your Wi-Fi like a conversation in a crowded room.\n\nOne person can speak clearly.\n\nTen people speaking at the same time create confusion.\n\nYour router works in exactly the same way.\n\nEvery phone, laptop, smart TV, gaming console, security camera, and smart speaker competes for the same wireless airtime.\n\nEven devices sitting idle still communicate with your router in the background.\n\nThe more connected devices you have, the less time each one gets to transmit data.\n\nThat's why your connection feels slower during the evening when everyone in your home is streaming, gaming, or attending video meetings.\n\n<strong>[VISUAL DEMONSTRATION]<\/strong>\n\nShow an animation comparing:\n\n• One device connected to a router.\n• Five devices sharing bandwidth.\n• Fifteen devices competing for wireless airtime.\n\nDisplay how available bandwidth is divided between devices.\n\n<strong>[PRACTICAL SOLUTIONS | 2:00 - 3:00]<\/strong>\n\nHere are three simple ways to improve your Wi-Fi performance:\n\n• Move your router to an open, central location.\n• Connect high-bandwidth devices to the 5 GHz network whenever possible.\n• Restart your router regularly to clear temporary network issues.\n\nIf your router is more than five years old, upgrading to a modern Wi-Fi 6 router can significantly improve speed and stability.\n\n<strong>[OUTRO | 3:00 - 3:20]<\/strong>\n\nUnderstanding how Wi-Fi actually works helps you solve problems instead of guessing.\n\nTechnology isn't magic.\n\nOnce you know what's happening behind the scenes, fixing it becomes much easier.\n\nIf you enjoyed this explanation, subscribe for more practical technology guides that make complex topics simple."},{"cat":"Business Copywriting","title":"Professional Company Profile for a Creative Agency","teaser":"A concise yet persuasive company profile that reinforces credibility across websites, proposals, and marketing materials.","body":"<strong>Professional Company Profile for a Creative Agency<\/strong>\n\nGreat businesses are remembered for more than the services they provide. They're remembered for the problems they solve, the relationships they build, and the results they consistently deliver.\n\nFounded with a commitment to thoughtful design and strategic communication, our agency helps ambitious businesses transform ideas into compelling digital experiences. We combine creativity, technology, and clear messaging to build brands that stand out in competitive markets.\n\nFrom startups launching their first product to established companies refreshing their identity, every project begins with understanding the client's goals before creating solutions tailored to their audience.\n\nOur multidisciplinary team specializes in website design, brand identity, UI/UX design, copywriting, and digital strategy. Rather than following trends, we focus on creating timeless, functional experiences that support long-term business growth.\n\nEvery project follows a structured process:\n\n• Discovery and research\n• Strategy and planning\n• Creative design\n• Content development\n• Review and refinement\n• Launch and ongoing support\n\nThis collaborative approach ensures every decision is backed by purpose, not assumptions.\n\nOver the years, we've partnered with businesses across technology, education, healthcare, e-commerce, and professional services, helping them strengthen their online presence and communicate with greater clarity.\n\n<strong>Why Clients Choose Us<\/strong>\n\n• Strategic thinking backed by research.\n• Clear communication throughout every project.\n• Reliable delivery without compromising quality.\n• Solutions tailored to business goals—not templates.\n\nWe believe successful partnerships are built on trust, transparency, and measurable results. Every project is an opportunity to create work that not only looks exceptional but also delivers lasting value for our clients.\n\nBecause great brands aren't built overnight.\n\nThey're built through consistent strategy, thoughtful execution, and meaningful collaboration."},{"cat":"Landing Page Copywriting","title":"Conversion-Focused Landing Page for a Productivity App","teaser":"Strategic landing page copy built around one offer, one audience, and one clear conversion goal.","body":"<strong>Conversion-Focused Landing Page for a Productivity App<\/strong>\n\n<strong>Headline<\/strong>\n\nFocus on what matters. Leave distractions behind.\n\n<strong>Subheadline<\/strong>\n\nBoost your productivity with an intelligent focus app that blocks distractions, organizes your workflow, and helps you accomplish more in less time.\n\n<strong>Why Professionals Choose FocusFlow<\/strong>\n\nStaying productive has never been more challenging. Endless notifications, social media, emails, and constant interruptions make deep work almost impossible.\n\nFocusFlow is designed to solve that problem.\n\nWith one click, it creates a distraction-free environment so you can concentrate on your most important tasks without unnecessary interruptions.\n\nWhether you're studying for exams, writing reports, coding your next project, or managing a busy workload, FocusFlow helps you stay focused from start to finish.\n\n<strong>Key Features<\/strong>\n\n• Block distracting websites and applications instantly.\n• Smart Focus Timer based on proven productivity techniques.\n• Daily productivity reports and progress tracking.\n• Custom focus sessions tailored to your workflow.\n• Automatic break reminders to prevent burnout.\n• Secure cloud synchronization across all your devices.\n\n<strong>Designed for Modern Professionals<\/strong>\n\nFreelancers, students, entrepreneurs, developers, designers, and remote teams all face the same challenge: protecting their attention.\n\nFocusFlow provides the structure you need without adding unnecessary complexity.\n\nSimple to set up.\n\nPowerful enough to become part of your daily routine.\n\n<strong>What You'll Gain<\/strong>\n\n• Complete more meaningful work every day.\n• Reduce digital distractions.\n• Improve concentration during deep work sessions.\n• Build healthier productivity habits.\n• Stay organized without feeling overwhelmed.\n\n<strong>Call to Action<\/strong>\n\nStart your free 14-day trial today.\n\nNo credit card required. No hidden fees. Cancel anytime.\n\nTake control of your attention—and let your best work speak for itself."}],"F":[{"q":"Why AI-assisted writing?","a":"AI is excellent at producing a fast first draft and exploring structure — but it also confidently states things that aren't true and tends toward generic phrasing. Using it for speed, then rewriting, fact-checking, and voicing every piece by hand, gets the turnaround benefit without the accuracy or authenticity risk."},{"q":"How long does delivery take?","a":"Most single pieces (a product description, a landing page section) are delivered within 24–72 hours depending on research depth required. Larger projects — a full site's copy, a multi-part blog series — are scoped with a timeline upfront before work begins."},{"q":"Can you write in different tones?","a":"Yes. Tone is set by the brand and audience, not by default habit — playful and irreverent for a DTC brand, precise and restrained for a fintech product, warm and plain for a healthcare service. A short brief or existing brand voice guide speeds this up considerably."},{"q":"What industries do you write for?","a":"Most experience so far is in tech, SaaS, e-commerce, and education — the samples above reflect that. I'm glad to take on other industries with extra research time built into the timeline and cost."},{"q":"Do you disclose when content is AI-assisted?","a":"Always, if asked, and it's stated plainly on this page. The AI-assisted step is treated as a tool in the process, not something to hide — the human editing and fact-checking step is what's actually being sold."}]}, FORM_ENDPOINT="", EMAIL="anasjahangirking@gmail.com";
-const $=s=>document.querySelector(s), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let glInitialized=false;
+const $=s=>document.querySelector(s), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const buzz=p=>{try{if(!reduce&&navigator.vibrate)navigator.vibrate(p)}catch(e){}};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 /* theme */
-const root=document.documentElement,themeMeta=$('meta[name="theme-color"]');
-const updateThemeColor=()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;themeMeta?.setAttribute('content',dark?'#050508':'#F5F5F7')};
-updateThemeColor();
-$('#th').onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark';updateThemeColor();buzz(10)};
+const root=document.documentElement;
+$('#th').onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark';buzz(10)};
 /* progress + nav */
-const pg=$('#pg');let scrollRAF=0,lastScrollY=scrollY,isScrolling=false,scrollResumeTimer=0;const pendingReveals=new Set();
-let pageMaxScroll=0,scrollMetricsDirty=true,metricsRAF=0;
-function refreshScrollMetrics(){pageMaxScroll=Math.max(0,document.documentElement.scrollHeight-innerHeight);scrollMetricsDirty=false}
-function invalidateScrollMetrics(){scrollMetricsDirty=true;if(!metricsRAF)metricsRAF=requestAnimationFrame(()=>{metricsRAF=0;refreshScrollMetrics()})}
-function revealNow(el){el.classList.add('in');setTimeout(()=>el.classList.remove('r','in'),1300)}
-function flushPendingReveals(){for(const el of pendingReveals){const r=el.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)revealNow(el);else el.classList.remove('r')}pendingReveals.clear()}
-function noteScrollActivity(){
- isScrolling=true;root.classList.add('is-scrolling');
- if(raf){cancelAnimationFrame(raf);raf=0}
- clearTimeout(scrollResumeTimer);
- scrollResumeTimer=setTimeout(()=>{isScrolling=false;root.classList.remove('is-scrolling');flushPendingReveals();kick()},145);
-}
-function scheduleScrollWork(){noteScrollActivity();if(scrollRAF)return;scrollRAF=requestAnimationFrame(()=>{scrollRAF=0;if(scrollMetricsDirty)refreshScrollMetrics();const y=scrollY,h=pageMaxScroll;pg.style.transform='scaleX('+(h>0?y/h:0)+')';const delta=y-lastScrollY;if(Math.abs(delta)>=6){nv.classList.toggle('mn',delta>0&&y>160);lastScrollY=y}})}
-addEventListener('scroll',scheduleScrollWork,{passive:true});
-const links=[...document.querySelectorAll('nav a.l')];
-const navSections=[...document.querySelectorAll('section[id]')];
-function setActiveSection(active){
- links.forEach(a=>a.classList.toggle('on',!!active&&a.hash==='#'+active.id));
- moveLens();
-}
-function updateActiveNav(){
- const marker=innerHeight*.42;
- let active=null;
- for(const section of navSections){const r=section.getBoundingClientRect();if(r.top<=marker&&r.bottom>marker){active=section;break}}
- if(!active&&scrollY+innerHeight>=document.documentElement.scrollHeight-2)active=navSections[navSections.length-1]||null;
- setActiveSection(active);
-}
-const navObserver=new IntersectionObserver(entries=>{
- const visible=entries.filter(entry=>entry.isIntersecting);
- if(visible.length){visible.sort((a,b)=>Math.abs(a.boundingClientRect.top-innerHeight*.42)-Math.abs(b.boundingClientRect.top-innerHeight*.42));setActiveSection(visible[0].target);return}
- if(scrollY+innerHeight>=document.documentElement.scrollHeight-2)setActiveSection(navSections[navSections.length-1]||null);
- else if(scrollY<(navSections[0]?.offsetTop||0)-innerHeight*.42)setActiveSection(null);
-},{rootMargin:'-42% 0px -52% 0px',threshold:0});
-navSections.forEach(section=>navObserver.observe(section));
+const pg=$('#pg');let tk=false;addEventListener('scroll',()=>{if(tk)return;tk=true;requestAnimationFrame(()=>{const h=document.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?scrollY/h:0)+')';tk=false})},{passive:true});
+const links=[...document.querySelectorAll('.tb')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&performance.now()>(window.lockUntil||0)){const m=links.find(a=>a.hash==='#'+e.target.id);if(m){links.forEach(a=>a.classList.toggle('on',a===m));moveLens()}}}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>io.observe(s));
 /* render */
 $('#mq').innerHTML=[...D.S,...D.S].map(s=>'<span>'+esc(s.title)+'</span>').join('');
 const feat=D.P.length-1;
-$('#pf').innerHTML=D.P.map((p,i)=>'<button class="c'+(i===feat?' big':'')+'" data-i="'+i+'"><span class="k">'+esc(p.cat)+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.teaser)+'</p><span class="go">Read the piece →</span></button>').join('');
+const art=n=>{const h=(n*57+205)%360;return '<span class="art" style="--h1:'+h+';--h2:'+((h+75)%360)+'"></span>'};
+const ord=[feat,...D.P.map((_,i)=>i).filter(i=>i!==feat)];
+$('#pf').innerHTML=ord.map((i,n)=>{const p=D.P[i];return '<button class="c" data-i="'+i+'">'+art(n)+'<span class="k">'+esc(p.cat)+(n===0?' · Featured':'')+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.teaser)+'</p><span class="go">Read the piece →</span></button>'}).join('');
+$('#pv').onclick=()=>{buzz(8);$('#pf').scrollBy({left:-340,behavior:'smooth'})};$('#nx').onclick=()=>{buzz(8);$('#pf').scrollBy({left:340,behavior:'smooth'})};
 $('#sv').innerHTML=D.S.map(s=>'<div class="c sv"><span class="ic">'+esc(s.icon)+'</span><h3>'+esc(s.title)+'</h3><p>'+esc(s.desc)+'</p><small>Best for: '+esc(s.clients)+'</small></div>').join('');
 $('#fq').innerHTML=D.F.map(f=>'<details><summary>'+esc(f.q)+'</summary><p>'+esc(f.a)+'</p></details>').join('');
 $('#sj').innerHTML=D.S.map(s=>'<option>'+esc(s.title)+'</option>').join('')+'<option>Something else</option>';
-document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{buzz(8);invalidateScrollMetrics()}));
-if(window.visualViewport)visualViewport.addEventListener('resize',invalidateScrollMetrics,{passive:true});
-refreshScrollMetrics();
-if('ResizeObserver'in window){const pageMetricsObserver=new ResizeObserver(invalidateScrollMetrics);pageMetricsObserver.observe(document.body)}
-addEventListener('resize',invalidateScrollMetrics,{passive:true});
-if(document.fonts?.ready)document.fonts.ready.then(invalidateScrollMetrics).catch(()=>{});
-if(matchMedia('(hover:hover)').matches)document.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const c=e.target.closest&&e.target.closest('.c,.stat,.ct,.win,.fq details');if(!c)return;const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;c.style.setProperty('--mx',x+'px');c.style.setProperty('--my',y+'px');if(c.classList.contains('c')){c.style.setProperty('--rx',((.5-y/r.height)*7).toFixed(2)+'deg');c.style.setProperty('--ry',((x/r.width-.5)*9).toFixed(2)+'deg')}});
+document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>buzz(8)));
+if(matchMedia('(hover:hover)').matches)document.addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.c');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}});
 /* counters */
 document.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n;if(reduce){el.textContent=n;return}
  new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();let t0;const f=t=>{t0=t0||t;const k=Math.min((t-t0)/900,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)}}).observe(el)});
 /* slide-over reader */
-const sh=$('#sh');let last,overlayOpen=false;const setInert=v=>document.querySelectorAll('main,nav,footer').forEach(e=>e.inert=!!v);
-function openSheet(i){const p=D.P[i];last=document.activeElement;overlayOpen=true;if(raf){cancelAnimationFrame(raf);raf=0}$('#shk').textContent=p.cat;$('#sht').textContent=p.title;let bd=p.body;try{bd=bd.replace(new RegExp('^\\s*(<[^>]+>)*\\s*'+p.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*(</[^>]+>)*\\s*','i'),'')}catch(e){}$('#shb').innerHTML=bd;sh.classList.add('o');root.classList.add('reader-open');setInert(1);sh.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';buzz(14);setTimeout(()=>sh.querySelector('.cl').focus(),50)}
-function closeSheet(){sh.classList.remove('o');root.classList.remove('reader-open');overlayOpen=false;kick();setInert(0);sh.setAttribute('aria-hidden','true');document.body.style.overflow='';buzz(8);last&&last.focus()}
+const sh=$('#sh');let last;
+function openSheet(i){const p=D.P[i];last=document.activeElement;$('#shk').textContent=p.cat;$('#sht').textContent=p.title;let bd=p.body;try{bd=bd.replace(new RegExp('^\\s*(<[^>]+>)*\\s*'+p.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*(</[^>]+>)*\\s*','i'),'')}catch(e){}$('#shb').innerHTML=bd;sh.classList.add('o');sh.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';buzz(14);setTimeout(()=>sh.querySelector('.cl').focus(),50)}
+function closeSheet(){sh.classList.remove('o');sh.setAttribute('aria-hidden','true');document.body.style.overflow='';buzz(8);last&&last.focus()}
 $('#pf').addEventListener('click',e=>{const c=e.target.closest('.c');if(c)openSheet(+c.dataset.i)});
 sh.addEventListener('click',e=>{if(e.target.closest('[data-c]'))closeSheet()});
 addEventListener('keydown',e=>{if(e.key==='Escape'&&sh.classList.contains('o'))closeSheet()});
-sh.addEventListener('keydown',e=>{
- if(e.key!=='Tab'||!sh.classList.contains('o'))return;
- const focusables=[...sh.querySelectorAll('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])')].filter(el=>el.getClientRects().length);
- if(!focusables.length){e.preventDefault();return}
- const first=focusables[0],lastFocusable=focusables[focusables.length-1],index=focusables.indexOf(document.activeElement);
- if(index<0){e.preventDefault();first.focus()}
- else if(e.shiftKey&&index===0){e.preventDefault();lastFocusable.focus()}
- else if(!e.shiftKey&&index===focusables.length-1){e.preventDefault();first.focus()}
-});
-/* hero editing animation */
-const parts=[['Our'],['innovative,',1],['cutting-edge',1],['platform'],['will'],['leverage',1],['synergy',1],['to'],['empower',1],['teams'],['to'],['book'],['meetings'],['seamlessly.',1]];
-const ed=$('#ed'),out=$('#out'),st=$('#st');let run=0;
-ed.innerHTML=parts.map(p=>'<span class="t'+(p[1]?' k':'')+'">'+p[0]+'</span>').join('');
-const T=[...ed.children],K=T.filter(t=>t.classList.contains('k'));
-const wait=ms=>new Promise(r=>setTimeout(r,ms));
-async function play(){const id=++run;T.forEach(t=>t.classList.remove('v','x'));out.classList.remove('on');st.textContent='AI draft';st.classList.remove('ok');
- if(reduce){T.forEach(t=>t.classList.add('v'));K.forEach(t=>t.classList.add('x'));out.classList.add('on');st.textContent='Human edit';st.classList.add('ok');return}
- for(const t of T){if(id!==run)return;t.classList.add('v');await wait(70)}
- await wait(500);
- for(const k of K){if(id!==run)return;k.classList.add('x');buzz(14);await wait(330)}
- await wait(250);if(id!==run)return;st.textContent='Human edit';st.classList.add('ok');out.classList.add('on');buzz([30,40,30,40,90])}
-$('#rp').onclick=()=>{buzz(10);play()};
+/* lens hero */
+const stage=$('#stage'),lens2=$('#lens2'),af=$('#af'),hint=$('#hint');
+let sw=0,shh=0,R=70,lx=0,ly=0,tx2=0,ty2=0,man=reduce,drag=false,lvis=false,lraf=0,trav=0;
+function sizeStage(){const r=stage.getBoundingClientRect();sw=r.width;shh=r.height;R=Math.max(54,Math.min(92,sw*.17));lens2.style.width=lens2.style.height=R*2+'px';lens2.style.marginLeft=lens2.style.marginTop=-R+'px';if(!lx&&!ly){lx=tx2=sw*.3;ly=ty2=shh*.45}}
+function paint(sp){const k=1+Math.min(.18,sp/260),r=R*k;lens2.style.transform='translate('+lx.toFixed(1)+'px,'+ly.toFixed(1)+'px) scale('+k.toFixed(3)+')';af.style.clipPath=af.style.webkitClipPath='circle('+r.toFixed(1)+'px at '+lx.toFixed(1)+'px '+ly.toFixed(1)+'px)'}
+function lframe(ts){lraf=0;if(!lvis||document.hidden)return;
+ if(!man){const t=ts/1000;tx2=sw*.5+Math.sin(t*.8)*sw*.26;ty2=shh*.42+Math.sin(t*1.25+1)*shh*.2}
+ const ox=lx,oy=ly,f=drag?.35:.14;lx+=(tx2-lx)*f;ly+=(ty2-ly)*f;const d=Math.hypot(lx-ox,ly-oy);
+ if(man){trav+=d;if(trav>90){trav=0;buzz(5)}}
+ paint(d*2);lraf=requestAnimationFrame(lframe)}
+function lkick(){if(!lraf&&lvis&&!document.hidden)lraf=requestAnimationFrame(lframe)}
+function play(){sizeStage();lkick()}
+const lpos=e=>{const r=stage.getBoundingClientRect();return[Math.max(0,Math.min(sw,e.clientX-r.left)),Math.max(0,Math.min(shh,e.clientY-r.top))]};
+lens2.addEventListener('pointerdown',e=>{e.preventDefault();drag=man=true;lens2.setPointerCapture(e.pointerId);hint.style.opacity=0;buzz(18);[tx2,ty2]=lpos(e)});
+lens2.addEventListener('pointermove',e=>{if(drag)[tx2,ty2]=lpos(e)});
+['pointerup','pointercancel'].forEach(n=>lens2.addEventListener(n,()=>{if(drag){drag=false;buzz(10)}}));
+stage.addEventListener('pointerdown',e=>{if(e.target===lens2)return;man=true;[tx2,ty2]=lpos(e);hint.style.opacity=0;buzz(8)});
+new IntersectionObserver(es=>{lvis=es[0].isIntersecting;lkick()},{threshold:.05}).observe(stage);
+document.addEventListener('visibilitychange',lkick);
+addEventListener('resize',sizeStage);
+sizeStage();paint(0);
 /* intro */
 const intro=$('#in'),hi=$('#hi');let started=false,iv;
-function begin(){if(started)return;started=true;setInert(0);document.body.classList.add('go');try{kick()}catch(e){}clearTimeout(iv);intro.classList.add('h');document.body.style.overflow='';setTimeout(()=>{intro.remove();startGraphics()},1100);setTimeout(play,500)}
+function begin(){if(started)return;started=true;document.body.classList.add('go');try{kick()}catch(e){}clearTimeout(iv);intro.classList.add('h');document.body.style.overflow='';setTimeout(()=>intro.remove(),1100);setTimeout(play,500)}
 function end(){try{sessionStorage.setItem('bs','1')}catch(e){}buzz([30,40,70]);begin()}
-const hello=['Hello','হ্যালো'];
+const hello=['Hello','হ্যালো','Hola','Bonjour','こんにちは','مرحبا','Ciao'];
 let seen=false;try{seen=sessionStorage.getItem('bs')==='1'}catch(e){}
-if(seen||reduce){intro.remove();started=true;document.body.classList.add('go');play();startGraphics()}else{document.body.style.overflow='hidden';setInert(1);let i=0;const next=()=>{if(i>=hello.length){end();return}hi.textContent=hello[i];hi.classList.remove('wp');void hi.offsetWidth;hi.classList.add('wp');buzz(i?10:22);i++;iv=setTimeout(next,650)};next()}
+if(seen||reduce){intro.remove();started=true;document.body.classList.add('go');play()}else{document.body.style.overflow='hidden';let i=0;const next=()=>{if(i>=hello.length){end();return}hi.textContent=hello[i];hi.classList.remove('w');void hi.offsetWidth;hi.classList.add('w');buzz(i?10:22);i++;iv=setTimeout(next,i===1?1200:900)};next()}
 intro.onclick=end;
 /* form */
 $('#fm').addEventListener('submit',async e=>{e.preventDefault();
  const n=$('#nm').value.trim(),m=$('#em').value.trim(),s=$('#ms').value.trim(),sj=$('#sj').value;
- const emailValid=/^\S+@\S+\.\S+$/.test(m);
- $('#e1').textContent=n?'':'Enter your name.';$('#e2').textContent=emailValid?'':'Enter a valid email.';$('#e3').textContent=s?'':'Add a short message.';
- $('#nm').setAttribute('aria-invalid',String(!n));$('#em').setAttribute('aria-invalid',String(!emailValid));$('#ms').setAttribute('aria-invalid',String(!s));
- if(!n||!emailValid||!s){buzz([20,40,20]);(!n?$('#nm'):!emailValid?$('#em'):$('#ms')).focus();return}
+ $('#e1').textContent=n?'':'Enter your name.';$('#e2').textContent=/^\S+@\S+\.\S+$/.test(m)?'':'Enter a valid email.';$('#e3').textContent=s?'':'Add a short message.';
+ if(!n||!/^\S+@\S+\.\S+$/.test(m)||!s){buzz([20,40,20]);return}
  const nt=$('#nt');
  if(!FORM_ENDPOINT){location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('New inquiry: '+sj)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+m+'\n\n'+s);nt.textContent='Opening your email app to send this.';return}
  try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{Accept:'application/json'},body:new FormData(e.target)});if(r.ok){nt.textContent='Thanks, your message is in.';e.target.reset();buzz([30,40,90])}else nt.textContent='Something went wrong. Try email or WhatsApp.'}catch(x){nt.textContent='Could not reach the server. Try email or WhatsApp.'}});
 
 /* depth, reveal, sheet drag */
-if(!reduce){const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;ro.unobserve(el);if(isScrolling)pendingReveals.add(el);else revealNow(el)}}),{threshold:.12});
- document.querySelectorAll('.hd,.win,.stat,.c,.fq details,.ct').forEach((el,i)=>{el.classList.add('r');el.style.setProperty('--rd',(i%4)*.08+'s');ro.observe(el)})}
-/* Pause only CSS animations that cannot be seen; resume at full fidelity before they enter view. */
-root.classList.add('fx-managed');
-const fxTargets=[...document.querySelectorAll('.hero,.win,.big,.btn.p,.mq,.m')];
-if('IntersectionObserver' in window){
- const fxObserver=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.classList.toggle('fx-live',entry.isIntersecting)},{rootMargin:'140px 0px'});
- fxTargets.forEach(el=>fxObserver.observe(el));
-}else{fxTargets.forEach(el=>el.classList.add('fx-live'))}
+if(!reduce){const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;ro.unobserve(el);el.classList.add('in');setTimeout(()=>el.classList.remove('r','in'),1300)}}),{threshold:.12});
+ document.querySelectorAll('.hd,.win,.stat,.c,.fq details,.ct').forEach((el,i)=>{el.classList.add('r');el.style.setProperty('--d',(i%4)*.08+'s');ro.observe(el)})}
 let y0=null;const pn=sh.querySelector('.pn');
 pn.addEventListener('touchstart',e=>{if(innerWidth<=720&&e.target.closest('header'))y0=e.touches[0].clientY},{passive:true});
 pn.addEventListener('touchmove',e=>{if(y0!==null){pn.style.transition='none';pn.style.transform='translateY('+Math.max(0,e.touches[0].clientY-y0)+'px)'}},{passive:true});
 pn.addEventListener('touchend',e=>{if(y0===null)return;const d=e.changedTouches[0].clientY-y0;y0=null;pn.style.transition='';pn.style.transform='';if(d>110)closeSheet()});
-pn.addEventListener('touchcancel',()=>{if(y0===null)return;y0=null;pn.style.transition='';pn.style.transform=''},{passive:true});
 
-/* hero shader + gyro tilt — fixed visual quality, cached canvas sizing */
-var vis=true,raf=0,gl=null,prog,U={},hashTexture=null,hasHashLUT=false,cv=document.getElementById('gl'),heroEl=document.querySelector('.hero'),rpx=.5,rpy=.5,rpt=-100,mx=.5,my=.7,tmx=.5,tmy=.7,tx=0,ty=0,cx=0,cy=0,light=false,fc=0,winEl=document.querySelector('.win'),tiltActive=false;
-const RENDER_SCALE=.55; // Preserve the existing shader resolution and visual detail.
-const COARSE_POINTER=matchMedia('(pointer:coarse)').matches||navigator.maxTouchPoints>0;
-const SHADER_FRAME_INTERVAL=1000/60; // Cap the full-screen shader at 60 draws/s on 120Hz panels.
-let lastShaderFrame=-Infinity;
-let canvasCSSWidth=0,canvasCSSHeight=0;
-function resizeCanvas(width,height){
- canvasCSSWidth=width;canvasCSSHeight=height;
- const w=Math.max(2,Math.round(width*RENDER_SCALE)),h=Math.max(2,Math.round(height*RENDER_SCALE));
- if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;if(gl)gl.viewport(0,0,w,h)}
-}
-function measureCanvas(){resizeCanvas(cv.clientWidth,cv.clientHeight)}
-function buildHashLUT(vertexSource,quadBuffer){
- const size=1024,texture=gl.createTexture(),framebuffer=gl.createFramebuffer();
- gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);
- gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
- gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.REPEAT);
- gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,size,size,0,gl.RGBA,gl.UNSIGNED_BYTE,null);
- gl.bindFramebuffer(gl.FRAMEBUFFER,framebuffer);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,texture,0);
- if(gl.checkFramebufferStatus(gl.FRAMEBUFFER)!==gl.FRAMEBUFFER_COMPLETE){gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.deleteFramebuffer(framebuffer);gl.deleteTexture(texture);return false}
- const fragmentSource='precision highp float;void main(){vec2 p=gl_FragCoord.xy-vec2(0.5);p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);float v=fract(p.x*p.y);float hi=floor(v*255.0)/255.0;float lo=fract(v*255.0);gl_FragColor=vec4(hi,lo,0.0,1.0);}';
- const vs=gl.createShader(gl.VERTEX_SHADER),fs=gl.createShader(gl.FRAGMENT_SHADER);gl.shaderSource(vs,vertexSource);gl.shaderSource(fs,fragmentSource);gl.compileShader(vs);gl.compileShader(fs);
- if(!gl.getShaderParameter(vs,gl.COMPILE_STATUS)||!gl.getShaderParameter(fs,gl.COMPILE_STATUS)){gl.deleteShader(vs);gl.deleteShader(fs);gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.deleteFramebuffer(framebuffer);gl.deleteTexture(texture);return false}
- const program=gl.createProgram();gl.attachShader(program,vs);gl.attachShader(program,fs);gl.linkProgram(program);
- if(!gl.getProgramParameter(program,gl.LINK_STATUS)){gl.deleteProgram(program);gl.deleteShader(vs);gl.deleteShader(fs);gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.deleteFramebuffer(framebuffer);gl.enable(gl.DITHER);gl.deleteTexture(texture);return false}
- gl.disable(gl.DITHER);gl.viewport(0,0,size,size);gl.useProgram(program);gl.bindBuffer(gl.ARRAY_BUFFER,quadBuffer);
- const location=gl.getAttribLocation(program,'p');gl.enableVertexAttribArray(location);gl.vertexAttribPointer(location,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.TRIANGLES,0,3);gl.flush();
- const ok=gl.getError()===gl.NO_ERROR;
- gl.deleteProgram(program);gl.deleteShader(vs);gl.deleteShader(fs);gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.deleteFramebuffer(framebuffer);gl.enable(gl.DITHER);
- if(!ok){gl.deleteTexture(texture);return false}
- hashTexture=texture;return true;
-}
+/* hero shader + gyro tilt */
+var vis=true,raf=0,gl=null,prog,U={},cv=document.getElementById('gl'),heroEl=document.querySelector('.hero'),rpx=.5,rpy=.5,rpt=-100,fN=0,fT=0,mx=.5,my=.7,tmx=.5,tmy=.7,tx=0,ty=0,cx=0,cy=0,light=false,fc=0,winEl=document.querySelector('.win');
 function initGL(){
- try{gl=cv.getContext('webgl',{alpha:true,antialias:false,depth:false,stencil:false,premultipliedAlpha:true,preserveDrawingBuffer:false,desynchronized:true})}catch(e){gl=null}
+ try{gl=cv.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:true,powerPreference:'low-power'})}catch(e){}
  if(!gl){cv.remove();return}
  const vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
- const quad=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,quad);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
- hasHashLUT=buildHashLUT(vs,quad);
  const fs='#ifdef GL_FRAGMENT_PRECISION_HIGH\nprecision highp float;\n#else\nprecision mediump float;\n#endif\nuniform vec2 r,m,tm;uniform float t,lt,tt;'+
- (hasHashLUT?'uniform sampler2D uHash;float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);vec2 cell=mod(i+f,vec2(1024.0));vec2 uv=(cell+vec2(0.5))/1024.0;vec2 rg=texture2D(uHash,uv).rg;return rg.x+rg.y/255.0;}':'float h(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}')+
- 
+ 'float h(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}'+
+ 'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}'+
  'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}'+
  'void main(){vec2 uv=gl_FragCoord.xy/r;float asp=r.x/r.y;vec2 uA=vec2(uv.x*asp,uv.y);vec2 p=uA*1.6;float T=t*.14;float age=t-tt;float rd=distance(uA,vec2(tm.x*asp,tm.y));float wave=sin(rd*28.-age*7.)*exp(-rd*3.5)*exp(-age*1.4)*step(0.,age);p+=wave*.18;'+
  'vec2 q=vec2(fbm(p+T),fbm(p+vec2(5.2,1.3)-T));'+
@@ -472,74 +343,55 @@ function initGL(){
  'float a=smoothstep(.3,.85,f)*(.5+.5*q.x);a+=exp(-d*3.2)*.3+wave*.22;'+
  'float K=mix(.46,.27,lt);a=clamp(a,0.,1.)*K;gl_FragColor=vec4(col*a,a);}';
  const mk=(ty,src)=>{const s=gl.createShader(ty);gl.shaderSource(s,src);gl.compileShader(s);return s};
- const vsh=mk(gl.VERTEX_SHADER,vs),fsh=mk(gl.FRAGMENT_SHADER,fs);
- if(!gl.getShaderParameter(vsh,gl.COMPILE_STATUS)||!gl.getShaderParameter(fsh,gl.COMPILE_STATUS)){gl=null;cv.remove();return}
- prog=gl.createProgram();gl.attachShader(prog,vsh);gl.attachShader(prog,fsh);gl.linkProgram(prog);
+ prog=gl.createProgram();gl.attachShader(prog,mk(gl.VERTEX_SHADER,vs));gl.attachShader(prog,mk(gl.FRAGMENT_SHADER,fs));gl.linkProgram(prog);
  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)){gl=null;cv.remove();return}
  gl.useProgram(prog);
- gl.bindBuffer(gl.ARRAY_BUFFER,quad);
+ const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
  const l=gl.getAttribLocation(prog,'p');gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,2,gl.FLOAT,false,0,0);
  ['r','t','m','lt','tm','tt'].forEach(n=>U[n]=gl.getUniformLocation(prog,n));
- if(hasHashLUT&&hashTexture){U.hash=gl.getUniformLocation(prog,'uHash');gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,hashTexture);gl.uniform1i(U.hash,0)}
- measureCanvas();gl.viewport(0,0,cv.width,cv.height);
- if(gl&&'ResizeObserver'in window&&!cv.__resizeObserver){const ro=new ResizeObserver(entries=>{const box=entries[0]?.contentRect;if(box){resizeCanvas(box.width,box.height);if(reduce)draw(6000)}});ro.observe(cv);cv.__resizeObserver=ro}
- else if(gl&&!('ResizeObserver'in window)){addEventListener('resize',()=>{measureCanvas();if(reduce)draw(6000)},{passive:true})}
- if(reduce)draw(6000);
+ if(reduce){draw(6000)}
 }
-function draw(ts){if(!gl)return;mx+=(tmx-mx)*.06;my+=(tmy-my)*.06;if(Math.abs(tmx-mx)<.001)mx=tmx;if(Math.abs(tmy-my)<.001)my=tmy;
- if(!(fc++%40))light=root.dataset.theme?root.dataset.theme==='light':!matchMedia('(prefers-color-scheme: dark)').matches;
+function size(){const s=root.dataset.fx==='lite'?.4:.55,w=Math.max(2,Math.round(cv.clientWidth*s)),h=Math.max(2,Math.round(cv.clientHeight*s));if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;gl.viewport(0,0,w,h)}}
+function draw(ts){size();if(!(fc++%40))light=root.dataset.theme?root.dataset.theme==='light':!matchMedia('(prefers-color-scheme: dark)').matches;
+ mx+=(tmx-mx)*.06;my+=(tmy-my)*.06;
  gl.uniform2f(U.r,cv.width,cv.height);gl.uniform1f(U.t,ts/1000);gl.uniform2f(U.m,mx,my);gl.uniform1f(U.lt,light?1:0);gl.uniform2f(U.tm,rpx,rpy);gl.uniform1f(U.tt,rpt);gl.drawArrays(gl.TRIANGLES,0,3)}
-function frame(ts){raf=0;if(!gl||!vis||document.hidden||!started||overlayOpen||isScrolling)return;
- if(ts-lastShaderFrame>=SHADER_FRAME_INTERVAL-0.5){
-  lastShaderFrame=ts;
-  const inputPending=!!(navigator.scheduling&&navigator.scheduling.isInputPending&&navigator.scheduling.isInputPending());
-  if(!inputPending)draw(ts);
- }
- if(winEl&&winEl.classList.contains('fx-live')&&!winEl.classList.contains('r')){
-  const nx=cx+(tx-cx)*.07,ny=cy+(ty-cy)*.07;
-  if(Math.abs(nx-cx)>.005||Math.abs(ny-cy)>.005||(!tiltActive&&(Math.abs(nx)>.02||Math.abs(ny)>.02))){cx=nx;cy=ny;tiltActive=true;winEl.style.willChange='transform';winEl.style.transform='perspective(1100px) rotateX('+cx.toFixed(2)+'deg) rotateY('+cy.toFixed(2)+'deg)'}
-  if(tiltActive&&Math.abs(cx)<.025&&Math.abs(cy)<.025&&Math.abs(tx)<.025&&Math.abs(ty)<.025){cx=cy=0;tiltActive=false;winEl.style.transform='';winEl.style.willChange=''}
- }else if(tiltActive){tiltActive=false;cx=cy=0;winEl.style.transform='';winEl.style.willChange=''}
+function frame(ts){raf=0;if(!vis||document.hidden||!started)return;
+ fN++;if(fN===60)fT=ts;if(fN===210&&(ts-fT)/150>26)root.dataset.fx='lite';if(gl)draw(ts);
+ if(winEl&&!winEl.classList.contains('r')){cx+=(tx-cx)*.07;cy+=(ty-cy)*.07;winEl.style.transform='perspective(1100px) rotateX('+cx.toFixed(2)+'deg) rotateY('+cy.toFixed(2)+'deg)'}
  raf=requestAnimationFrame(frame)}
-function kick(){if(gl&&!raf&&vis&&!document.hidden&&started&&!overlayOpen&&!isScrolling&&!reduce){lastShaderFrame=-Infinity;raf=requestAnimationFrame(frame)}}
-function startGraphics(){if(glInitialized)return;glInitialized=true;const create=()=>{initGL();if(reduce&&gl)draw(6000);kick()};if('requestIdleCallback'in window)requestIdleCallback(create,{timeout:850});else setTimeout(create,120)}
-document.addEventListener('visibilitychange',()=>{if(document.hidden){vis=false;if(raf){cancelAnimationFrame(raf);raf=0}}else{vis=true;kick()}});
-addEventListener('pagehide',()=>{vis=false;clearTimeout(scrollResumeTimer);if(raf){cancelAnimationFrame(raf);raf=0}});
-addEventListener('pageshow',()=>{vis=true;isScrolling=false;root.classList.remove('is-scrolling');if(started&&!gl)startGraphics();kick()});
-document.addEventListener('pointermove',e=>{if(e.pointerType==='touch'&&isScrolling)return;tmx=e.clientX/innerWidth;tmy=1-e.clientY/innerHeight;if(e.pointerType==='mouse'){ty=(tmx-.5)*8;tx=(e.clientY/innerHeight-.5)*-5}},{passive:true});
+function kick(){if(!raf&&vis&&!document.hidden&&started&&!reduce)raf=requestAnimationFrame(frame)}
+initGL();
+
+document.addEventListener('visibilitychange',kick);
+document.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();tmx=(e.clientX-r.left)/r.width;tmy=1-(e.clientY-r.top)/r.height;if(e.pointerType==='mouse'){ty=(tmx-.5)*8;tx=((e.clientY-r.top)/r.height-.5)*-5}});
 heroEl.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'){tx=0;ty=0}});
-function handleOrientation(e){if(document.hidden||isScrolling||e.gamma==null)return;ty=Math.max(-7,Math.min(7,e.gamma/5));tx=Math.max(-5,Math.min(5,-((e.beta||65)-65)/8));tmx=Math.max(0,Math.min(1,.5+e.gamma/90));aim(innerWidth*tmx,innerHeight*.5)}
-addEventListener('deviceorientation',handleOrientation,{passive:true});
+addEventListener('deviceorientation',e=>{if(e.gamma==null)return;ty=Math.max(-7,Math.min(7,e.gamma/5));tx=Math.max(-5,Math.min(5,-((e.beta||65)-65)/8));tmx=Math.max(0,Math.min(1,.5+e.gamma/90))},{passive:true});
 kick();
 
 /* liquid: lens, ripple, jelly */
-function moveLens(){const a=links.find(x=>x.classList.contains('on')&&x.offsetWidth),l=$('#lens');if(!a){l.style.opacity=0;l.style.width='0px';l.style.transform='translateX(0px)';return}l.style.opacity=1;l.style.width=a.offsetWidth+'px';l.style.transform='translateX('+a.offsetLeft+'px)'}
-addEventListener('resize',()=>{updateActiveNav();scheduleScrollWork()},{passive:true});requestAnimationFrame(updateActiveNav);if(document.fonts?.ready)document.fonts.ready.then(updateActiveNav).catch(()=>{});
-document.addEventListener('pointerdown',e=>{rpx=e.clientX/innerWidth;rpy=1-e.clientY/innerHeight;rpt=performance.now()/1000;if(e.pointerType!=='mouse')aim(e.clientX,e.clientY);
- const j=e.target.closest&&e.target.closest('.c,.btn,#th,nav a');
- if(j&&!reduce){j.classList.remove('jl');requestAnimationFrame(()=>{if(!j.isConnected)return;j.classList.add('jl')});const onJellyEnd=ev=>{if(ev.animationName!=='jl')return;j.classList.remove('jl');j.removeEventListener('animationend',onJellyEnd)};j.addEventListener('animationend',onJellyEnd)}},{passive:true});
+/* dock */
+const dock=$('#dock'),tabs=$('#tabs'),bub=$('#bub'),tbs=[...tabs.querySelectorAll('.tb')];
+let iw=0,dragD=false,hov=-1,px0=0;
+function dsz(){iw=(tabs.clientWidth-12)/tbs.length;bub.style.width=iw+'px'}
+function moveLens(){dsz();if(dragD)return;const i=tbs.findIndex(x=>x.classList.contains('on'));if(i<0){bub.style.opacity=0;return}bub.style.opacity=1;bub.style.transform='translate3d('+i*iw+'px,0,0)'}
+const idxAt=e=>{const r=tabs.getBoundingClientRect();return Math.max(0,Math.min(tbs.length-1,Math.floor((e.clientX-r.left-6)/iw)))};
+function bubAt(e){const r=tabs.getBoundingClientRect();let x=e.clientX-r.left-6-iw/2;x=Math.max(0,Math.min(iw*(tbs.length-1),x));bub.style.opacity=1;bub.style.transform='translate3d('+x+'px,0,0) scale(1.24,1.14)'}
+const go=h=>{const el=document.querySelector(h);if(el)el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})};
+tabs.addEventListener('pointerdown',e=>{dock.classList.remove('min');dragD=true;px0=e.clientX;try{tabs.setPointerCapture(e.pointerId)}catch(x){}tabs.classList.add('press');hov=idxAt(e);bubAt(e);buzz(12)});
+tabs.addEventListener('pointermove',e=>{if(!dragD)return;bubAt(e);const i=idxAt(e);if(i!==hov){hov=i;buzz(7);tbs.forEach((x,k)=>x.classList.toggle('on',k===i))}});
+tabs.addEventListener('pointerup',e=>{if(!dragD)return;dragD=false;tabs.classList.remove('press');const i=idxAt(e);hov=-1;tbs.forEach((x,k)=>x.classList.toggle('on',k===i));$('.circ').classList.remove('on');window.lockUntil=performance.now()+1000;moveLens();buzz(16);go(tbs[i].getAttribute('href'))});
+tabs.addEventListener('dragstart',e=>e.preventDefault());tabs.addEventListener('contextmenu',e=>e.preventDefault());
+tabs.addEventListener('pointercancel',()=>{dragD=false;tabs.classList.remove('press');moveLens()});
+tabs.addEventListener('click',e=>{e.preventDefault();const a=e.target.closest('.tb');if(a&&e.detail===0)go(a.getAttribute('href'))});
+$('.circ').addEventListener('pointerdown',()=>{dock.classList.remove('min');buzz(12)});
+addEventListener('resize',moveLens);
+let ly0=0,tk2=false;addEventListener('scroll',()=>{if(tk2)return;tk2=true;requestAnimationFrame(()=>{const y=scrollY,d=y-ly0;if(Math.abs(d)>6){dock.classList.toggle('min',d>0&&y>240);ly0=y}tk2=false})},{passive:true});
+new IntersectionObserver(es=>dock.classList.toggle('atc',es[0].isIntersecting),{threshold:.25}).observe($('#contact'));
+moveLens();
+document.addEventListener('pointerdown',e=>{rpx=e.clientX/innerWidth;rpy=1-e.clientY/innerHeight;rpt=performance.now()/1000;
+ const j=e.target.closest&&e.target.closest('.c,.btn,#th,.circ,.ib,.brand');
+ if(j&&!reduce){j.classList.remove('jl');void j.offsetWidth;j.classList.add('jl');j.addEventListener('animationend',ev=>{if(ev.animationName==='jl')j.classList.remove('jl')})}},{passive:true});
 
-/* v3 */
-cv.addEventListener('webglcontextlost',e=>{e.preventDefault();gl=null;hashTexture=null;hasHashLUT=false;cv.style.display='none';if(raf){cancelAnimationFrame(raf);raf=0}});
-cv.addEventListener('webglcontextrestored',()=>{cv.style.display='block';initGL();kick()});
-intro.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();intro.focus();return}if(['Enter',' ','Escape'].includes(e.key)){e.preventDefault();end()}});if(document.body.contains(intro))intro.focus();
-
-/* v4 */
-let la=160,tla=160,lq=160,lid=0,lastAimFrame=0;
-const AIM_INTERVAL=COARSE_POINTER?1000/20:0;
-const aimLoop=(ts)=>{
- lid=0;
- if(COARSE_POINTER&&ts-lastAimFrame<AIM_INTERVAL){if(Math.abs(tla-la)>.4)lid=requestAnimationFrame(aimLoop);return}
- const dt=lastAimFrame?Math.min(100,ts-lastAimFrame):1000/60;lastAimFrame=ts;
- const alpha=1-Math.pow(.88,dt/(1000/60));la+=(tla-la)*alpha;
- const q=Math.round(la);if(q!==lq){lq=q;root.style.setProperty('--la',q+'deg')}
- if(Math.abs(tla-la)>.4)lid=requestAnimationFrame(aimLoop)
-};
-const aim=(x,y)=>{if(reduce)return;tla=140+(x/innerWidth-.5)*60+(y/innerHeight-.5)*24;if(!lid)lid=requestAnimationFrame(aimLoop)};
-addEventListener('pointermove',e=>{if(e.pointerType==='mouse')aim(e.clientX,e.clientY)},{passive:true});
-const nv=$('nav');
-let mb=null;document.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||reduce)return;const b=e.target.closest&&e.target.closest('.btn');if(mb&&mb!==b){mb.style.setProperty('--tx','0px');mb.style.setProperty('--ty','0px');mb=null}if(b){const r=b.getBoundingClientRect();b.style.setProperty('--tx',((e.clientX-r.left-r.width/2)*.16).toFixed(1)+'px');b.style.setProperty('--ty',((e.clientY-r.top-r.height/2)*.26).toFixed(1)+'px');mb=b}});
-document.addEventListener('pointerdown',e=>{const b=e.target.closest&&e.target.closest('.btn');if(b){const r=b.getBoundingClientRect();b.style.setProperty('--px',(e.clientX-r.left)+'px');b.style.setProperty('--py',(e.clientY-r.top)+'px')}},{passive:true});
 </script>
 </body>
 </html>
