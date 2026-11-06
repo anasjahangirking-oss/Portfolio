@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#F5F5F7">
 <title>ByteSpark — Copywriting that moves people</title>
+<!-- Galaxy S21 / Chrome tuning: same visual assets and shader resolution; render work is scheduled more efficiently. -->
 <meta name="description" content="Freelance copywriter turning complex ideas into clear, confident copy. AI for speed, human for judgment.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -223,10 +224,15 @@ nav.mn{transform:translateX(-50%) scale(.9);opacity:.9}nav.mn:hover,nav.mn:focus
 @media(min-width:721px){.edge.b{display:none}}
 
 /* Render long sections only as they approach the viewport; their full effects remain intact. */
+/* Pause only the continuously-running decorative animations while scrolling.
+   Avoid a universal descendant selector that invalidates style across the whole page. */
 .fx-managed.is-scrolling body::after,
-.fx-managed.is-scrolling * ,
-.fx-managed.is-scrolling *::before,
-.fx-managed.is-scrolling *::after{animation-play-state:paused!important}
+.fx-managed.is-scrolling .big::after,
+.fx-managed.is-scrolling .win::after,
+.fx-managed.is-scrolling .btn.p::after,
+.fx-managed.is-scrolling .mq>div,
+.fx-managed.is-scrolling .wd.gr,
+.fx-managed.is-scrolling .m .n.gr{animation-play-state:paused!important}
 #work,#services,#method,#faq,#contact{content-visibility:auto;contain-intrinsic-size:auto 900px}
 @media(max-width:759px){
  #work{contain-intrinsic-size:auto 2050px}
@@ -300,6 +306,9 @@ updateThemeColor();
 $('#th').onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark';updateThemeColor();buzz(10)};
 /* progress + nav */
 const pg=$('#pg');let scrollRAF=0,lastScrollY=scrollY,isScrolling=false,scrollResumeTimer=0;const pendingReveals=new Set();
+let pageMaxScroll=0,scrollMetricsDirty=true,metricsRAF=0;
+function refreshScrollMetrics(){pageMaxScroll=Math.max(0,document.documentElement.scrollHeight-innerHeight);scrollMetricsDirty=false}
+function invalidateScrollMetrics(){scrollMetricsDirty=true;if(!metricsRAF)metricsRAF=requestAnimationFrame(()=>{metricsRAF=0;refreshScrollMetrics()})}
 function revealNow(el){el.classList.add('in');setTimeout(()=>el.classList.remove('r','in'),1300)}
 function flushPendingReveals(){for(const el of pendingReveals){const r=el.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)revealNow(el);else el.classList.remove('r')}pendingReveals.clear()}
 function noteScrollActivity(){
@@ -308,7 +317,7 @@ function noteScrollActivity(){
  clearTimeout(scrollResumeTimer);
  scrollResumeTimer=setTimeout(()=>{isScrolling=false;root.classList.remove('is-scrolling');flushPendingReveals();kick()},145);
 }
-function scheduleScrollWork(){noteScrollActivity();if(scrollRAF)return;scrollRAF=requestAnimationFrame(()=>{scrollRAF=0;const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?y/h:0)+')';const delta=y-lastScrollY;if(Math.abs(delta)>=6){nv.classList.toggle('mn',delta>0&&y>160);lastScrollY=y}})}
+function scheduleScrollWork(){noteScrollActivity();if(scrollRAF)return;scrollRAF=requestAnimationFrame(()=>{scrollRAF=0;if(scrollMetricsDirty)refreshScrollMetrics();const y=scrollY,h=pageMaxScroll;pg.style.transform='scaleX('+(h>0?y/h:0)+')';const delta=y-lastScrollY;if(Math.abs(delta)>=6){nv.classList.toggle('mn',delta>0&&y>160);lastScrollY=y}})}
 addEventListener('scroll',scheduleScrollWork,{passive:true});
 const links=[...document.querySelectorAll('nav a.l')];
 const navSections=[...document.querySelectorAll('section[id]')];
@@ -337,7 +346,12 @@ $('#pf').innerHTML=D.P.map((p,i)=>'<button class="c'+(i===feat?' big':'')+'" dat
 $('#sv').innerHTML=D.S.map(s=>'<div class="c sv"><span class="ic">'+esc(s.icon)+'</span><h3>'+esc(s.title)+'</h3><p>'+esc(s.desc)+'</p><small>Best for: '+esc(s.clients)+'</small></div>').join('');
 $('#fq').innerHTML=D.F.map(f=>'<details><summary>'+esc(f.q)+'</summary><p>'+esc(f.a)+'</p></details>').join('');
 $('#sj').innerHTML=D.S.map(s=>'<option>'+esc(s.title)+'</option>').join('')+'<option>Something else</option>';
-document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>buzz(8)));
+document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{buzz(8);invalidateScrollMetrics()}));
+if(window.visualViewport)visualViewport.addEventListener('resize',invalidateScrollMetrics,{passive:true});
+refreshScrollMetrics();
+if('ResizeObserver'in window){const pageMetricsObserver=new ResizeObserver(invalidateScrollMetrics);pageMetricsObserver.observe(document.body)}
+addEventListener('resize',invalidateScrollMetrics,{passive:true});
+if(document.fonts?.ready)document.fonts.ready.then(invalidateScrollMetrics).catch(()=>{});
 if(matchMedia('(hover:hover)').matches)document.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const c=e.target.closest&&e.target.closest('.c,.stat,.ct,.win,.fq details');if(!c)return;const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;c.style.setProperty('--mx',x+'px');c.style.setProperty('--my',y+'px');if(c.classList.contains('c')){c.style.setProperty('--rx',((.5-y/r.height)*7).toFixed(2)+'deg');c.style.setProperty('--ry',((x/r.width-.5)*9).toFixed(2)+'deg')}});
 /* counters */
 document.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n;if(reduce){el.textContent=n;return}
@@ -408,7 +422,10 @@ pn.addEventListener('touchcancel',()=>{if(y0===null)return;y0=null;pn.style.tran
 
 /* hero shader + gyro tilt — fixed visual quality, cached canvas sizing */
 var vis=true,raf=0,gl=null,prog,U={},hashTexture=null,hasHashLUT=false,cv=document.getElementById('gl'),heroEl=document.querySelector('.hero'),rpx=.5,rpy=.5,rpt=-100,mx=.5,my=.7,tmx=.5,tmy=.7,tx=0,ty=0,cx=0,cy=0,light=false,fc=0,winEl=document.querySelector('.win'),tiltActive=false;
-const RENDER_SCALE=.55; // Keep the same shader resolution on desktop and mobile.
+const RENDER_SCALE=.55; // Preserve the existing shader resolution and visual detail.
+const COARSE_POINTER=matchMedia('(pointer:coarse)').matches||navigator.maxTouchPoints>0;
+const SHADER_FRAME_INTERVAL=1000/60; // Cap the full-screen shader at 60 draws/s on 120Hz panels.
+let lastShaderFrame=-Infinity;
 let canvasCSSWidth=0,canvasCSSHeight=0;
 function resizeCanvas(width,height){
  canvasCSSWidth=width;canvasCSSHeight=height;
@@ -473,14 +490,18 @@ function draw(ts){if(!gl)return;mx+=(tmx-mx)*.06;my+=(tmy-my)*.06;if(Math.abs(tm
  if(!(fc++%40))light=root.dataset.theme?root.dataset.theme==='light':!matchMedia('(prefers-color-scheme: dark)').matches;
  gl.uniform2f(U.r,cv.width,cv.height);gl.uniform1f(U.t,ts/1000);gl.uniform2f(U.m,mx,my);gl.uniform1f(U.lt,light?1:0);gl.uniform2f(U.tm,rpx,rpy);gl.uniform1f(U.tt,rpt);gl.drawArrays(gl.TRIANGLES,0,3)}
 function frame(ts){raf=0;if(!gl||!vis||document.hidden||!started||overlayOpen||isScrolling)return;
- draw(ts);
+ if(ts-lastShaderFrame>=SHADER_FRAME_INTERVAL-0.5){
+  lastShaderFrame=ts;
+  const inputPending=!!(navigator.scheduling&&navigator.scheduling.isInputPending&&navigator.scheduling.isInputPending());
+  if(!inputPending)draw(ts);
+ }
  if(winEl&&winEl.classList.contains('fx-live')&&!winEl.classList.contains('r')){
   const nx=cx+(tx-cx)*.07,ny=cy+(ty-cy)*.07;
   if(Math.abs(nx-cx)>.005||Math.abs(ny-cy)>.005||(!tiltActive&&(Math.abs(nx)>.02||Math.abs(ny)>.02))){cx=nx;cy=ny;tiltActive=true;winEl.style.willChange='transform';winEl.style.transform='perspective(1100px) rotateX('+cx.toFixed(2)+'deg) rotateY('+cy.toFixed(2)+'deg)'}
   if(tiltActive&&Math.abs(cx)<.025&&Math.abs(cy)<.025&&Math.abs(tx)<.025&&Math.abs(ty)<.025){cx=cy=0;tiltActive=false;winEl.style.transform='';winEl.style.willChange=''}
  }else if(tiltActive){tiltActive=false;cx=cy=0;winEl.style.transform='';winEl.style.willChange=''}
  raf=requestAnimationFrame(frame)}
-function kick(){if(gl&&!raf&&vis&&!document.hidden&&started&&!overlayOpen&&!isScrolling&&!reduce)raf=requestAnimationFrame(frame)}
+function kick(){if(gl&&!raf&&vis&&!document.hidden&&started&&!overlayOpen&&!isScrolling&&!reduce){lastShaderFrame=-Infinity;raf=requestAnimationFrame(frame)}}
 function startGraphics(){if(glInitialized)return;glInitialized=true;const create=()=>{initGL();if(reduce&&gl)draw(6000);kick()};if('requestIdleCallback'in window)requestIdleCallback(create,{timeout:850});else setTimeout(create,120)}
 document.addEventListener('visibilitychange',()=>{if(document.hidden){vis=false;if(raf){cancelAnimationFrame(raf);raf=0}}else{vis=true;kick()}});
 addEventListener('pagehide',()=>{vis=false;clearTimeout(scrollResumeTimer);if(raf){cancelAnimationFrame(raf);raf=0}});
@@ -496,7 +517,7 @@ function moveLens(){const a=links.find(x=>x.classList.contains('on')&&x.offsetWi
 addEventListener('resize',()=>{updateActiveNav();scheduleScrollWork()},{passive:true});requestAnimationFrame(updateActiveNav);if(document.fonts?.ready)document.fonts.ready.then(updateActiveNav).catch(()=>{});
 document.addEventListener('pointerdown',e=>{rpx=e.clientX/innerWidth;rpy=1-e.clientY/innerHeight;rpt=performance.now()/1000;if(e.pointerType!=='mouse')aim(e.clientX,e.clientY);
  const j=e.target.closest&&e.target.closest('.c,.btn,#th,nav a');
- if(j&&!reduce){j.classList.remove('jl');void j.offsetWidth;j.classList.add('jl');j.addEventListener('animationend',ev=>{if(ev.animationName==='jl')j.classList.remove('jl')})}},{passive:true});
+ if(j&&!reduce){j.classList.remove('jl');requestAnimationFrame(()=>{if(!j.isConnected)return;j.classList.add('jl')});const onJellyEnd=ev=>{if(ev.animationName!=='jl')return;j.classList.remove('jl');j.removeEventListener('animationend',onJellyEnd)};j.addEventListener('animationend',onJellyEnd)}},{passive:true});
 
 /* v3 */
 cv.addEventListener('webglcontextlost',e=>{e.preventDefault();gl=null;hashTexture=null;hasHashLUT=false;cv.style.display='none';if(raf){cancelAnimationFrame(raf);raf=0}});
@@ -504,7 +525,16 @@ cv.addEventListener('webglcontextrestored',()=>{cv.style.display='block';initGL(
 intro.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();intro.focus();return}if(['Enter',' ','Escape'].includes(e.key)){e.preventDefault();end()}});if(document.body.contains(intro))intro.focus();
 
 /* v4 */
-let la=160,tla=160,lq=160,lid=0;const aimLoop=()=>{lid=0;la+=(tla-la)*.12;const q=Math.round(la);if(q!==lq){lq=q;root.style.setProperty('--la',q+'deg')}if(Math.abs(tla-la)>.4)lid=requestAnimationFrame(aimLoop)};
+let la=160,tla=160,lq=160,lid=0,lastAimFrame=0;
+const AIM_INTERVAL=COARSE_POINTER?1000/20:0;
+const aimLoop=(ts)=>{
+ lid=0;
+ if(COARSE_POINTER&&ts-lastAimFrame<AIM_INTERVAL){if(Math.abs(tla-la)>.4)lid=requestAnimationFrame(aimLoop);return}
+ const dt=lastAimFrame?Math.min(100,ts-lastAimFrame):1000/60;lastAimFrame=ts;
+ const alpha=1-Math.pow(.88,dt/(1000/60));la+=(tla-la)*alpha;
+ const q=Math.round(la);if(q!==lq){lq=q;root.style.setProperty('--la',q+'deg')}
+ if(Math.abs(tla-la)>.4)lid=requestAnimationFrame(aimLoop)
+};
 const aim=(x,y)=>{if(reduce)return;tla=140+(x/innerWidth-.5)*60+(y/innerHeight-.5)*24;if(!lid)lid=requestAnimationFrame(aimLoop)};
 addEventListener('pointermove',e=>{if(e.pointerType==='mouse')aim(e.clientX,e.clientY)},{passive:true});
 const nv=$('nav');
