@@ -221,6 +221,27 @@ nav.mn{transform:translateX(-50%) scale(.9);opacity:.9}nav.mn:hover,nav.mn:focus
 .btn,nav a{white-space:nowrap}#th{flex:none}
 .mq{width:calc(100% - 40px);max-width:1080px;margin:56px auto 0}
 @media(min-width:721px){.edge.b{display:none}}
+
+/* Render long sections only as they approach the viewport; their full effects remain intact. */
+.fx-managed.is-scrolling body::after,
+.fx-managed.is-scrolling * ,
+.fx-managed.is-scrolling *::before,
+.fx-managed.is-scrolling *::after{animation-play-state:paused!important}
+#work,#services,#method,#faq,#contact{content-visibility:auto;contain-intrinsic-size:auto 900px}
+@media(max-width:759px){
+ #work{contain-intrinsic-size:auto 2050px}
+ #services{contain-intrinsic-size:auto 1850px}
+ #method{contain-intrinsic-size:auto 720px}
+ #faq{contain-intrinsic-size:auto 780px}
+ #contact{contain-intrinsic-size:auto 950px}
+}
+@media(min-width:760px){
+ #work{contain-intrinsic-size:auto 980px}
+ #services{contain-intrinsic-size:auto 850px}
+ #method{contain-intrinsic-size:auto 650px}
+ #faq{contain-intrinsic-size:auto 650px}
+ #contact{contain-intrinsic-size:auto 850px}
+}
 </style>
 </head>
 <body>
@@ -269,7 +290,7 @@ nav.mn{transform:translateX(-50%) scale(.9);opacity:.9}nav.mn:hover,nav.mn:focus
 
 <script>
 const D={"S":[{"icon":"📦","title":"Product Descriptions","desc":"Clear, benefit-led copy that helps shoppers decide fast — built for e-commerce and marketplace listings.","benefits":"Higher conversion, less return-driving confusion","clients":"D2C brands, marketplace sellers"},{"icon":"📝","title":"Blog Writing","desc":"Well-researched articles that answer real reader questions and support SEO without keyword-stuffing.","benefits":"Organic traffic, topical authority","clients":"SaaS, agencies, niche publishers"},{"icon":"🌐","title":"Website Copy","desc":"Homepage and inner-page copy that explains what you do in plain language, fast.","benefits":"Lower bounce, clearer positioning","clients":"Startups, service businesses"},{"icon":"🚀","title":"Landing Pages","desc":"Single-goal pages built around one offer, one action, and a clear reason to act now.","benefits":"Higher conversion rate","clients":"Product launches, ad campaigns"},{"icon":"👋","title":"About Us Pages","desc":"Origin story and mission copy that builds trust without sounding like a press release.","benefits":"Stronger brand connection","clients":"Founders, small businesses"},{"icon":"🏢","title":"Business Profiles","desc":"Concise, credible company descriptions for directories, pitch decks, and partner pages.","benefits":"Consistent brand story everywhere","clients":"B2B firms, agencies"},{"icon":"📱","title":"Social Media Content","desc":"Platform-native captions and post copy that sound human, not templated.","benefits":"Better engagement, consistent voice","clients":"Small brands, personal brands"},{"icon":"🎬","title":"YouTube Scripts","desc":"Hook-first scripts structured for retention, with clear visual and pacing notes.","benefits":"Stronger watch time","clients":"Educational and tech channels"}],"P":[{"cat":"E-Commerce Copywriting","title":"Premium Product Description for a Smart Desk Lamp","teaser":"Benefit-driven product copy crafted to build trust, highlight key features, and increase purchase confidence.","body":"<strong>Premium Product Description for a Smart Desk Lamp<\/strong>\n\nA desk lamp should do more than simply brighten your workspace. It should help you stay focused, reduce eye strain, and blend naturally into your environment. This smart LED desk lamp was designed with exactly that purpose in mind.\n\nFeaturing adjustable brightness levels and three color temperature modes, it adapts effortlessly to every task. Switch to cool white light for productive work sessions, warm light for relaxed evening reading, or balanced daylight mode for everyday use. The touch-sensitive controls provide smooth, responsive adjustments without the clutter of traditional buttons.\n\nIts minimalist aluminum body complements both modern home offices and professional workspaces while occupying very little desk space. The flexible arm offers precise positioning, ensuring light reaches exactly where you need it without unwanted glare or harsh shadows.\n\nEngineered with energy-efficient LED technology, the lamp delivers consistent illumination while consuming significantly less power than conventional lighting solutions. With an estimated lifespan of over 25,000 hours, it offers years of reliable performance with virtually no maintenance.\n\nWhether you're working late, studying for exams, reading your favorite book, or attending virtual meetings, this smart desk lamp combines elegant design with practical functionality to create a workspace that's both comfortable and productive.\n\n<strong>Key Benefits<\/strong>\n\n• Adjustable brightness and three lighting modes\n• Touch-sensitive controls for effortless operation\n• Eye-friendly illumination with reduced glare\n• Energy-efficient LED technology\n• Durable premium aluminum construction\n• Compact, modern design suitable for any workspace\n\nBuilt for professionals, students, and creators alike, this lamp delivers dependable performance while enhancing the overall look and feel of your desk."},{"cat":"SEO Blog Writing","title":"Why Most Landing Pages Lose Customers in Seconds","teaser":"An SEO-optimized educational article designed to attract organic traffic while demonstrating persuasive long-form writing.","body":"<strong>Why Most Landing Pages Lose Customers in Seconds<\/strong>\n\nEvery visitor who lands on your website asks the same question within a few seconds:\n\n<strong>\"Is this what I'm looking for?\"<\/strong>\n\nIf your page doesn't answer that question immediately, you've already lost the opportunity. Most landing pages don't fail because the product is weak. They fail because the message isn't clear.\n\nA common mistake is writing headlines that describe the company instead of explaining the customer's benefit. Phrases like <em>\"Revolutionizing Digital Experiences\"<\/em> or <em>\"Innovative Business Solutions\"<\/em> sound impressive, but they don't tell visitors why they should care.\n\nHigh-converting landing pages focus on outcomes rather than features. Instead of explaining what a business does, they explain how a customer's problem will be solved.\n\nFor example:\n\n❌ \"AI-Powered Workflow Management\"\n\n✅ \"Finish Your Daily Tasks in Half the Time with AI Automation.\"\n\nThe second version immediately communicates a clear benefit that visitors can understand.\n\nAnother overlooked factor is information overload. Many pages attempt to explain every feature before establishing trust. Visitors aren't searching for every detail at first. They want confidence that they're in the right place.\n\nStrong landing pages follow a simple structure:\n\n• A headline focused on the customer's desired outcome.\n• A supporting paragraph that explains how that outcome is achieved.\n• Key benefits presented in a clear, scannable format.\n• Social proof that builds credibility.\n• One primary call-to-action without unnecessary distractions.\n\nClarity always outperforms cleverness. Visitors shouldn't have to decode your message or guess what your business offers.\n\nThe best landing pages don't convince people with flashy language. They remove uncertainty, answer questions before they're asked, and guide visitors toward a single action with confidence.\n\nWhen every sentence has a purpose, conversions become the natural result—not the lucky outcome."},{"cat":"Website Copywriting","title":"Homepage Copy for a Modern SaaS Platform","teaser":"Clear, customer-focused homepage messaging that communicates value, builds credibility, and drives sign-ups.","body":"<strong>Homepage Copy for a Modern SaaS Platform<\/strong>\n\n<strong>Headline<\/strong>\n\nRun your business, not your admin.\n\n<strong>Subheadline<\/strong>\n\nManage projects, invoices, clients, and team communication from one intuitive platform designed to save time and keep your business moving forward.\n\n<strong>Why Choose Our Platform?<\/strong>\n\nGrowing businesses shouldn't have to juggle multiple tools just to stay organized. Our platform brings everything together in one secure workspace, helping your team collaborate more efficiently while reducing repetitive manual work.\n\nWhether you're managing five clients or five hundred, every feature is built around one goal: helping your business operate faster with less effort.\n\n<strong>What You Can Do<\/strong>\n\n• Organize projects with real-time collaboration.\n• Track invoices and payments in one dashboard.\n• Manage client communication without switching platforms.\n• Generate reports that help you make smarter business decisions.\n• Keep your entire team connected from anywhere.\n\n<strong>Built for Growing Businesses<\/strong>\n\nFrom freelancers and agencies to startups and established companies, the platform scales alongside your business. No complicated setup, no unnecessary features, and no steep learning curve.\n\nInstead of spending hours managing software, you can spend more time serving clients, closing deals, and growing your business.\n\n<strong>Call to Action<\/strong>\n\nStart your free trial today and discover how simple business management can be.\n\nNo credit card required. Cancel anytime."},{"cat":"Brand Story","title":"Brand Story for a Specialty Coffee Company","teaser":"Authentic storytelling that creates emotional connection, strengthens brand identity, and builds customer trust.","body":"<strong>Brand Story for a Specialty Coffee Company<\/strong>\n\nGreat coffee begins long before it reaches your cup. It starts with the people who grow it, the care they invest in every harvest, and the belief that quality should never come at the expense of honesty.\n\nOur journey began with a simple question:\n\n<strong>Why should exceptional coffee be difficult to trust?<\/strong>\n\nToo many brands rely on polished marketing while revealing very little about where their coffee comes from or how it's produced. We wanted to build something different. Every decision we make is guided by transparency, consistency, and respect for the farmers who make our work possible.\n\nWe partner with growers who share our commitment to sustainable farming and responsible sourcing. Every batch is carefully selected, roasted in small quantities, and tested for quality before it reaches our customers. This approach allows us to preserve the unique character of every bean while ensuring a consistently exceptional cup.\n\nFor us, coffee isn't simply another product on a shelf. It's part of someone's morning routine, an afternoon conversation, or a late-night work session. Those everyday moments deserve something crafted with genuine care.\n\nWe believe great brands earn trust through actions rather than promises. That's why we're committed to clear sourcing, honest communication, and uncompromising quality in everything we do.\n\nEvery cup reflects the same values that shaped our company from the beginning: authenticity, craftsmanship, and respect for the people behind every harvest.\n\n<strong>Our Promise<\/strong>\n\n• Ethically sourced coffee from trusted farming partners.\n• Small-batch roasting for maximum freshness.\n• Complete transparency from origin to cup.\n• Consistent quality without unnecessary complexity.\n\nBecause great coffee isn't defined by marketing.\n\nIt's defined by the experience people remember after the last sip."},{"cat":"Menu Copywriting","title":"Restaurant Menu Designed to Increase Orders","teaser":"Descriptive menu copy that makes every dish memorable while encouraging higher-value customer purchases.","body":"<strong>Restaurant Menu Designed to Increase Orders<\/strong>\n\nEvery memorable dining experience begins before the first bite. The right menu doesn't simply list ingredients. It creates anticipation, highlights craftsmanship, and helps guests feel confident about every choice they make.\n\nOur menu is carefully written to celebrate fresh ingredients, balanced flavors, and the experience behind each dish. Every description is designed to be informative without overwhelming the reader, allowing the food to remain the true focus.\n\n<strong>Signature Dishes<\/strong>\n\n<strong>Wood-Fired Herb Chicken<\/strong>\n\nFree-range chicken marinated for 24 hours in fresh herbs, garlic, and citrus, then slow-roasted over natural oak fire. Served with roasted seasonal vegetables and a light herb butter that enhances every bite.\n\n<strong>Grilled Atlantic Salmon<\/strong>\n\nFresh Atlantic salmon grilled until perfectly tender and paired with creamy lemon risotto, asparagus, and a delicate white wine butter sauce that complements without overpowering the fish.\n\n<strong>Truffle Mushroom Pasta<\/strong>\n\nFresh fettuccine tossed with sautéed wild mushrooms, roasted garlic, Parmesan cheese, and a touch of black truffle oil. Rich, comforting, and perfectly balanced.\n\n<strong>Classic Ribeye Steak<\/strong>\n\nA premium 12-ounce ribeye grilled to your preferred temperature and finished with garlic herb butter. Served alongside crispy rosemary potatoes and seasonal vegetables.\n\n<strong>Desserts<\/strong>\n\nComplete your meal with our signature Chocolate Lava Cake, served warm with handcrafted vanilla bean ice cream and fresh berries.\n\n<strong>Our Philosophy<\/strong>\n\nEvery ingredient is selected for freshness. Every dish is prepared to order. Every plate is served with the belief that exceptional food deserves thoughtful presentation and honest craftsmanship.\n\nGreat dining isn't created by recipes alone.\n\nIt's created by memorable experiences shared around the table."},{"cat":"YouTube Scriptwriting","title":"Educational Script for a Technology Channel","teaser":"A retention-focused YouTube script featuring a compelling hook, structured storytelling, and engaging explanations.","body":"<strong>Educational Script for a Technology Channel<\/strong>\n\n<strong>[HOOK | 0:00 - 0:15]<\/strong>\n\nNARRATOR:\n\n\"What if I told you your Wi-Fi isn't actually slow? The real problem might be happening before your internet connection even reaches your device.\"\n\n[Visual: A laptop loading slowly while multiple phones, TVs, and smart devices connect to the same router.]\n\n<strong>[INTRO | 0:15 - 0:40]<\/strong>\n\nEvery evening, millions of people experience slower internet speeds. Most blame their internet provider. Others restart the router and hope for the best.\n\nBut in many cases, neither is the real cause.\n\nThe biggest culprit is network congestion inside your own home.\n\nLet's see why.\n\n<strong>[EXPLANATION | 0:40 - 2:00]<\/strong>\n\nThink of your Wi-Fi like a conversation in a crowded room.\n\nOne person can speak clearly.\n\nTen people speaking at the same time create confusion.\n\nYour router works in exactly the same way.\n\nEvery phone, laptop, smart TV, gaming console, security camera, and smart speaker competes for the same wireless airtime.\n\nEven devices sitting idle still communicate with your router in the background.\n\nThe more connected devices you have, the less time each one gets to transmit data.\n\nThat's why your connection feels slower during the evening when everyone in your home is streaming, gaming, or attending video meetings.\n\n<strong>[VISUAL DEMONSTRATION]<\/strong>\n\nShow an animation comparing:\n\n• One device connected to a router.\n• Five devices sharing bandwidth.\n• Fifteen devices competing for wireless airtime.\n\nDisplay how available bandwidth is divided between devices.\n\n<strong>[PRACTICAL SOLUTIONS | 2:00 - 3:00]<\/strong>\n\nHere are three simple ways to improve your Wi-Fi performance:\n\n• Move your router to an open, central location.\n• Connect high-bandwidth devices to the 5 GHz network whenever possible.\n• Restart your router regularly to clear temporary network issues.\n\nIf your router is more than five years old, upgrading to a modern Wi-Fi 6 router can significantly improve speed and stability.\n\n<strong>[OUTRO | 3:00 - 3:20]<\/strong>\n\nUnderstanding how Wi-Fi actually works helps you solve problems instead of guessing.\n\nTechnology isn't magic.\n\nOnce you know what's happening behind the scenes, fixing it becomes much easier.\n\nIf you enjoyed this explanation, subscribe for more practical technology guides that make complex topics simple."},{"cat":"Business Copywriting","title":"Professional Company Profile for a Creative Agency","teaser":"A concise yet persuasive company profile that reinforces credibility across websites, proposals, and marketing materials.","body":"<strong>Professional Company Profile for a Creative Agency<\/strong>\n\nGreat businesses are remembered for more than the services they provide. They're remembered for the problems they solve, the relationships they build, and the results they consistently deliver.\n\nFounded with a commitment to thoughtful design and strategic communication, our agency helps ambitious businesses transform ideas into compelling digital experiences. We combine creativity, technology, and clear messaging to build brands that stand out in competitive markets.\n\nFrom startups launching their first product to established companies refreshing their identity, every project begins with understanding the client's goals before creating solutions tailored to their audience.\n\nOur multidisciplinary team specializes in website design, brand identity, UI/UX design, copywriting, and digital strategy. Rather than following trends, we focus on creating timeless, functional experiences that support long-term business growth.\n\nEvery project follows a structured process:\n\n• Discovery and research\n• Strategy and planning\n• Creative design\n• Content development\n• Review and refinement\n• Launch and ongoing support\n\nThis collaborative approach ensures every decision is backed by purpose, not assumptions.\n\nOver the years, we've partnered with businesses across technology, education, healthcare, e-commerce, and professional services, helping them strengthen their online presence and communicate with greater clarity.\n\n<strong>Why Clients Choose Us<\/strong>\n\n• Strategic thinking backed by research.\n• Clear communication throughout every project.\n• Reliable delivery without compromising quality.\n• Solutions tailored to business goals—not templates.\n\nWe believe successful partnerships are built on trust, transparency, and measurable results. Every project is an opportunity to create work that not only looks exceptional but also delivers lasting value for our clients.\n\nBecause great brands aren't built overnight.\n\nThey're built through consistent strategy, thoughtful execution, and meaningful collaboration."},{"cat":"Landing Page Copywriting","title":"Conversion-Focused Landing Page for a Productivity App","teaser":"Strategic landing page copy built around one offer, one audience, and one clear conversion goal.","body":"<strong>Conversion-Focused Landing Page for a Productivity App<\/strong>\n\n<strong>Headline<\/strong>\n\nFocus on what matters. Leave distractions behind.\n\n<strong>Subheadline<\/strong>\n\nBoost your productivity with an intelligent focus app that blocks distractions, organizes your workflow, and helps you accomplish more in less time.\n\n<strong>Why Professionals Choose FocusFlow<\/strong>\n\nStaying productive has never been more challenging. Endless notifications, social media, emails, and constant interruptions make deep work almost impossible.\n\nFocusFlow is designed to solve that problem.\n\nWith one click, it creates a distraction-free environment so you can concentrate on your most important tasks without unnecessary interruptions.\n\nWhether you're studying for exams, writing reports, coding your next project, or managing a busy workload, FocusFlow helps you stay focused from start to finish.\n\n<strong>Key Features<\/strong>\n\n• Block distracting websites and applications instantly.\n• Smart Focus Timer based on proven productivity techniques.\n• Daily productivity reports and progress tracking.\n• Custom focus sessions tailored to your workflow.\n• Automatic break reminders to prevent burnout.\n• Secure cloud synchronization across all your devices.\n\n<strong>Designed for Modern Professionals<\/strong>\n\nFreelancers, students, entrepreneurs, developers, designers, and remote teams all face the same challenge: protecting their attention.\n\nFocusFlow provides the structure you need without adding unnecessary complexity.\n\nSimple to set up.\n\nPowerful enough to become part of your daily routine.\n\n<strong>What You'll Gain<\/strong>\n\n• Complete more meaningful work every day.\n• Reduce digital distractions.\n• Improve concentration during deep work sessions.\n• Build healthier productivity habits.\n• Stay organized without feeling overwhelmed.\n\n<strong>Call to Action<\/strong>\n\nStart your free 14-day trial today.\n\nNo credit card required. No hidden fees. Cancel anytime.\n\nTake control of your attention—and let your best work speak for itself."}],"F":[{"q":"Why AI-assisted writing?","a":"AI is excellent at producing a fast first draft and exploring structure — but it also confidently states things that aren't true and tends toward generic phrasing. Using it for speed, then rewriting, fact-checking, and voicing every piece by hand, gets the turnaround benefit without the accuracy or authenticity risk."},{"q":"How long does delivery take?","a":"Most single pieces (a product description, a landing page section) are delivered within 24–72 hours depending on research depth required. Larger projects — a full site's copy, a multi-part blog series — are scoped with a timeline upfront before work begins."},{"q":"Can you write in different tones?","a":"Yes. Tone is set by the brand and audience, not by default habit — playful and irreverent for a DTC brand, precise and restrained for a fintech product, warm and plain for a healthcare service. A short brief or existing brand voice guide speeds this up considerably."},{"q":"What industries do you write for?","a":"Most experience so far is in tech, SaaS, e-commerce, and education — the samples above reflect that. I'm glad to take on other industries with extra research time built into the timeline and cost."},{"q":"Do you disclose when content is AI-assisted?","a":"Always, if asked, and it's stated plainly on this page. The AI-assisted step is treated as a tool in the process, not something to hide — the human editing and fact-checking step is what's actually being sold."}]}, FORM_ENDPOINT="", EMAIL="anasjahangirking@gmail.com";
-const $=s=>document.querySelector(s), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $=s=>document.querySelector(s), reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let glInitialized=false;
 const buzz=p=>{try{if(!reduce&&navigator.vibrate)navigator.vibrate(p)}catch(e){}};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 /* theme */
@@ -278,22 +299,37 @@ const updateThemeColor=()=>{const dark=root.dataset.theme?root.dataset.theme==='
 updateThemeColor();
 $('#th').onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark';updateThemeColor();buzz(10)};
 /* progress + nav */
-const pg=$('#pg');let scrollRAF=0,lastScrollY=scrollY;
-function scheduleScrollWork(){if(scrollRAF)return;scrollRAF=requestAnimationFrame(()=>{scrollRAF=0;const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?y/h:0)+')';updateActiveNav();const delta=y-lastScrollY;if(Math.abs(delta)>=6){nv.classList.toggle('mn',delta>0&&y>160);lastScrollY=y}})}
+const pg=$('#pg');let scrollRAF=0,lastScrollY=scrollY,isScrolling=false,scrollResumeTimer=0;const pendingReveals=new Set();
+function revealNow(el){el.classList.add('in');setTimeout(()=>el.classList.remove('r','in'),1300)}
+function flushPendingReveals(){for(const el of pendingReveals){const r=el.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)revealNow(el);else el.classList.remove('r')}pendingReveals.clear()}
+function noteScrollActivity(){
+ isScrolling=true;root.classList.add('is-scrolling');
+ if(raf){cancelAnimationFrame(raf);raf=0}
+ clearTimeout(scrollResumeTimer);
+ scrollResumeTimer=setTimeout(()=>{isScrolling=false;root.classList.remove('is-scrolling');flushPendingReveals();kick()},145);
+}
+function scheduleScrollWork(){noteScrollActivity();if(scrollRAF)return;scrollRAF=requestAnimationFrame(()=>{scrollRAF=0;const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(h>0?y/h:0)+')';const delta=y-lastScrollY;if(Math.abs(delta)>=6){nv.classList.toggle('mn',delta>0&&y>160);lastScrollY=y}})}
 addEventListener('scroll',scheduleScrollWork,{passive:true});
 const links=[...document.querySelectorAll('nav a.l')];
 const navSections=[...document.querySelectorAll('section[id]')];
-function updateActiveNav(){
- const marker=innerHeight*.42;
- let active=null;
- for(const section of navSections){
-  const r=section.getBoundingClientRect();
-  if(r.top<=marker&&r.bottom>marker){active=section;break}
- }
- if(!active&&scrollY+innerHeight>=document.documentElement.scrollHeight-2)active=navSections[navSections.length-1]||null;
+function setActiveSection(active){
  links.forEach(a=>a.classList.toggle('on',!!active&&a.hash==='#'+active.id));
  moveLens();
 }
+function updateActiveNav(){
+ const marker=innerHeight*.42;
+ let active=null;
+ for(const section of navSections){const r=section.getBoundingClientRect();if(r.top<=marker&&r.bottom>marker){active=section;break}}
+ if(!active&&scrollY+innerHeight>=document.documentElement.scrollHeight-2)active=navSections[navSections.length-1]||null;
+ setActiveSection(active);
+}
+const navObserver=new IntersectionObserver(entries=>{
+ const visible=entries.filter(entry=>entry.isIntersecting);
+ if(visible.length){visible.sort((a,b)=>Math.abs(a.boundingClientRect.top-innerHeight*.42)-Math.abs(b.boundingClientRect.top-innerHeight*.42));setActiveSection(visible[0].target);return}
+ if(scrollY+innerHeight>=document.documentElement.scrollHeight-2)setActiveSection(navSections[navSections.length-1]||null);
+ else if(scrollY<(navSections[0]?.offsetTop||0)-innerHeight*.42)setActiveSection(null);
+},{rootMargin:'-42% 0px -52% 0px',threshold:0});
+navSections.forEach(section=>navObserver.observe(section));
 /* render */
 $('#mq').innerHTML=[...D.S,...D.S].map(s=>'<span>'+esc(s.title)+'</span>').join('');
 const feat=D.P.length-1;
@@ -337,11 +373,11 @@ async function play(){const id=++run;T.forEach(t=>t.classList.remove('v','x'));o
 $('#rp').onclick=()=>{buzz(10);play()};
 /* intro */
 const intro=$('#in'),hi=$('#hi');let started=false,iv;
-function begin(){if(started)return;started=true;setInert(0);document.body.classList.add('go');try{kick()}catch(e){}clearTimeout(iv);intro.classList.add('h');document.body.style.overflow='';setTimeout(()=>intro.remove(),1100);setTimeout(play,500)}
+function begin(){if(started)return;started=true;setInert(0);document.body.classList.add('go');try{kick()}catch(e){}clearTimeout(iv);intro.classList.add('h');document.body.style.overflow='';setTimeout(()=>{intro.remove();startGraphics()},1100);setTimeout(play,500)}
 function end(){try{sessionStorage.setItem('bs','1')}catch(e){}buzz([30,40,70]);begin()}
 const hello=['Hello','হ্যালো'];
 let seen=false;try{seen=sessionStorage.getItem('bs')==='1'}catch(e){}
-if(seen||reduce){intro.remove();started=true;document.body.classList.add('go');play()}else{document.body.style.overflow='hidden';setInert(1);let i=0;const next=()=>{if(i>=hello.length){end();return}hi.textContent=hello[i];hi.classList.remove('wp');void hi.offsetWidth;hi.classList.add('wp');buzz(i?10:22);i++;iv=setTimeout(next,650)};next()}
+if(seen||reduce){intro.remove();started=true;document.body.classList.add('go');play();startGraphics()}else{document.body.style.overflow='hidden';setInert(1);let i=0;const next=()=>{if(i>=hello.length){end();return}hi.textContent=hello[i];hi.classList.remove('wp');void hi.offsetWidth;hi.classList.add('wp');buzz(i?10:22);i++;iv=setTimeout(next,650)};next()}
 intro.onclick=end;
 /* form */
 $('#fm').addEventListener('submit',async e=>{e.preventDefault();
@@ -355,7 +391,7 @@ $('#fm').addEventListener('submit',async e=>{e.preventDefault();
  try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{Accept:'application/json'},body:new FormData(e.target)});if(r.ok){nt.textContent='Thanks, your message is in.';e.target.reset();buzz([30,40,90])}else nt.textContent='Something went wrong. Try email or WhatsApp.'}catch(x){nt.textContent='Could not reach the server. Try email or WhatsApp.'}});
 
 /* depth, reveal, sheet drag */
-if(!reduce){const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;ro.unobserve(el);el.classList.add('in');setTimeout(()=>el.classList.remove('r','in'),1300)}}),{threshold:.12});
+if(!reduce){const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;ro.unobserve(el);if(isScrolling)pendingReveals.add(el);else revealNow(el)}}),{threshold:.12});
  document.querySelectorAll('.hd,.win,.stat,.c,.fq details,.ct').forEach((el,i)=>{el.classList.add('r');el.style.setProperty('--rd',(i%4)*.08+'s');ro.observe(el)})}
 /* Pause only CSS animations that cannot be seen; resume at full fidelity before they enter view. */
 root.classList.add('fx-managed');
@@ -371,7 +407,7 @@ pn.addEventListener('touchend',e=>{if(y0===null)return;const d=e.changedTouches[
 pn.addEventListener('touchcancel',()=>{if(y0===null)return;y0=null;pn.style.transition='';pn.style.transform=''},{passive:true});
 
 /* hero shader + gyro tilt — fixed visual quality, cached canvas sizing */
-var vis=true,raf=0,gl=null,prog,U={},cv=document.getElementById('gl'),heroEl=document.querySelector('.hero'),rpx=.5,rpy=.5,rpt=-100,mx=.5,my=.7,tmx=.5,tmy=.7,tx=0,ty=0,cx=0,cy=0,light=false,fc=0,winEl=document.querySelector('.win'),tiltActive=false;
+var vis=true,raf=0,gl=null,prog,U={},hashTexture=null,hasHashLUT=false,cv=document.getElementById('gl'),heroEl=document.querySelector('.hero'),rpx=.5,rpy=.5,rpt=-100,mx=.5,my=.7,tmx=.5,tmy=.7,tx=0,ty=0,cx=0,cy=0,light=false,fc=0,winEl=document.querySelector('.win'),tiltActive=false;
 const RENDER_SCALE=.55; // Keep the same shader resolution on desktop and mobile.
 let canvasCSSWidth=0,canvasCSSHeight=0;
 function resizeCanvas(width,height){
@@ -380,13 +416,35 @@ function resizeCanvas(width,height){
  if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h;if(gl)gl.viewport(0,0,w,h)}
 }
 function measureCanvas(){resizeCanvas(cv.clientWidth,cv.clientHeight)}
+function buildHashLUT(vertexSource,quadBuffer){
+ const size=1024,texture=gl.createTexture(),framebuffer=gl.createFramebuffer();
+ gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);
+ gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
+ gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.REPEAT);
+ gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,size,size,0,gl.RGBA,gl.UNSIGNED_BYTE,null);
+ gl.bindFramebuffer(gl.FRAMEBUFFER,framebuffer);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,texture,0);
+ if(gl.checkFramebufferStatus(gl.FRAMEBUFFER)!==gl.FRAMEBUFFER_COMPLETE){gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.deleteFramebuffer(framebuffer);gl.deleteTexture(texture);return false}
+ const fragmentSource='precision highp float;void main(){vec2 p=gl_FragCoord.xy-vec2(0.5);p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);float v=fract(p.x*p.y);float hi=floor(v*255.0)/255.0;float lo=fract(v*255.0);gl_FragColor=vec4(hi,lo,0.0,1.0);}';
+ const vs=gl.createShader(gl.VERTEX_SHADER),fs=gl.createShader(gl.FRAGMENT_SHADER);gl.shaderSource(vs,vertexSource);gl.shaderSource(fs,fragmentSource);gl.compileShader(vs);gl.compileShader(fs);
+ if(!gl.getShaderParameter(vs,gl.COMPILE_STATUS)||!gl.getShaderParameter(fs,gl.COMPILE_STATUS)){gl.deleteShader(vs);gl.deleteShader(fs);gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.deleteFramebuffer(framebuffer);gl.deleteTexture(texture);return false}
+ const program=gl.createProgram();gl.attachShader(program,vs);gl.attachShader(program,fs);gl.linkProgram(program);
+ if(!gl.getProgramParameter(program,gl.LINK_STATUS)){gl.deleteProgram(program);gl.deleteShader(vs);gl.deleteShader(fs);gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.deleteFramebuffer(framebuffer);gl.enable(gl.DITHER);gl.deleteTexture(texture);return false}
+ gl.disable(gl.DITHER);gl.viewport(0,0,size,size);gl.useProgram(program);gl.bindBuffer(gl.ARRAY_BUFFER,quadBuffer);
+ const location=gl.getAttribLocation(program,'p');gl.enableVertexAttribArray(location);gl.vertexAttribPointer(location,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.TRIANGLES,0,3);gl.flush();
+ const ok=gl.getError()===gl.NO_ERROR;
+ gl.deleteProgram(program);gl.deleteShader(vs);gl.deleteShader(fs);gl.bindFramebuffer(gl.FRAMEBUFFER,null);gl.deleteFramebuffer(framebuffer);gl.enable(gl.DITHER);
+ if(!ok){gl.deleteTexture(texture);return false}
+ hashTexture=texture;return true;
+}
 function initGL(){
  try{gl=cv.getContext('webgl',{alpha:true,antialias:false,depth:false,stencil:false,premultipliedAlpha:true,preserveDrawingBuffer:false,desynchronized:true})}catch(e){gl=null}
  if(!gl){cv.remove();return}
  const vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ const quad=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,quad);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ hasHashLUT=buildHashLUT(vs,quad);
  const fs='#ifdef GL_FRAGMENT_PRECISION_HIGH\nprecision highp float;\n#else\nprecision mediump float;\n#endif\nuniform vec2 r,m,tm;uniform float t,lt,tt;'+
- 'float h(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}'+
- 'float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}'+
+ (hasHashLUT?'uniform sampler2D uHash;float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);vec2 cell=mod(i+f,vec2(1024.0));vec2 uv=(cell+vec2(0.5))/1024.0;vec2 rg=texture2D(uHash,uv).rg;return rg.x+rg.y/255.0;}':'float h(vec2 p){p=fract(p*vec2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}')+
+ 
  'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}'+
  'void main(){vec2 uv=gl_FragCoord.xy/r;float asp=r.x/r.y;vec2 uA=vec2(uv.x*asp,uv.y);vec2 p=uA*1.6;float T=t*.14;float age=t-tt;float rd=distance(uA,vec2(tm.x*asp,tm.y));float wave=sin(rd*28.-age*7.)*exp(-rd*3.5)*exp(-age*1.4)*step(0.,age);p+=wave*.18;'+
  'vec2 q=vec2(fbm(p+T),fbm(p+vec2(5.2,1.3)-T));'+
@@ -402,16 +460,19 @@ function initGL(){
  prog=gl.createProgram();gl.attachShader(prog,vsh);gl.attachShader(prog,fsh);gl.linkProgram(prog);
  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)){gl=null;cv.remove();return}
  gl.useProgram(prog);
- const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ gl.bindBuffer(gl.ARRAY_BUFFER,quad);
  const l=gl.getAttribLocation(prog,'p');gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,2,gl.FLOAT,false,0,0);
  ['r','t','m','lt','tm','tt'].forEach(n=>U[n]=gl.getUniformLocation(prog,n));
+ if(hasHashLUT&&hashTexture){U.hash=gl.getUniformLocation(prog,'uHash');gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,hashTexture);gl.uniform1i(U.hash,0)}
  measureCanvas();gl.viewport(0,0,cv.width,cv.height);
+ if(gl&&'ResizeObserver'in window&&!cv.__resizeObserver){const ro=new ResizeObserver(entries=>{const box=entries[0]?.contentRect;if(box){resizeCanvas(box.width,box.height);if(reduce)draw(6000)}});ro.observe(cv);cv.__resizeObserver=ro}
+ else if(gl&&!('ResizeObserver'in window)){addEventListener('resize',()=>{measureCanvas();if(reduce)draw(6000)},{passive:true})}
  if(reduce)draw(6000);
 }
 function draw(ts){if(!gl)return;mx+=(tmx-mx)*.06;my+=(tmy-my)*.06;if(Math.abs(tmx-mx)<.001)mx=tmx;if(Math.abs(tmy-my)<.001)my=tmy;
  if(!(fc++%40))light=root.dataset.theme?root.dataset.theme==='light':!matchMedia('(prefers-color-scheme: dark)').matches;
  gl.uniform2f(U.r,cv.width,cv.height);gl.uniform1f(U.t,ts/1000);gl.uniform2f(U.m,mx,my);gl.uniform1f(U.lt,light?1:0);gl.uniform2f(U.tm,rpx,rpy);gl.uniform1f(U.tt,rpt);gl.drawArrays(gl.TRIANGLES,0,3)}
-function frame(ts){raf=0;if(!gl||!vis||document.hidden||!started||overlayOpen)return;
+function frame(ts){raf=0;if(!gl||!vis||document.hidden||!started||overlayOpen||isScrolling)return;
  draw(ts);
  if(winEl&&winEl.classList.contains('fx-live')&&!winEl.classList.contains('r')){
   const nx=cx+(tx-cx)*.07,ny=cy+(ty-cy)*.07;
@@ -419,16 +480,14 @@ function frame(ts){raf=0;if(!gl||!vis||document.hidden||!started||overlayOpen)re
   if(tiltActive&&Math.abs(cx)<.025&&Math.abs(cy)<.025&&Math.abs(tx)<.025&&Math.abs(ty)<.025){cx=cy=0;tiltActive=false;winEl.style.transform='';winEl.style.willChange=''}
  }else if(tiltActive){tiltActive=false;cx=cy=0;winEl.style.transform='';winEl.style.willChange=''}
  raf=requestAnimationFrame(frame)}
-function kick(){if(gl&&!raf&&vis&&!document.hidden&&started&&!overlayOpen&&!reduce)raf=requestAnimationFrame(frame)}
-initGL();
-if(gl&&'ResizeObserver'in window){const canvasRO=new ResizeObserver(entries=>{const box=entries[0]?.contentRect;if(box){resizeCanvas(box.width,box.height);if(reduce)draw(6000)}});canvasRO.observe(cv)}else if(gl){addEventListener('resize',()=>{measureCanvas();if(reduce)draw(6000)},{passive:true})}
-
+function kick(){if(gl&&!raf&&vis&&!document.hidden&&started&&!overlayOpen&&!isScrolling&&!reduce)raf=requestAnimationFrame(frame)}
+function startGraphics(){if(glInitialized)return;glInitialized=true;const create=()=>{initGL();if(reduce&&gl)draw(6000);kick()};if('requestIdleCallback'in window)requestIdleCallback(create,{timeout:850});else setTimeout(create,120)}
 document.addEventListener('visibilitychange',()=>{if(document.hidden){vis=false;if(raf){cancelAnimationFrame(raf);raf=0}}else{vis=true;kick()}});
-addEventListener('pagehide',()=>{vis=false;if(raf){cancelAnimationFrame(raf);raf=0}});
-addEventListener('pageshow',()=>{vis=true;kick()});
-document.addEventListener('pointermove',e=>{tmx=e.clientX/innerWidth;tmy=1-e.clientY/innerHeight;if(e.pointerType==='mouse'){ty=(tmx-.5)*8;tx=(e.clientY/innerHeight-.5)*-5}},{passive:true});
+addEventListener('pagehide',()=>{vis=false;clearTimeout(scrollResumeTimer);if(raf){cancelAnimationFrame(raf);raf=0}});
+addEventListener('pageshow',()=>{vis=true;isScrolling=false;root.classList.remove('is-scrolling');if(started&&!gl)startGraphics();kick()});
+document.addEventListener('pointermove',e=>{if(e.pointerType==='touch'&&isScrolling)return;tmx=e.clientX/innerWidth;tmy=1-e.clientY/innerHeight;if(e.pointerType==='mouse'){ty=(tmx-.5)*8;tx=(e.clientY/innerHeight-.5)*-5}},{passive:true});
 heroEl.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'){tx=0;ty=0}});
-function handleOrientation(e){if(e.gamma==null)return;ty=Math.max(-7,Math.min(7,e.gamma/5));tx=Math.max(-5,Math.min(5,-((e.beta||65)-65)/8));tmx=Math.max(0,Math.min(1,.5+e.gamma/90));aim(innerWidth*tmx,innerHeight*.5)}
+function handleOrientation(e){if(document.hidden||isScrolling||e.gamma==null)return;ty=Math.max(-7,Math.min(7,e.gamma/5));tx=Math.max(-5,Math.min(5,-((e.beta||65)-65)/8));tmx=Math.max(0,Math.min(1,.5+e.gamma/90));aim(innerWidth*tmx,innerHeight*.5)}
 addEventListener('deviceorientation',handleOrientation,{passive:true});
 kick();
 
@@ -440,7 +499,7 @@ document.addEventListener('pointerdown',e=>{rpx=e.clientX/innerWidth;rpy=1-e.cli
  if(j&&!reduce){j.classList.remove('jl');void j.offsetWidth;j.classList.add('jl');j.addEventListener('animationend',ev=>{if(ev.animationName==='jl')j.classList.remove('jl')})}},{passive:true});
 
 /* v3 */
-cv.addEventListener('webglcontextlost',e=>{e.preventDefault();gl=null;cv.style.display='none';if(raf){cancelAnimationFrame(raf);raf=0}});
+cv.addEventListener('webglcontextlost',e=>{e.preventDefault();gl=null;hashTexture=null;hasHashLUT=false;cv.style.display='none';if(raf){cancelAnimationFrame(raf);raf=0}});
 cv.addEventListener('webglcontextrestored',()=>{cv.style.display='block';initGL();kick()});
 intro.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();intro.focus();return}if(['Enter',' ','Escape'].includes(e.key)){e.preventDefault();end()}});if(document.body.contains(intro))intro.focus();
 
