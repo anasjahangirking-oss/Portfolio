@@ -20,14 +20,35 @@ section{padding:110px 0;position:relative}
 h1,h2,h3{font-weight:600;line-height:1.06;letter-spacing:-.04em}
 h2{font-size:clamp(2rem,5vw,3.2rem);max-width:18ch}
 .lede{color:var(--mut);font-size:clamp(1.02rem,2vw,1.22rem);max-width:46ch;margin-top:18px}
-.g{background-image:radial-gradient(130% 80% at 18% 0%,rgba(255,255,255,var(--sp)),transparent 58%),linear-gradient(160deg,var(--m1),var(--m2));border:1px solid var(--e2);box-shadow:inset 0 1px 1px var(--e1),inset 1px 2px 4px -2px var(--e1),inset 0 0 20px -6px var(--e2),inset 0 -10px 18px -14px rgba(0,0,0,.16),0 1px 1px rgba(0,0,0,.05),0 20px 40px -20px var(--dk)}
-.bl{-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%)}
+.g{background-image:radial-gradient(120% 70% at var(--gx,18%) var(--gy,0%),rgba(255,255,255,calc(var(--sp)*1.15)),transparent 56%),radial-gradient(90% 55% at 88% 112%,rgba(255,255,255,calc(var(--sp)*.55)),transparent 62%),linear-gradient(160deg,var(--m1),var(--m2));border:1px solid var(--e2);box-shadow:inset 0 1px 1px var(--e1),inset 1.5px 2px 3px -2px var(--e1),inset -1px -1px 0 -.5px rgba(255,255,255,calc(var(--sp)*.9)),inset 1px 1px 0 -.5px rgba(120,190,255,.3),inset -1px -1px 0 -.5px rgba(255,160,215,.22),inset 0 0 22px -6px var(--e2),inset 0 -12px 20px -14px rgba(0,0,0,.18),0 1px 1px rgba(0,0,0,.05),0 3px 8px -3px rgba(0,0,0,.08),0 22px 44px -22px var(--dk)}
+.bl{-webkit-backdrop-filter:blur(20px) saturate(190%) brightness(1.05);backdrop-filter:blur(20px) saturate(190%) brightness(1.05)}
 /* preloader */
-#pre{position:fixed;inset:0;z-index:300;background:var(--bg);display:grid;place-items:center;transition:transform 1.25s var(--ease),border-radius 1.25s var(--ease),visibility 0s 1.3s}
-#pre b{font:600 clamp(4.5rem,18vw,10rem)/1 var(--f);letter-spacing:-.06em;font-variant-numeric:tabular-nums;transition:opacity .4s,transform .6s var(--ease)}
-#pre small{position:absolute;bottom:9vh;color:var(--mut);letter-spacing:.02em}
+#pre{position:fixed;inset:0;z-index:300;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;transition:transform 1.25s var(--ease),border-radius 1.25s var(--ease),visibility 0s 1.3s}
+#pre .o{position:absolute;left:50%;top:50%;width:75vmax;height:75vmax;margin:-37.5vmax 0 0 -37.5vmax;border-radius:50%;will-change:transform}
+#pre .o1{background:radial-gradient(circle,rgba(10,132,255,.5),transparent 62%);animation:pl1 9s ease-in-out infinite alternate}
+#pre .o2{background:radial-gradient(circle,rgba(175,82,222,.4),transparent 62%);animation:pl2 11s ease-in-out infinite alternate}
+#pre .o3{background:radial-gradient(circle,rgba(50,215,205,.38),transparent 62%);animation:pl3 10s ease-in-out infinite alternate}
+@keyframes pl1{from{transform:translate(-30vw,-22vh)}to{transform:translate(16vw,14vh) scale(1.15)}}
+@keyframes pl2{from{transform:translate(26vw,-16vh) scale(1.1)}to{transform:translate(-18vw,20vh)}}
+@keyframes pl3{from{transform:translate(-10vw,26vh)}to{transform:translate(22vw,-20vh) scale(1.2)}}
+.pk{position:relative;display:grid;place-items:center;width:min(88vw,560px);text-align:center}.pk>*{grid-area:1/1}
+.dr{position:relative;width:100%;padding:20px 22px 24px;border-radius:26px;text-align:left;animation:pl4 .8s var(--spring) .1s both,pl5 .4s var(--ease) 1.85s forwards}
+@keyframes pl4{from{opacity:0;transform:translateY(24px) scale(.92)}to{opacity:1;transform:none}}
+@keyframes pl5{to{opacity:0;transform:translateY(-18px) scale(.94)}}
+.dr .lb{display:block;margin-bottom:12px;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.dl{position:relative;display:inline-block;max-width:100%;font-size:clamp(.92rem,3.7vw,1.15rem);font-weight:500;letter-spacing:-.01em;white-space:nowrap;min-height:1.5em}
+#ty{animation:pl6 .3s ease 1.4s forwards}@keyframes pl6{to{opacity:.4}}
+.dl .cr{display:inline-block;width:2px;height:1.15em;margin-left:2px;vertical-align:-.2em;background:var(--a);animation:pl7 .9s steps(1) infinite}@keyframes pl7{50%{opacity:0}}
+.dl s{position:absolute;left:-4px;right:-4px;top:56%;height:2.5px;border-radius:2px;background:#ff453a;transform:scaleX(0);transform-origin:left;animation:pl8 .28s var(--ease) 1.3s forwards}@keyframes pl8{to{transform:scaleX(1)}}
+.dr em{position:absolute;right:14px;top:-12px;font:600 .72rem/1 var(--f);font-style:normal;color:#fff;background:#ff453a;padding:6px 10px;border-radius:99px;box-shadow:0 6px 16px -4px rgba(255,69,58,.6);transform:scale(0) rotate(-6deg);animation:pl9 .45s var(--spring) 1.5s forwards}@keyframes pl9{to{transform:scale(1) rotate(-6deg)}}
+.fn{font-size:clamp(2.4rem,10.5vw,4.6rem);line-height:1.02;letter-spacing:-.045em;max-width:12ch}
+.fn span{display:inline-block;opacity:0;transform:translateY(.5em) scale(.96);animation:pla .7s var(--spring) calc(1.95s + var(--i)*.08s) forwards}@keyframes pla{to{opacity:1;transform:none}}
+.fn span:nth-child(n+4){background:linear-gradient(100deg,var(--a),#af52de 60%,#ff375f);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+#pre .pb{position:absolute;bottom:calc(9vh + 26px);width:120px;height:3px;border-radius:3px;background:var(--e2);overflow:hidden}
+#pre .pb i{display:block;height:100%;background:var(--a);transform-origin:left;transform:scaleX(0);animation:plb 2.8s cubic-bezier(.6,0,.3,1) forwards}@keyframes plb{to{transform:scaleX(1)}}
+#pre .by{position:absolute;bottom:9vh;color:var(--mut);letter-spacing:.02em;font-size:.85rem}
 body.ready #pre{transform:translateY(-101%);border-radius:0 0 50% 50%/0 0 16vw 16vw;visibility:hidden}
-body.ready #pre b{opacity:0;transform:translateY(-30px) scale(.9)}
+body.ready #pre *{animation-play-state:paused!important}
 /* chrome */
 #pg{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--a);transform:scaleX(0);transform-origin:0 50%;z-index:60}
 header{position:fixed;z-index:50;left:0;right:0;top:calc(12px + env(safe-area-inset-top,0px));display:flex;justify-content:space-between;padding:0 max(20px,calc(50% - 560px));pointer-events:none}
@@ -127,7 +148,7 @@ footer{padding:0 0 130px;text-align:center;color:var(--mut);font-size:.9rem}
 </style>
 </head>
 <body>
-<div id="pre"><b id="pn">0</b><small>ByteSpark</small></div>
+<div id="pre"><i class="o o1"></i><i class="o o2"></i><i class="o o3"></i><div class="pk"><div class="dr g bl"><span class="lb">Draft 01</span><span class="dl"><span id="ty">Innovative solutions for modern teams.</span><b class="cr"></b><s></s></span><em>Too generic.</em></div><h2 class="fn" aria-label="Words that make people act."><span style="--i:0">Words</span> <span style="--i:1">that</span> <span style="--i:2">make</span> <span style="--i:3">people</span> <span style="--i:4">act.</span></h2></div><div class="pb"><i></i></div><small class="by">ByteSpark</small></div>
 <canvas id="bg" aria-hidden="true"></canvas><div id="pg"></div><div id="cur"></div>
 <header>
   <a class="brand g bl" href="#home">ByteSpark</a>
@@ -296,6 +317,7 @@ if(hovering){addEventListener('pointermove',e=>{ev=e;cur.style.opacity=1;if(!pq)
  if(y<innerHeight*.9){hero.style.setProperty('--px',(e.clientX/innerWidth-.5).toFixed(2));hero.style.setProperty('--py',(e.clientY/innerHeight-.5).toFixed(2))}
  cur.classList.toggle('hot',!!(t.closest&&t.closest('a,button,.card,.tile')));
  const c=t.closest&&t.closest('.card,.tile');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}
+ const gg=t.closest&&t.closest('.g');if(gg)glare(gg,e);
  const b=t.closest&&t.closest('.btn');if(ab&&ab!==b){ab.style.setProperty('--tx','0px');ab.style.setProperty('--ty','0px')}ab=b;
  if(b){const r=b.getBoundingClientRect();b.style.setProperty('--tx',((e.clientX-r.left-r.width/2)*.22).toFixed(1)+'px');b.style.setProperty('--ty',((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px')}})}},{passive:true});
  document.addEventListener('pointerleave',()=>cur.style.opacity=0)}
@@ -325,8 +347,12 @@ async function closeSheet(){if(busy)return;busy=true;bgOn=!document.hidden;const
  sh.hidden=true;body.style.overflow='';[sp,dim,inner].forEach(e=>e.getAnimations().forEach(a=>a.cancel()));busy=false;last.focus({preventScroll:true})}
 track.addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openSheet(c)});$('.x').addEventListener('click',closeSheet);dim.addEventListener('click',closeSheet);
 addEventListener('keydown',e=>{if(e.key==='Escape'&&!sh.hidden)closeSheet()});
-// preloader count, then the curtain lifts
-{let t0=performance.now();const el=$('#pn'),f=t=>{const p=Math.min(1,(t-t0)/(reduce?1:1500));el.textContent=Math.round(100*(1-Math.pow(1-p,3)));p<1?requestAnimationFrame(f):setTimeout(()=>{body.classList.add('ready');rdy=true;M()},reduce?0:280)};requestAnimationFrame(f)}
+// welcome: a bad draft gets edited into a good line, then the curtain lifts (tap to skip)
+function glare(g,e){const r=g.getBoundingClientRect();g.style.setProperty('--gx',((e.clientX-r.left)/r.width*100).toFixed(0)+'%');g.style.setProperty('--gy',((e.clientY-r.top)/r.height*100).toFixed(0)+'%')}
+addEventListener('pointerdown',e=>{const g=e.target.closest&&e.target.closest('.g');if(g)glare(g,e)},{passive:true});
+{const pre=$('#pre'),ty=$('#ty'),T=ty.textContent;let done=false,tm=0;
+const go=()=>{if(done)return;done=true;clearTimeout(tm);ty.textContent=T;body.classList.add('ready');rdy=true;M();setTimeout(()=>pre.remove(),1500)};
+if(reduce)go();else{ty.textContent='';const t0=performance.now()+500,f=t=>{if(done)return;const p=Math.max(0,Math.min(1,(t-t0)/750));ty.textContent=T.slice(0,Math.round(T.length*p));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f);tm=setTimeout(go,2900);pre.addEventListener('click',go)}}
 M();requestAnimationFrame(loop);
 </script>
 </body>
