@@ -3,7 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ByteSpark | Freelance copywriter</title>
+<title>ByteSpark | Website Copy & Product Description Portfolio</title>
+<meta name="description" content="A copywriting portfolio focused on clear website copy and product descriptions, with self-initiated spec projects for fictional brands.">
+<meta name="theme-color" content="#eef2fb">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ByteSpark | Clear, customer-focused copy">
+<meta property="og:description" content="Explore website-copy and product-description spec projects, plus the thinking behind each draft.">
+<meta property="og:url" content="https://anasjahangirking-oss.github.io/Portfolio/">
+<link rel="canonical" href="https://anasjahangirking-oss.github.io/Portfolio/">
 <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('bs-theme');if(t)d.dataset.theme=t}catch(e){}if(!d.dataset.theme)d.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'})(document.documentElement)</script>
 <style>
 :root{--bg:#eef2fb;--ink:#10131a;--mut:#596073;--a:#0a84ff;--m1:rgba(255,255,255,.72);--m2:rgba(255,255,255,.22);--e1:rgba(255,255,255,.95);--e2:rgba(255,255,255,.45);--dk:rgba(24,52,112,.26);--sp:.5;--sheet:rgba(244,247,252,.93);--ease:cubic-bezier(.32,.72,0,1);--spring:cubic-bezier(.34,1.5,.64,1);--f:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,"Segoe UI",sans-serif}
@@ -12,6 +19,10 @@
 *{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
 html{background:var(--bg)}
 body{font:400 1.02rem/1.6 var(--f);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.011em}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 12% 12%,rgba(10,132,255,.12),transparent 42%),radial-gradient(ellipse at 88% 78%,rgba(175,82,222,.09),transparent 38%)}
+:focus-visible{outline:3px solid var(--a);outline-offset:4px}
+.skip-link{position:fixed;z-index:500;left:16px;top:12px;padding:10px 16px;border-radius:999px;background:var(--ink);color:var(--bg);transform:translateY(-160%);transition:transform .2s}
+.skip-link:focus{transform:translateY(0)}
 body:not(.ready){overflow:hidden}
 a,button{font:inherit;color:inherit;text-decoration:none}button{border:0;background:none;cursor:pointer}
 #bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1}
@@ -22,10 +33,8 @@ h2{font-size:clamp(2rem,5vw,3.2rem);max-width:18ch}
 .lede{color:var(--mut);font-size:clamp(1.02rem,2vw,1.22rem);max-width:46ch;margin-top:18px}
 .g{background-image:radial-gradient(120% 70% at var(--gx,18%) var(--gy,0%),rgba(255,255,255,calc(var(--sp)*1.15)),transparent 56%),radial-gradient(90% 55% at 88% 112%,rgba(255,255,255,calc(var(--sp)*.55)),transparent 62%),linear-gradient(160deg,var(--m1),var(--m2));border:1px solid var(--e2);box-shadow:inset 0 1px 1px var(--e1),inset 1.5px 2px 3px -2px var(--e1),inset -1px -1px 0 -.5px rgba(255,255,255,calc(var(--sp)*.9)),inset 1px 1px 0 -.5px rgba(120,190,255,.3),inset -1px -1px 0 -.5px rgba(255,160,215,.22),inset 0 0 22px -6px var(--e2),inset 0 -12px 20px -14px rgba(0,0,0,.18),0 1px 1px rgba(0,0,0,.05),0 3px 8px -3px rgba(0,0,0,.08),0 22px 44px -22px var(--dk)}
 .bl{-webkit-backdrop-filter:blur(20px) saturate(190%) brightness(1.05);backdrop-filter:blur(20px) saturate(190%) brightness(1.05)}
-@media(hover:hover){.g{transition:border-color .35s var(--ease),box-shadow .35s var(--ease)}.g:hover{border-color:var(--e1)}}
-.g:active{scale:.985;transition:scale .14s var(--spring)}
 /* preloader */
-#pre{position:fixed;inset:0;z-index:300;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;transition:transform 1.25s var(--ease),border-radius 1.25s var(--ease),visibility 0s 1.3s}
+#pre{position:fixed;inset:0;z-index:300;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;transition:transform .75s var(--ease),border-radius .75s var(--ease),visibility 0s .8s}
 #pre .o{position:absolute;left:50%;top:50%;width:75vmax;height:75vmax;margin:-37.5vmax 0 0 -37.5vmax;border-radius:50%;will-change:transform}
 #pre .o1{background:radial-gradient(circle,rgba(10,132,255,.5),transparent 62%);animation:pl1 9s ease-in-out infinite alternate}
 #pre .o2{background:radial-gradient(circle,rgba(175,82,222,.4),transparent 62%);animation:pl2 11s ease-in-out infinite alternate}
@@ -34,20 +43,21 @@ h2{font-size:clamp(2rem,5vw,3.2rem);max-width:18ch}
 @keyframes pl2{from{transform:translate(26vw,-16vh) scale(1.1)}to{transform:translate(-18vw,20vh)}}
 @keyframes pl3{from{transform:translate(-10vw,26vh)}to{transform:translate(22vw,-20vh) scale(1.2)}}
 .pk{position:relative;display:grid;place-items:center;width:min(88vw,560px);text-align:center}.pk>*{grid-area:1/1}
-.dr{position:relative;width:100%;padding:20px 22px 24px;border-radius:26px;text-align:left;animation:pl4 .8s var(--spring) .1s both,pl5 .4s var(--ease) 1.85s forwards}
+.dr{position:relative;width:100%;padding:20px 22px 24px;border-radius:26px;text-align:left;animation:pl4 .45s var(--spring) .05s both,pl5 .25s var(--ease) .75s forwards}
 @keyframes pl4{from{opacity:0;transform:translateY(24px) scale(.92)}to{opacity:1;transform:none}}
 @keyframes pl5{to{opacity:0;transform:translateY(-18px) scale(.94)}}
 .dr .lb{display:block;margin-bottom:12px;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
 .dl{position:relative;display:inline-block;max-width:100%;font-size:clamp(.92rem,3.7vw,1.15rem);font-weight:500;letter-spacing:-.01em;white-space:nowrap;min-height:1.5em}
-#ty{animation:pl6 .3s ease 1.4s forwards}@keyframes pl6{to{opacity:.4}}
+#ty{animation:pl6 .2s ease .35s forwards}@keyframes pl6{to{opacity:.4}}
 .dl .cr{display:inline-block;width:2px;height:1.15em;margin-left:2px;vertical-align:-.2em;background:var(--a);animation:pl7 .9s steps(1) infinite}@keyframes pl7{50%{opacity:0}}
-.dl s{position:absolute;left:-4px;right:-4px;top:56%;height:2.5px;border-radius:2px;background:#ff453a;transform:scaleX(0);transform-origin:left;animation:pl8 .28s var(--ease) 1.3s forwards}@keyframes pl8{to{transform:scaleX(1)}}
-.dr em{position:absolute;right:14px;top:-12px;font:600 .72rem/1 var(--f);font-style:normal;color:#fff;background:#ff453a;padding:6px 10px;border-radius:99px;box-shadow:0 6px 16px -4px rgba(255,69,58,.6);transform:scale(0) rotate(-6deg);animation:pl9 .45s var(--spring) 1.5s forwards}@keyframes pl9{to{transform:scale(1) rotate(-6deg)}}
+.dl s{position:absolute;left:-4px;right:-4px;top:56%;height:2.5px;border-radius:2px;background:#ff453a;transform:scaleX(0);transform-origin:left;animation:pl8 .2s var(--ease) .35s forwards}@keyframes pl8{to{transform:scaleX(1)}}
+.dr em{position:absolute;right:14px;top:-12px;font:600 .72rem/1 var(--f);font-style:normal;color:#fff;background:#ff453a;padding:6px 10px;border-radius:99px;box-shadow:0 6px 16px -4px rgba(255,69,58,.6);transform:scale(0) rotate(-6deg);animation:pl9 .3s var(--spring) .45s forwards}@keyframes pl9{to{transform:scale(1) rotate(-6deg)}}
 .fn{font-size:clamp(2.4rem,10.5vw,4.6rem);line-height:1.02;letter-spacing:-.045em;max-width:12ch}
-.fn span{display:inline-block;opacity:0;transform:translateY(.5em) scale(.96);animation:pla .7s var(--spring) calc(1.95s + var(--i)*.08s) forwards}@keyframes pla{to{opacity:1;transform:none}}
+#pre .skip-hint{position:absolute;bottom:calc(9vh + 42px);font-size:.75rem;color:var(--mut);letter-spacing:.02em}
+.fn span{display:inline-block;opacity:0;transform:translateY(.5em) scale(.96);animation:pla .45s var(--spring) calc(.25s + var(--i)*.04s) forwards}@keyframes pla{to{opacity:1;transform:none}}
 .fn span:nth-child(n+4){background:linear-gradient(100deg,var(--a),#af52de 60%,#ff375f);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
 #pre .pb{position:absolute;bottom:calc(9vh + 26px);width:120px;height:3px;border-radius:3px;background:var(--e2);overflow:hidden}
-#pre .pb i{display:block;height:100%;background:var(--a);transform-origin:left;transform:scaleX(0);animation:plb 2.8s cubic-bezier(.6,0,.3,1) forwards}@keyframes plb{to{transform:scaleX(1)}}
+#pre .pb i{display:block;height:100%;background:var(--a);transform-origin:left;transform:scaleX(0);animation:plb .65s cubic-bezier(.6,0,.3,1) forwards}@keyframes plb{to{transform:scaleX(1)}}
 #pre .by{position:absolute;bottom:9vh;color:var(--mut);letter-spacing:.02em;font-size:.85rem}
 body.ready #pre{transform:translateY(-101%);border-radius:0 0 50% 50%/0 0 16vw 16vw;visibility:hidden}
 body.ready #pre *{animation-play-state:paused!important}
@@ -66,7 +76,7 @@ header>*{pointer-events:auto}.hr{display:flex;gap:10px;align-items:center}
 .ib svg{grid-area:1/1;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .7s var(--spring),opacity .35s}
 .ib .sun{opacity:0;transform:rotate(-90deg) scale(.4)}
 :root[data-theme=dark] .ib .sun{opacity:1;transform:none}:root[data-theme=dark] .ib .moon{opacity:0;transform:rotate(90deg) scale(.4)}
-#dock{position:fixed;z-index:50;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));translate:-50% 160%;padding:5px;border-radius:999px;display:flex;transition:translate 1.2s var(--spring) 1.5s}
+#dock{position:fixed;z-index:50;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));translate:-50% 160%;padding:5px;border-radius:999px;display:flex;transition:translate .65s var(--spring) .15s}
 body.ready #dock{translate:-50% 0}
 #dock a{position:relative;z-index:1;padding:10px 15px;font-size:.82rem;font-weight:600;color:var(--mut);border-radius:999px;transition:color .35s,transform .5s var(--spring)}
 #dock a.on{color:var(--ink)}@media(hover:hover){#dock a:hover{transform:translateY(-3px) scale(1.1)}}
@@ -84,12 +94,12 @@ h1{font-size:clamp(2.9rem,9.4vw,7.2rem);letter-spacing:-.055em;line-height:.98;m
 .wd{display:inline-block;white-space:nowrap;margin-right:.2em}
 .ch{display:inline-block;transform-origin:50% 100%}
 .js .ch{opacity:0;transform:rotateX(-85deg) translateY(.5em)}
-body.ready .ch{animation:ch 1.2s var(--ease) both;animation-delay:calc(.8s + var(--i)*.03s)}
+body.ready .ch{animation:ch .8s var(--ease) both;animation-delay:calc(.2s + var(--i)*.012s)}
 @keyframes ch{to{opacity:1;transform:none}}
-.js .fi{opacity:0;transform:translateY(22px)}body.ready .fi{animation:fi 1.1s var(--ease) both;animation-delay:calc(1.5s + var(--i,0)*.12s)}@keyframes fi{to{opacity:1;transform:none}}
+.js .fi{opacity:0;transform:translateY(22px)}body.ready .fi{animation:fi .7s var(--ease) both;animation-delay:calc(.32s + var(--i,0)*.08s)}@keyframes fi{to{opacity:1;transform:none}}
 .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
 .chips{position:absolute;right:0;top:50%;width:min(360px,40vw);height:330px;transform:translateY(-50%);pointer-events:none}
-.chip{position:absolute;padding:16px 20px;border-radius:26px;font-weight:600;letter-spacing:-.02em;transform:translate3d(calc(var(--px,0)*var(--k)*1px),calc(var(--py,0)*var(--k)*1px),0);transition:transform .9s var(--ease),opacity 1s var(--ease) calc(1.7s + var(--i)*.12s);animation:fl 7s ease-in-out infinite;animation-delay:calc(var(--i)*-2.3s)}
+.chip{position:absolute;padding:16px 20px;border-radius:26px;font-weight:600;letter-spacing:-.02em;transform:translate3d(calc(var(--px,0)*var(--k)*1px),calc(var(--py,0)*var(--k)*1px),0);transition:transform .7s var(--ease),opacity .65s var(--ease) calc(.2s + var(--i)*.08s);animation:fl 7s ease-in-out infinite;animation-delay:calc(var(--i)*-2.3s)}
 .js .chip{opacity:0}body.ready .chip{opacity:1}@keyframes fl{50%{translate:0 -12px}}
 .chip small{display:block;color:var(--mut);font-weight:500;font-size:.8rem}
 .chip:nth-child(1){--k:-18;right:30px;top:10px}.chip:nth-child(2){--k:26;right:150px;top:120px}.chip:nth-child(3){--k:-34;right:10px;top:232px}
@@ -140,52 +150,89 @@ footer{padding:0 0 130px;text-align:center;color:var(--mut);font-size:.9rem}
 .dim{position:absolute;inset:0;background:rgba(6,9,18,.45)}
 .sp{position:absolute;inset:0;background:var(--sheet);-webkit-backdrop-filter:blur(28px) saturate(180%);backdrop-filter:blur(28px) saturate(180%);overflow-y:auto;overscroll-behavior:contain}
 .sp .in{width:min(720px,100% - 40px);margin:0 auto;padding:calc(110px + env(safe-area-inset-top,0px)) 0 120px}
+.sp .spec-intro{font-size:.92rem;color:var(--mut);padding:12px 16px;border:1px solid var(--e2);border-radius:16px;background:var(--m2)}
+.sp .source-ref a{color:var(--a);font-weight:600;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 .sp .k{color:var(--a);font-weight:600}.sp h2{margin:10px 0 28px;max-width:20ch}.sp p{font-size:1.1rem;margin-bottom:20px}.sp h3{font-size:1.3rem;margin:34px 0 10px}.sp .nt{color:var(--mut);font-size:.95rem;border-left:2px solid var(--a);padding-left:14px}.sp .note{color:var(--mut);font-size:.9rem;margin-top:36px}
 .x{position:fixed;z-index:2;right:20px;top:calc(16px + env(safe-area-inset-top,0px));padding:10px 20px;border-radius:999px;font-weight:600}
 .off,.off *,.off::before{animation-play-state:paused!important}body.hide *{animation-play-state:paused!important}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}.js .rv,.js .ch,.js .fi,.js .chip,.js .mw,.js .st{opacity:1;transform:none}}
-#services,#process,#contact{contain:layout paint style}
+#services,#process,#contact,#about,#faq{contain:layout paint style}
+.about-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr);gap:18px;margin-top:38px;align-items:stretch}
+.about-copy,.about-aside,.scope-box,.faq-item{padding:clamp(24px,4vw,34px);border-radius:28px}
+.about-copy p,.about-aside p{color:var(--mut);margin-top:14px;max-width:64ch}
+.about-aside h3,.scope-box h3{font-size:1.2rem;margin-bottom:12px}
+.focus-list{display:grid;gap:12px;margin-top:18px}
+.focus-list li{list-style:none;padding-left:22px;position:relative;color:var(--mut)}
+.focus-list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--a)}
+.secondary-note{color:var(--mut);margin-top:18px;max-width:70ch}
+.scope-box{margin-top:20px}
+.scope-box p{color:var(--mut);max-width:70ch}
+.faq-list{display:grid;gap:12px;margin-top:38px}
+.faq-item summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--a);font-size:1.35rem;line-height:1}
+.faq-item[open] summary::after{content:"−"}
+.faq-item p{color:var(--mut);margin-top:14px;max-width:75ch}
+.email-line{margin-top:18px;color:var(--mut);overflow-wrap:anywhere}
+.email-line a{color:var(--a);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.about-grid{grid-template-columns:1fr}.about-copy,.about-aside,.scope-box,.faq-item{border-radius:22px}}
+@media(max-width:420px){#dock a{padding:9px 10px;font-size:.75rem}.brand{padding:8px 13px}.btn.s{padding:0 13px}}
 .tt *,.tt *::before,.tt *::after{animation-play-state:paused!important}.tt .bl,.tt .sp{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
 .rg{position:fixed;left:0;top:0;width:200px;height:200px;margin:-100px 0 0 -100px;border-radius:50%;z-index:400;pointer-events:none;border:2px solid var(--a);box-shadow:0 0 36px 4px var(--a),inset 0 0 36px 4px var(--a);will-change:transform,opacity}
 </style>
 </head>
 <body>
-<div id="pre"><i class="o o1"></i><i class="o o2"></i><i class="o o3"></i><div class="pk"><div class="dr g bl"><span class="lb">Draft 01</span><span class="dl"><span id="ty">Innovative solutions for modern teams.</span><b class="cr"></b><s></s></span><em>Too generic.</em></div><h2 class="fn" aria-label="Words that make people act."><span style="--i:0">Words</span> <span style="--i:1">that</span> <span style="--i:2">make</span> <span style="--i:3">people</span> <span style="--i:4">act.</span></h2></div><div class="pb"><i></i></div><small class="by">ByteSpark</small></div>
-<canvas id="bg" aria-hidden="true"></canvas><div id="pg"></div><div id="cur"></div>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div id="pre" role="button" tabindex="0" aria-label="Skip the introduction animation"><i class="o o1"></i><i class="o o2"></i><i class="o o3"></i><div class="pk"><div class="dr g bl"><span class="lb">Draft 01</span><span class="dl"><span id="ty">Innovative solutions for modern teams.</span><b class="cr"></b><s></s></span><em>Too generic.</em></div><h2 class="fn" aria-label="Words that make people act."><span style="--i:0">Words</span> <span style="--i:1">that</span> <span style="--i:2">make</span> <span style="--i:3">people</span> <span style="--i:4">act.</span></h2></div><div class="pb"><i></i></div><small class="skip-hint">Tap or press Enter to skip</small><small class="by">ByteSpark</small></div>
+<canvas id="bg" aria-hidden="true"></canvas><div id="pg" aria-hidden="true"></div><div id="cur" aria-hidden="true"></div>
 <header>
   <a class="brand g bl" href="#home">ByteSpark</a>
   <div class="hr"><button class="ib g bl" id="tb" aria-label="Switch light or dark theme"><svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button><a class="btn s g bl" href="#contact">Start a project</a></div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section class="hero" id="home"><div class="w" style="position:relative">
-  <div class="hc"><div class="pill g fi"><i></i>Open for new projects</div>
-  <h1 id="h1">Words that make people act.</h1>
-  <p class="lede fi" style="--i:1">I’m a freelance copywriter for websites, product pages, blog posts and video scripts. Clear writing, checked facts, and a voice that sounds like you.</p>
-  <div class="row fi" style="--i:2"><a class="btn p" href="#contact">Start a project</a><a class="btn g" href="#work">See the work</a></div></div>
+  <div class="hc"><div class="pill g fi"><i></i>Independent copywriting portfolio</div>
+  <h1 id="h1">Clear copy. Stronger brands.</h1>
+  <p class="lede fi" style="--i:1">I create clear, customer-focused website copy and product descriptions that help people understand what a business offers, who it is for and what to do next.</p>
+  <div class="row fi" style="--i:2"><a class="btn p" href="#contact">Discuss a project</a><a class="btn g" href="#work">Explore the work</a></div></div>
   <div class="chips" aria-hidden="true"><div class="chip g" style="--i:0">Landing pages<small>Clear offer, one action</small></div><div class="chip g" style="--i:1">Product copy<small>Benefits before features</small></div><div class="chip g" style="--i:2">Video scripts<small>Written to be heard</small></div></div>
 </div></section>
 <div class="mq" aria-hidden="true"><div id="mqi"><div class="mt" id="mt"></div></div></div>
-<section id="stmS" style="padding:90px 0 40px"><div class="w"><p class="stm" id="stm">Clear copy earns attention, builds trust and turns readers into customers.</p></div></section>
+<section id="stmS" style="padding:90px 0 40px"><div class="w"><p class="stm" id="stm">Make the offer clear. Respect the reader. Give every sentence a job.</p></div></section>
+<section id="about"><div class="w"><h2 class="rv">A thoughtful process, not inflated promises.</h2><div class="about-grid">
+  <article class="about-copy g rv"><h3>About ByteSpark</h3><p>I’m an emerging copywriter building a portfolio around clear, audience-aware writing. I’m especially interested in website copy and product descriptions: the words that explain an offer, answer a reader’s questions and make the next step clear.</p><p>The projects shown here are self-initiated spec samples for fictional brands. They are not paid client commissions, and they do not represent measured campaign results. I use them to show how I approach a brief, structure a message and revise a draft.</p><p>My working principle is simple: understand the reader first, write the clearest useful version, and flag any claim that needs evidence before publication.</p></article>
+  <aside class="about-aside g rv"><h3>Current focus</h3><ul class="focus-list"><li>Landing pages and website copy</li><li>Product descriptions and catalogue copy</li><li>Clear messaging, headlines and calls to action</li></ul><p>Blog articles and short video scripts appear as supporting samples. I assess requests outside my main focus individually rather than promising expertise in everything.</p></aside>
+</div></div></section>
 <section id="work"><div class="pin">
-  <div class="wh"><h2>Selected work</h2><p class="lede">Scroll to move through the samples, then tap one to read it.</p></div>
+  <div class="wh"><h2>Spec projects & writing samples</h2><p class="lede">These are self-initiated demonstrations for fictional brands, not client commissions. Open a card to see the brief, copy decisions and sample.</p></div>
   <div class="track" id="track"></div><div class="wb"><i id="wbi"></i></div>
 </div></section>
-<section id="services"><div class="w"><h2 class="rv">What I write</h2><div class="grid" id="grid"></div></div></section>
+<section id="services"><div class="w"><h2 class="rv">Core services</h2><p class="lede rv">A focused starting point makes it easier to define the work, the deliverables and what success should look like.</p><div class="grid" id="grid"></div><p class="secondary-note rv"><strong>Supporting formats:</strong> SEO blog articles and short video scripts, considered case by case when the brief and research requirements are a good fit.</p>
+<div class="scope-box g rv"><h3>What a typical project can include</h3><p>A short discovery brief, audience and message outline, headline options, agreed page or product copy, a factual-claims checklist and one consolidated revision round. The exact scope is confirmed before work begins.</p></div></div></section>
 <section id="process"><div class="w"><h2 class="rv">From brief to final copy</h2><div class="steps" id="steps">
-<div class="st"><h3>Brief</h3><p>You share the goal, the audience and what already exists. I ask what’s missing.</p></div>
-<div class="st"><h3>Draft</h3><p>A first version with a clear structure and a few headline options.</p></div>
-<div class="st"><h3>Edit</h3><p>I rewrite by hand, check every claim, and tune the tone to your brand.</p></div>
-<div class="st"><h3>Deliver</h3><p>Final copy in the format you need, with one round of revisions.</p></div></div></div></section>
-<section id="contact"><div class="w"><div class="ct g rv"><h2>Let’s write something worth reading.</h2><p class="lede">Send a few lines about the project, who it’s for and your deadline.</p><div class="row"><a class="btn p xl" href="mailto:hello@example.com?subject=Project%20enquiry">Start a project</a></div></div><footer>© 2026 ByteSpark · Freelance copywriter</footer></div></section>
+<div class="st"><h3>Brief</h3><p>We define the goal, audience, deliverable, deadline and source material. Missing information is identified before drafting.</p></div>
+<div class="st"><h3>Draft</h3><p>I prepare a clear structure, headline options where relevant and a first draft aligned with the agreed brief.</p></div>
+<div class="st"><h3>Edit & verify</h3><p>I revise for clarity and consistency, then flag product, pricing, performance or compliance claims that need source documents or client approval.</p></div>
+<div class="st"><h3>Deliver</h3><p>You receive the agreed copy in the agreed format, plus one round of consolidated revisions when included in the scope.</p></div></div></div></section>
+<section id="faq"><div class="w"><h2 class="rv">Good questions to ask</h2><div class="faq-list">
+<details class="faq-item g rv"><summary>Are these real client projects?</summary><p>No. The current portfolio contains self-initiated spec samples for fictional brands. They demonstrate writing approach and structure, not paid client experience or real campaign results.</p></details>
+<details class="faq-item g rv"><summary>What would you need before starting?</summary><p>A project goal, target audience, product or service details, preferred tone, examples you like, the required format and a realistic deadline. For factual claims, I’ll ask for supporting product documentation or approved sources.</p></details>
+<details class="faq-item g rv"><summary>Can you guarantee more sales or search rankings?</summary><p>No. Copy can make an offer clearer and improve the quality of communication, but sales and rankings depend on many factors beyond the words. I don’t promise results I cannot control.</p></details>
+<details class="faq-item g rv"><summary>How do revisions work?</summary><p>The default sample workflow includes one round of consolidated revisions, but the exact scope is agreed in writing before a project starts. Large changes to the original brief may need a new scope.</p></details>
+<details class="faq-item g rv"><summary>How are paid projects arranged?</summary><p>Project enquiries start by email. A parent or guardian will be involved in any paid-work discussions, agreements and payment arrangements.</p></details>
+<details class="faq-item g rv"><summary>How do you handle unverified claims?</summary><p>I flag claims about performance, security, health, finance, pricing or product specifications when they need evidence. The client must confirm the facts and approve the final copy before publication.</p></details>
+</div></div></section>
+<section id="contact"><div class="w"><div class="ct g rv"><h2>Have a clear brief? Let’s start there.</h2><p class="lede">Send the project goal, intended audience, required deliverable and your preferred timeline. I’ll review the brief before discussing scope.</p><div class="row"><a class="btn p xl" href="mailto:anasjahangir2108@gmail.com?subject=Copywriting%20project%20enquiry">Email ByteSpark</a></div><p class="email-line">Or write directly: <a href="mailto:anasjahangir2108@gmail.com">anasjahangir2108@gmail.com</a></p></div><footer>© 2026 ByteSpark · Independent copywriting portfolio · <a href="#faq">Project FAQ</a></footer></div></section>
 </main>
-<nav id="dock" class="g bl" aria-label="Sections"><span class="ind"></span><a href="#home" class="on">Home</a><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#contact">Contact</a></nav>
-<div id="sh" hidden role="dialog" aria-modal="true" aria-label="Writing sample"><div class="dim"></div><article class="sp"><button class="x g bl" aria-label="Close">Close</button><div class="in"></div></article></div>
+<nav id="dock" class="g bl" aria-label="Sections"><span class="ind"></span><a href="#home" class="on">Home</a><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+<div id="sh" hidden role="dialog" aria-modal="true" aria-labelledby="sample-title"><div class="dim"></div><article class="sp" tabindex="-1"><button class="x g bl" aria-label="Close sample">Close</button><div class="in"></div></article></div>
 <script>
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
 const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches,EASE='cubic-bezier(.32,.72,0,1)',root=document.documentElement,body=document.body;
 const W=[
-{c:'Landing page',t:'Know what you owe before tax season does',d:'A full landing page for a bookkeeping app, from headline to final button.',b:[
-'>Brief: Plainbook, a bookkeeping app for freelancers. Audience: designers, writers and developers who dread tax time. Goal: free-trial signups. Fictional brand, written as a spec sample.',
+{c:'Case study 01 · Website copy',t:'Plainbook: a landing page built around tax-time clarity',d:'Spec project for a fictional bookkeeping app: audience insight, message hierarchy and full landing-page copy.',b:[
+'>Brief: Plainbook, a fictional bookkeeping app for freelancers. Audience: independent designers, writers and developers who want a clearer view of invoices, expenses and tax set-asides. Objective: make the product offer understandable and encourage a trial signup. This is a self-initiated spec project, not a live campaign.',
+'>Spec and claims note: features, prices, trial terms, encryption and privacy statements in this sample are invented. A real publication would require product documentation, security review and approval of every claim.',
 '#Hero',
 'Know what you owe before tax season does.',
 'Plainbook tracks your invoices, expenses and tax set-aside in one place, so the number you owe never arrives as a surprise.',
@@ -206,8 +253,9 @@ const W=[
 '#Closing line',
 'Make this tax season the quiet one. Start your free 30 days.',
 '>Why it’s built this way: the headline promises a feeling the reader already wants, the middle names their exact pain, every objection (jargon, price, accountant, privacy) is answered before it’s raised, and the page asks for one thing.']},
-{c:'Product description',t:'A desk lamp, described by what it does for your evenings',d:'A product page, a catalogue-card version and the spec block, in one consistent voice.',b:[
-'>Brief: Alder, a desk lamp for an online homeware shop. Audience: people who work from home and buy on look and on proof. Goal: more add-to-cart, fewer returns. Fictional product; specs invented for this sample.',
+{c:'Case study 02 · Product copy',t:'Alder: product copy that connects features to daily use',d:'Spec project for a fictional desk lamp: product-page copy, a catalogue version and a structured specification block.',b:[
+'>Brief: Alder, a fictional desk lamp for an online homeware shop. Audience: people who work or study at a desk and want both a considered design and useful product details. Objective: explain the features in terms of everyday use while keeping specifications easy to scan. This is a self-initiated spec project.',
+'>Spec and claims note: all technical values, materials, warranty terms and comfort claims are hypothetical. A real product page would need manufacturer documentation and appropriate review before publication.',
 '#Product page',
 'Alder Desk Lamp: light that’s kind to your eyes at 9 p.m.',
 'Most desk lamps are built to be bright. This one is built to be comfortable. The light is diffused and flicker-free, so there’s no harsh hotspot on the page and no tiring shimmer after a long day.',
@@ -218,15 +266,21 @@ const W=[
 '#Catalogue card (25 words)',
 'Flicker-free light that warms or cools with a turn of the dial. Weighted base, arm that folds flat, USB-C power. Oat or Graphite.',
 '>Why it works: each feature is tied to a moment in the buyer’s day, the claims are measurable rather than vague, and the specs sit exactly where a careful shopper looks for them.']},
-{c:'SEO blog post',t:'Why most landing pages lose visitors in seconds',d:'A full-structure article with a meta title, meta description and a test readers can run today.',b:[
-'>Brief: blog for a website-builder company. Target keyword: landing page conversion. Meta title (54 characters): Why Landing Pages Lose Visitors (and How to Keep Them). Meta description (134 characters): Most visitors decide within seconds. Here are the three things your first screen must do, with before-and-after examples you can copy.',
-'Someone clicks your ad, lands on your page and decides whether to stay, often before they’ve scrolled. Not after reading your carefully chosen paragraphs. Before.',
+{c:'Case study 03 · SEO content',t:'A practical landing-page clarity checklist',d:'Spec editorial project: search-focused structure, useful examples, a meta title and a meta description without unsupported performance claims.',b:[
+'>Brief: educational blog article for a fictional website-builder company. Primary topic: landing-page clarity. Objective: help readers identify whether a page explains its offer, audience and next step. This is a self-initiated editorial spec project, not a report of measured conversion data.',
+'>Editorial note: the examples are illustrative. A publish-ready SEO article should be checked against current search guidance, the publisher’s expertise and any claims drawn from research or analytics.',
+'#References',
+'LINK:https://developers.google.com/search/docs/fundamentals/seo-starter-guide|Google Search Central: SEO Starter Guide',
+'LINK:https://developers.google.com/search/docs/essentials|Google Search Essentials',
+'Meta title: A Practical Landing Page Clarity Checklist',
+'Meta description: Learn how to make a landing page clearer with a focused headline, an audience-specific message and one obvious next step.',
+'A visitor arrives on your page with a question: is this relevant to me? The opening section should help them answer that question without making them decode vague marketing language.',
 '#The first screen has one job',
 'It has to answer three questions: What is this? Is it for me? What do I do next? If any answer is missing, the visitor does the cheapest thing available, which is leave.',
 '#1. What is this?',
 'Weak: “Innovative solutions for modern teams.”',
 'Stronger: “Invoices that send themselves, for freelancers.”',
-'The weak line could describe a thousand companies, so it describes none. The stronger line names the product and the person it’s for. A reader knows within a second whether to keep going.',
+'The weak line could describe a thousand companies, so it describes none. The stronger line names the product and the person it’s for. A reader can more quickly judge whether the offer is relevant to them.',
 '#2. Is it for me?',
 'People look for themselves on the page. Name the reader’s situation in words they’d use: “for freelancers”, “for first-time buyers”, “for teams under ten”. Specific isn’t narrow. It’s the reason the right people stay.',
 '#3. What do I do next?',
@@ -234,10 +288,10 @@ const W=[
 '#A five-second test you can run today',
 'Show your page to someone who has never seen it for five seconds. Then hide it and ask three things: What does this company sell? Who is it for? What would you click? If they hesitate on any answer, that’s the line to rewrite first.',
 '#Fix the headline before anything else',
-'Better photos, tidier design and faster loading all help. None of them rescues a headline that doesn’t say what you offer. Run the test tonight, then rewrite the one line that made your reviewer hesitate.',
+'Visual design and loading performance matter, but they cannot replace a clear explanation of the offer. Run the test, note where your reviewer hesitates, and rewrite that part first.',
 '>Why it works: a clear point of view, one idea per section, examples instead of theory, subheads that match what people search for, and an ending that gives the reader a task.']},
-{c:'Video script',t:'A 30-second explainer, written to be heard',d:'Timed scenes, voice-over and on-screen text, with a word count that fits the runtime.',b:[
-'>Brief: 30-second explainer for Folder Zero, an email app. Audience: busy professionals. Goal: free-trial clicks. Voice-over is 56 words, which leaves room for pauses at a natural pace. Fictional brand.',
+{c:'Additional sample · Video script',t:'Folder Zero: a 30-second explainer written for the ear',d:'Supporting format sample with timed scenes, voice-over and on-screen text for a fictional email app.',b:[
+'>Brief: 30-second explainer for Folder Zero, a fictional email app. Audience: busy professionals who want to find important messages faster. Objective: explain the proposed product idea in a memorable, spoken format. This is a self-initiated spec sample; all product capabilities and trial details are invented.',
 '#0:00 to 0:05',
 'Visual: A phone screen. The unread counter climbs: 38, 39, 40. The number 3 glows among the messages.',
 'Voice-over: Forty unread emails. Three of them matter. Good luck.',
@@ -254,8 +308,8 @@ const W=[
 'On screen: Folder Zero. Less inbox, more day. Try it free for 14 days.',
 'Voice-over: Folder Zero. Less inbox, more day.',
 '>Why it works: one idea per line, numbers instead of adjectives, the product doing something in every scene, and a closing line short enough to remember.']}];
-const S=[['Website copy','Home, about and service pages that explain what you do in plain language.'],['Product descriptions','Benefit-led copy for shops and catalogues, consistent across every product.'],['Blog and SEO','Articles with a clear point of view, structured to be found and finished.'],['Video scripts','Explainers and ads written for the ear, with scene and screen notes.']];
-$('#track').innerHTML=W.map((p,i)=>`<button class="card" data-i="${i}"><div class="ci g"><span class="k">${p.c}</span><h3>${p.t}</h3><p>${p.d}</p><span class="go">Read the sample</span></div></button>`).join('');
+const S=[['Website & landing-page copy','Homepages, service pages and landing pages with clear messaging, useful headline options and a focused call to action.'],['Product descriptions','Product-page and catalogue copy that connects verified features to customer needs, with specifications kept clear and scannable.']];
+$('#track').innerHTML=W.map((p,i)=>`<button class="card" data-i="${i}" aria-haspopup="dialog" aria-label="Open ${p.t}"><div class="ci g"><span class="k">${p.c}</span><h3>${p.t}</h3><p>${p.d}</p><span class="go">Read the project</span></div></button>`).join('');
 $('#grid').innerHTML=S.map(s=>`<div class="tile g rv"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
 {const m=['Website copy','Product descriptions','Blog posts','Video scripts','Landing pages','Email'];$('#mt').innerHTML=[...m,...m].map(x=>`<span>${x}</span><i></i>`).join('')}
 // split text: hero by character, headings by masked word, statement by word
@@ -290,19 +344,15 @@ const bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.AR
 const lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
 ['r','m','t','d'].forEach(k=>U[k]=gl.getUniformLocation(pr,k));
 const rs=()=>{cv.width=Math.ceil(innerWidth*sc);cv.height=Math.ceil(innerHeight*sc);gl.viewport(0,0,cv.width,cv.height);gl.uniform2f(U.r,cv.width,cv.height)};rs();let rq=0;addEventListener('resize',()=>{if(!rq)rq=requestAnimationFrame(()=>{rq=0;rs()})})}catch(e){gl=null;cv.style.display='none'}
-// Scroll and pointer motion use full refresh; idle rendering stays at the existing 30 fps.
+// scroll-driven engine: one loop, smoothed scroll value
 let y=scrollY,vk=0,dirty=1,wT=0,wH=1,tW=0,cL=[],cW=1,sT=0,sH=1,stT=[],wdT=[],lp2=-1,mxs=1,mqf=0;
-let loopRaf=0,loopTimer=0,activeUntil=0;
-function wakeLoop(){if(document.hidden)return;if(loopTimer){clearTimeout(loopTimer);loopTimer=0}if(!loopRaf)loopRaf=requestAnimationFrame(loop)}
-addEventListener('scroll',()=>{activeUntil=performance.now()+180;dirty=1;wakeLoop()},{passive:true});
 function M(){if(!mqf)mqf=requestAnimationFrame(()=>{mqf=0;M0()})}
-function M0(){const sy=scrollY,r=$('#work').getBoundingClientRect();wT=r.top+sy;wH=r.height;tW=track.scrollWidth;cL=cards.map(c=>c.offsetLeft);cW=cards[0].offsetWidth;const s=steps.getBoundingClientRect();sT=s.top+sy;sH=s.height||1;stT=st.map(e=>e.getBoundingClientRect().top+sy);wdT=words.map(w=>w.getBoundingClientRect().top+sy);mxs=document.documentElement.scrollHeight-innerHeight;dirty=1;wakeLoop()}
+function M0(){const sy=scrollY,r=$('#work').getBoundingClientRect();wT=r.top+sy;wH=r.height;tW=track.scrollWidth;cL=cards.map(c=>c.offsetLeft);cW=cards[0].offsetWidth;const s=steps.getBoundingClientRect();sT=s.top+sy;sH=s.height||1;stT=st.map(e=>e.getBoundingClientRect().top+sy);wdT=words.map(w=>w.getBoundingClientRect().top+sy);mxs=document.documentElement.scrollHeight-innerHeight;dirty=1}
 if('ResizeObserver' in window)new ResizeObserver(M).observe(body);addEventListener('load',M);addEventListener('resize',M);
 const po=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('off',!e.isIntersecting)),{rootMargin:'80px'});[hero,$('.mq'),$('.ct')].forEach(el=>po.observe(el));
-document.addEventListener('visibilitychange',()=>{bgOn=!document.hidden&&sh.hidden;body.classList.toggle('hide',document.hidden);if(bgOn)wakeLoop();else{if(loopTimer){clearTimeout(loopTimer);loopTimer=0}if(loopRaf){cancelAnimationFrame(loopRaf);loopRaf=0}}});
+document.addEventListener('visibilitychange',()=>{bgOn=!document.hidden;body.classList.toggle('hide',document.hidden)});
 let ctx=0,cty=0,ccx=-100,ccy=-100,ltx=NaN,lsk='',pt=0,slow=0;const wo=[];
 function loop(t){
-  loopRaf=0;
   const d=scrollY-y;y+=d*(reduce?1:.14);if(Math.abs(d)<.05)y=scrollY;
   if(Math.abs(d)>.05||dirty){dirty=0;const vh=innerHeight,max=mxs;
     pg.style.transform=`scaleX(${max>0?y/max:0})`;
@@ -316,8 +366,7 @@ function loop(t){
   if(hovering&&Math.abs(ctx-ccx)+Math.abs(cty-ccy)>.1){ccx+=(ctx-ccx)*.2;ccy+=(cty-ccy)*.2;cur.style.transform=`translate3d(${ccx}px,${ccy}px,0)`}
   const ft=t-pt;pt=t;slow=slow*.96+(ft>45?.04:0);if(slow>.6&&sc>.3){sc=.3;dispatchEvent(new Event('resize'))}
   if(gl&&bgOn&&rdy&&!tt&&t-lt>(slow>.5?66:32)){lt=t;mx+=(mtx-mx)*.06;my+=(mty-my)*.06;const dt=root.dataset.theme==='dark'?1:0;dm+=(dt-dm)*.08;gl.uniform1f(U.t,reduce?3:t/1000);gl.uniform1f(U.d,dm);gl.uniform2f(U.m,mx,my);gl.drawArrays(gl.TRIANGLES,0,3)}
-  const moving=Math.abs(scrollY-y)>.05||performance.now()<activeUntil||(hovering&&(Math.abs(ctx-ccx)+Math.abs(cty-ccy)>.1));
-  if(moving)wakeLoop();else if(gl&&bgOn&&rdy&&!reduce&&!document.hidden&&!loopTimer)loopTimer=setTimeout(()=>{loopTimer=0;wakeLoop()},32)}
+  requestAnimationFrame(loop)}
 // pointer: cursor lens, hero parallax, spotlight, magnetic buttons, ripples
 const hovering=matchMedia('(hover:hover)').matches&&!reduce;let ev=null,pq=0,ab=null;
 if(hovering){addEventListener('pointermove',e=>{ev=e;cur.style.opacity=1;if(!pq){pq=1;requestAnimationFrame(()=>{pq=0;const e=ev,t=e.target;ctx=e.clientX;cty=e.clientY;mtx=e.clientX/innerWidth;mty=1-e.clientY/innerHeight;
@@ -326,7 +375,7 @@ if(hovering){addEventListener('pointermove',e=>{ev=e;cur.style.opacity=1;if(!pq)
  const c=t.closest&&t.closest('.card,.tile');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}
  const gg=t.closest&&t.closest('.g');if(gg)glare(gg,e);
  const b=t.closest&&t.closest('.btn');if(ab&&ab!==b){ab.style.setProperty('--tx','0px');ab.style.setProperty('--ty','0px')}ab=b;
- if(b){const r=b.getBoundingClientRect();b.style.setProperty('--tx',((e.clientX-r.left-r.width/2)*.22).toFixed(1)+'px');b.style.setProperty('--ty',((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px')}wakeLoop()})}},{passive:true});
+ if(b){const r=b.getBoundingClientRect();b.style.setProperty('--tx',((e.clientX-r.left-r.width/2)*.22).toFixed(1)+'px');b.style.setProperty('--ty',((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px')}})}},{passive:true});
  document.addEventListener('pointerleave',()=>cur.style.opacity=0)}
 document.addEventListener('pointerdown',e=>{const b=e.target.closest&&e.target.closest('.btn');if(!b||reduce)return;const r=b.getBoundingClientRect(),s=document.createElement('span');s.className='rip';s.style.left=e.clientX-r.left+'px';s.style.top=e.clientY-r.top+'px';b.appendChild(s);s.animate([{transform:'scale(0)',opacity:.6},{transform:`scale(${Math.max(r.width,r.height)/6})`,opacity:0}],{duration:750,easing:EASE}).finished.then(()=>s.remove())});
 // theme with circular reveal
@@ -340,27 +389,29 @@ $('#tb').addEventListener('click',()=>{if(tt)return;const tb=$('#tb'),next=root.
   vt.finished.finally(()=>{tt=false;body.classList.remove('tt')})}else set()});
 // reader sheet: grows out of the tapped card
 const sh=$('#sh'),sp=$('.sp'),dim=$('.dim'),inner=$('.in',sp);let tt=false;function drawNow(){if(!gl||!rdy)return;dm=root.dataset.theme==='dark'?1:0;gl.uniform1f(U.t,reduce?3:performance.now()/1000);gl.uniform1f(U.d,dm);gl.uniform2f(U.m,mx,my);gl.drawArrays(gl.TRIANGLES,0,3)}
-let last=null,busy=false;const D=reduce?0:1;
+let last=null,busy=false,previousFocus=null,previousOverflow='';const D=reduce?0:1;
 const clip=r=>`inset(${r.top}px ${innerWidth-r.right}px ${innerHeight-r.bottom}px ${r.left}px round 38px)`;
-async function openSheet(card){if(busy)return;busy=true;last=card;const p=W[+card.dataset.i],r=card.firstElementChild.getBoundingClientRect();
- inner.innerHTML=`<span class="k">${p.c}</span><h2>${p.t}</h2>${p.b.map(x=>x[0]==='#'?`<h3>${x.slice(1)}</h3>`:x[0]==='>'?`<p class="nt">${x.slice(1)}</p>`:`<p>${x}</p>`).join('')}<p class="note">Sample written for a fictional brand, to show approach and structure.</p>`;
- sp.scrollTop=0;sh.hidden=false;body.style.overflow='hidden';const o={duration:700*D,easing:EASE,fill:'both'};
+function setPageInert(value){['main','header','#dock'].forEach(sel=>{const el=$(sel);if(el)el.inert=value})}
+function modalFocusables(){return $$('button:not([disabled]),a[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])',sh).filter(el=>!el.hidden)}
+async function openSheet(card){if(busy)return;busy=true;last=card;previousFocus=document.activeElement;previousOverflow=body.style.overflow;const p=W[+card.dataset.i],r=card.firstElementChild.getBoundingClientRect();
+ inner.innerHTML=`<span class="k">${p.c}</span><h2 id="sample-title">${p.t}</h2><p class="spec-intro">Self-initiated spec project · Fictional brand · No live campaign results are claimed.</p>${p.b.map(x=>x[0]==='#'?`<h3>${x.slice(1)}</h3>`:x[0]==='>'?`<p class="nt">${x.slice(1)}</p>`:x.startsWith('LINK:')?`<p class="source-ref"><a href="${x.slice(5).split('|')[0]}" target="_blank" rel="noopener noreferrer">${x.slice(5).split('|').slice(1).join('|')}</a></p>`:`<p>${x}</p>`).join('')}<p class="note">This sample demonstrates writing approach and structure. Product claims and specifications must be verified with source documents before real-world use.</p>`;
+ sp.scrollTop=0;sh.hidden=false;setPageInert(true);body.style.overflow='hidden';$('.x').focus({preventScroll:true});const o={duration:650*D,easing:EASE,fill:'both'};
  dim.animate([{opacity:0},{opacity:1}],o);sp.animate([{clipPath:clip(r)},{clipPath:'inset(0px 0px 0px 0px round 0px)'}],o);
- [...inner.children].forEach((c,i)=>c.animate([{opacity:0,transform:'translateY(30px)',filter:'blur(8px)'},{opacity:1,transform:'none',filter:'blur(0px)'}],{...o,duration:850*D,delay:(180+i*80)*D}));
+ [...inner.children].forEach((c,i)=>c.animate([{opacity:0,transform:'translateY(22px)',filter:'blur(6px)'},{opacity:1,transform:'none',filter:'blur(0px)'}],{...o,duration:700*D,delay:(100+i*45)*D}));
  await sp.getAnimations()[0]?.finished.catch(()=>{});bgOn=false;busy=false;$('.x').focus({preventScroll:true})}
-async function closeSheet(){if(busy)return;busy=true;bgOn=!document.hidden;wakeLoop();const r=last.firstElementChild.getBoundingClientRect(),o={duration:520*D,easing:EASE,fill:'both'};
- dim.animate([{opacity:1},{opacity:0}],o);inner.animate([{opacity:1},{opacity:0}],{...o,duration:200*D});
+async function closeSheet(){if(busy||sh.hidden)return;busy=true;bgOn=!document.hidden;const r=last.firstElementChild.getBoundingClientRect(),o={duration:460*D,easing:EASE,fill:'both'};
+ dim.animate([{opacity:1},{opacity:0}],o);inner.animate([{opacity:1},{opacity:0}],{...o,duration:180*D});
  await sp.animate([{clipPath:'inset(0px 0px 0px 0px round 0px)'},{clipPath:clip(r)}],o).finished.catch(()=>{});
- sh.hidden=true;body.style.overflow='';[sp,dim,inner].forEach(e=>e.getAnimations().forEach(a=>a.cancel()));busy=false;last.focus({preventScroll:true})}
+ sh.hidden=true;body.style.overflow=previousOverflow;setPageInert(false);[sp,dim,inner].forEach(e=>e.getAnimations().forEach(a=>a.cancel()));busy=false;(previousFocus||last)?.focus({preventScroll:true});previousFocus=null}
 track.addEventListener('click',e=>{const c=e.target.closest('.card');if(c)openSheet(c)});$('.x').addEventListener('click',closeSheet);dim.addEventListener('click',closeSheet);
-addEventListener('keydown',e=>{if(e.key==='Escape'&&!sh.hidden)closeSheet()});
+addEventListener('keydown',e=>{if(sh.hidden)return;if(e.key==='Escape'){e.preventDefault();closeSheet();return}if(e.key==='Tab'){const items=modalFocusables();if(!items.length){e.preventDefault();return}const first=items[0],lastItem=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();lastItem.focus()}else if(!e.shiftKey&&document.activeElement===lastItem){e.preventDefault();first.focus()}}});
 // welcome: a bad draft gets edited into a good line, then the curtain lifts (tap to skip)
 function glare(g,e){const r=g.getBoundingClientRect();g.style.setProperty('--gx',((e.clientX-r.left)/r.width*100).toFixed(0)+'%');g.style.setProperty('--gy',((e.clientY-r.top)/r.height*100).toFixed(0)+'%')}
 addEventListener('pointerdown',e=>{const g=e.target.closest&&e.target.closest('.g');if(g)glare(g,e)},{passive:true});
 {const pre=$('#pre'),ty=$('#ty'),T=ty.textContent;let done=false,tm=0;
-const go=()=>{if(done)return;done=true;clearTimeout(tm);ty.textContent=T;body.classList.add('ready');rdy=true;M();wakeLoop();setTimeout(()=>pre.remove(),1500)};
-if(reduce)go();else{ty.textContent='';const t0=performance.now()+500,f=t=>{if(done)return;const p=Math.max(0,Math.min(1,(t-t0)/750));ty.textContent=T.slice(0,Math.round(T.length*p));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f);tm=setTimeout(go,2900);pre.addEventListener('click',go)}}
-M();wakeLoop();
+const go=()=>{if(done)return;done=true;clearTimeout(tm);ty.textContent=T;body.classList.add('ready');rdy=true;M();setTimeout(()=>pre.remove(),900)};
+if(reduce)go();else{ty.textContent='';const t0=performance.now()+80,f=t=>{if(done)return;const p=Math.max(0,Math.min(1,(t-t0)/350));ty.textContent=T.slice(0,Math.round(T.length*p));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f);tm=setTimeout(go,720);pre.addEventListener('click',go);pre.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})}}
+M();requestAnimationFrame(loop);
 </script>
 </body>
 </html>
